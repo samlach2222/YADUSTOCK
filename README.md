@@ -44,8 +44,6 @@ Pour développer Yadustock, un certain nombre de logiciels ont été utilisés :
 ### Membres du projet :
 
 
-Pour développer Yadustock, un certain nombre de logiciels ont été utilisés :
-
 * **Marion TALLANDIER** - @itsiami
 * **Youssef El KADI** - 
 * **Loïs PAZOLA** - @Mahtwo
