@@ -47,8 +47,8 @@ Pour développer Yadustock, un certain nombre de logiciels ont été utilisés :
 ### Membres du projet :
 
 
-* **Marion TALLANDIER** - @itsiami
-* **Youssef El KADI** - 
-* **Loïs PAZOLA** - @Mahtwo
-* **Corentin FAUTRE** - 
-* **Samuel LACHAUD** - @samlach2222
+* **Marion TALLANDIER** - [@itsiami](https://github.com/Itsiami)
+* **Youssef El KADI** - [@Zok0ta](https://github.com/Zok0ta)
+* **Loïs PAZOLA** - [@Mahtwo](https://github.com/Mahtwo)
+* **Corentin FAUTRE** - [@Itazurra](https://github.com/Itazurra)
+* **Samuel LACHAUD** - [@samlach2222](https://github.com/samlach2222)
