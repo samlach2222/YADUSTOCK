@@ -1,8 +1,8 @@
 # YADUSTOCK
 ## Projet Tutoré de S3 - Purple Dream
 
-
-[![GitHub version](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version.svg)](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version)
+[![GitHub version](https://img.shields.io/badge/version-0.1-purple.svg)](https://img.shields.io/badge/version-0.1-purple)
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
 
 Le projet Yadustock porte sur la création d’un jeu de gestion d’une entreprise. Nous avons choisi que l’entreprise sera spécialisée dans la vente de jeux de cartes afin d’offrir au joueur un large éventail de produits pour lui permettre une certaine personnalisation.  
 
@@ -40,3 +40,14 @@ Pour développer Yadustock, un certain nombre de logiciels ont été utilisés :
 * [Microsoft Project](https://www.microsoft.com/france/office/project/) - Outil de création de diagrammes de Gantt et de gestion de ressources
 * [Photofiltre](http://www.photofiltre-studio.com/) - Outil de création et d'édition d'images
 * [Pencil](http://pencil.evolus.vn/) - Outil de création de maquettes d'applications
+***
+### Membres du projet :
+
+
+Pour développer Yadustock, un certain nombre de logiciels ont été utilisés :
+
+* **Marion TALLANDIER** - @itsiami
+* **Youssef El KADI** - 
+* **Loïs PAZOLA** - @Mahtwo
+* **Corentin FAUTRE** - 
+* **Samuel LACHAUD** - @samlach2222
