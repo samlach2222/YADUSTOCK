@@ -4,10 +4,8 @@
 
 ## Projet Tutoré de S3 - Purple Dream
 
+<!-- [![GitHub version](https://img.shields.io/badge/version-0.1-purple.svg)](https://img.shields.io/badge) -->
 [![GitHub version](https://badge.fury.io/gh/samlach2222%2FYADUSTOCK.svg)](https://badge.fury.io/gh/samlach2222%2FYADUSTOCK)
-
-<!-- https://img.shields.io/badge/version-0.1-purple.svg -->
-
 [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-blue.svg)](http://www.wtfpl.net/about/)
 [![Discord](https://img.shields.io/discord/756176190603132959.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/awD7fzb)
 
