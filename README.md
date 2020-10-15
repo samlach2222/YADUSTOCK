@@ -1,4 +1,7 @@
 # YADUSTOCK
+
+<img src="Documentation/Maquette/Conception%20d'image/Logo.png" height="300" width="300" >
+
 ## Projet Tutoré de S3 - Purple Dream
 
 [![GitHub version](https://img.shields.io/badge/version-0.1-purple.svg)](https://img.shields.io/badge/version-0.1-purple)
