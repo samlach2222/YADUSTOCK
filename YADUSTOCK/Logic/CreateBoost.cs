@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public interface CreateHashBoost
+    public interface CreateBoost
     {
         Boost[] CreateListBoost();
     }
