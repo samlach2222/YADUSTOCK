@@ -18,5 +18,10 @@ namespace Logic
 
         public double Own { get => own; set => own = value; }
         public Boost[] BoostList => boostList;
+
+        public void PurchaseBoost(Boost b)
+        {
+            // A CODER
+        }
     }
 }

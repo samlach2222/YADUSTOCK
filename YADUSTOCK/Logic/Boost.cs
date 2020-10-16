@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class Boost : CreateBoost
+    public class Boost : CreateHashBoost
     {
         private readonly TypeBoost name;
         private readonly double bonus;
         private int timeEnd;
         private readonly Boolean etat;
-        private readonly double price;
 
-        public Boost(TypeBoost n, double b, double p)
+        public Boost(TypeBoost n, double b)
         {
             this.etat = false;
             // A CODER
@@ -24,7 +23,6 @@ namespace Logic
         public double Bonus => bonus;
         public int TimeEnd { get => timeEnd; set => timeEnd = value; }
         public bool Etat => etat;
-        public double Price => price;
 
         public Boost[] CreateListBoost()
         {

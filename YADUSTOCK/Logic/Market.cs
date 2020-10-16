@@ -18,10 +18,5 @@ namespace Logic
             // A CODER
             return null;
         }
-
-        public void PurchaseBoost(Boost b)
-        {
-            // A CODER
-        }
     }
 }

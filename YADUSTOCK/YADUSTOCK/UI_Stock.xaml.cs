@@ -18,13 +18,13 @@ namespace YADUSTOCK
     /// <summary>
     /// Logique d'interaction pour UI_Stock.xaml
     /// </summary>
-    public partial class UI_Stock : Page
+    public partial class UI_Stock : Window
     {
         private Stock s;
 
         public Stock S { get => s; set => s = value; }
 
-        public UI_Stock(Stock S)
+        public UI_Stock()
         {
             // A CODER
             InitializeComponent();
