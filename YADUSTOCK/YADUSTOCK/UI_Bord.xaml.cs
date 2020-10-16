@@ -17,7 +17,7 @@ namespace YADUSTOCK
     /// <summary>
     /// Logique d'interaction pour UI_Bord.xaml
     /// </summary>
-    public partial class UI_Bord : Window
+    public partial class UI_Bord : Page
     {
         public UI_Bord()
         {

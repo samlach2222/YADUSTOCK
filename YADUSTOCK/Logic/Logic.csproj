@@ -43,8 +43,9 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Boost.cs" />
+    <Compile Include="SafeMarket.cs" />
     <Compile Include="TypeBoost.cs" />
-    <Compile Include="CreateHashBoost.cs" />
+    <Compile Include="CreateBoost.cs" />
     <Compile Include="CreateProduct.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="Memory.cs" />

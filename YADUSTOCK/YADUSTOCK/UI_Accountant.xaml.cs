@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,26 +18,16 @@ namespace YADUSTOCK
     /// <summary>
     /// Logique d'interaction pour UI_Accountant.xaml
     /// </summary>
-    public partial class UI_Accountant : Window
+    public partial class UI_Accountant : Page
     {
-        private int nbTour;
+        private Account a;
 
-        public UI_Accountant()
+        public Account A { get => a; set => a = value; }
+
+        public UI_Accountant(Account a)
         {
             // A CODER
             InitializeComponent();
-        }
-
-        public int NbTour { get => nbTour; set => nbTour = value; }
-
-        public void setAccount()
-        {
-            // A CODER
-        }
-
-        public void addTranslation()
-        {
-            // A CODER
         }
     }
 }
