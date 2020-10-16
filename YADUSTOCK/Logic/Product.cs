@@ -12,10 +12,12 @@ namespace Logic
         private readonly double atBuyPrice;
         private double resalePrice;
         private int quantity;
+        private int tourAfterDelivery;
 
-        public Product(TypeProduct n, double price)
+        public Product(TypeProduct n, double price, int quantity)
         {
-            this.quantity = 0;
+            this.resalePrice = 0;
+            this.tourAfterDelivery = 0 ;
             // A CODER
         }
 
@@ -23,6 +25,7 @@ namespace Logic
         public double AtBuyPrice => atBuyPrice;
         public double ResalePrice { get => resalePrice; set => resalePrice = value; }
         public int Quantity { get => quantity; set => quantity = value; }
+        public int TourAfterDelivery { get => tourAfterDelivery; set => tourAfterDelivery = value; }
 
         public Product[] CreateListProduct()
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E3qbiDXfhdEmpvBw3rHxDbGrQ0OyZscYDhj4jKxGtgSoAU6igl/XKoxIiIsOs81UoijACuqyXBRmtAhSP4LPzw==",
+  "dgSpecHash": "BJ5C7/Fkl1ZiZFIlCZ2i/e7p3y7NFbOkwbjY11W0MtI5PPIIdBbAfwU3g+b0Dq1Eabzq6hu6nXl0Jkq4GnGaKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+  "projectFilePath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samlach22\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\samlach22\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
