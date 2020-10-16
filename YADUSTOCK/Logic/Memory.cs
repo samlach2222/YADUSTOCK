@@ -8,23 +8,25 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class Memory : CreateHashBoost, CreateProduct
+    public class Memory : CreateBoost, CreateProduct
     {
         private Product[] buyList;
-        private int Own = 10000;
+        private int nbTour;
+        private int Own;
         private Boost[] buyBoostList;
+        private String namePlayer;
 
         private readonly Market market;
         private readonly Stock stock;
         private readonly Account account;
+        private readonly SafeMarket safemarket;
+
+        public string NamePlayer { get => namePlayer; set => namePlayer = value; }
 
         public Memory() 
         {
-            // A CODER
-        }
-
-        public void BenefitCalcul() 
-        {
+            this.nbTour = 1;
+            this.Own = 10000;
             // A CODER
         }
 

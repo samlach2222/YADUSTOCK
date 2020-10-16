@@ -1,12 +1,11 @@
 # YADUSTOCK
 
-<img src="Documentation/Maquette/Conception%20d'image/Logo.png" height="300" width="300" >
+<img src="Documentation/Maquette/Conception%20d'image/Logo.png" height="300" width="300">
 
 ## Projet Tutoré de S3 - Purple Dream
 
-<!-- [![GitHub version](https://img.shields.io/badge/version-0.1-purple.svg)](https://img.shields.io/badge) -->
-[![GitHub version](https://badge.fury.io/gh/samlach2222%2FYADUSTOCK.svg)](https://badge.fury.io/gh/samlach2222%2FYADUSTOCK)
-[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-blue.svg)](http://www.wtfpl.net/about/)
+[![GitHub version](https://img.shields.io/badge/version-0.01-purple.svg)](https://img.shields.io/badge)
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-blue.svg)](http://www.wtfpl.net/about/)-
 [![Discord](https://img.shields.io/discord/756176190603132959.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/awD7fzb)
 
 
@@ -29,12 +28,25 @@ Il regroupe :
     * Le diagramme de cas d'utilisation
     * Le diagramme d'Ishikawa 
 * Le dossier "Documents ressources" comprenant les documents importants du projet
+* Le dossier "Gestion de projet" comprenant les documents liés
+    * Les diagrammes d'Ishikawa 
+    * Le diagramme de risque
 * Le dossier "Maquette" comprennant :
     * Les fichiers de conceptions d'images (Photofiltre)
     * La charte graphique
     * La maquette en fil de fer (Pencil)
+    * La maquette graphique (Pencil)
 * Le dossier "Prévisionel" comprenant le diagramme de Gantt (MS Project)
 * Le document "Livrable" qui est le résumé de tout le dossier "Documentation" 
+***
+### [Dossier] YADUSTOCK :
+
+
+Dossier contenant le code source de l'application  
+Il regroupe :
+
+* Une partie Métier (Logic) avec les différents classes métier du projet
+* Une partie IHM (YADUSTOCK) avec les différentes pages du projet
 ***
 ### Logiciels utilisés :
 
@@ -47,6 +59,7 @@ Pour développer Yadustock, un certain nombre de logiciels ont été utilisés :
 * [Microsoft Project](https://www.microsoft.com/france/office/project/) - Outil de création de diagrammes de Gantt et de gestion de ressources
 * [Photofiltre](http://www.photofiltre-studio.com/) - Outil de création et d'édition d'images
 * [Pencil](http://pencil.evolus.vn/) - Outil de création de maquettes d'applications
+* [Visual Studio](https://visualstudio.microsoft.com/fr/) - IDE complet pour coder en C#
 ***
 ### Membres du projet :
 
