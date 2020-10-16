@@ -1,27 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj": {}
+    "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\TestLogic\\TestLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
+    "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\Logic\\Logic.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
+        "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\Logic\\Logic.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj": {
+    "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\TestLogic\\TestLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+        "projectUniqueName": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
         "projectName": "TestLogic",
-        "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+        "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
         "packagesPath": "C:\\Users\\samlach22\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\obj\\",
+        "outputPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\TestLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,8 +41,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
+              "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\Logic\\Logic.csproj": {
+                "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\Projet\\YADUSTOCK\\Logic\\Logic.csproj"
               }
             }
           }

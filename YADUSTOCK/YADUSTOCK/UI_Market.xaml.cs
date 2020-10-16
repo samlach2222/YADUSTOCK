@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,20 +11,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Logic;
 
 namespace YADUSTOCK
 {
     /// <summary>
     /// Logique d'interaction pour UI_Market.xaml
     /// </summary>
-    public partial class UI_Market : Page
+    public partial class UI_Market : Window
     {
         private Market m;
 
-        public UI_Market(Market m)
+        public UI_Market()
         {
             // A CODER
             InitializeComponent();
