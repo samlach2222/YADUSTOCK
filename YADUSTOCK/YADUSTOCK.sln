@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YADUSTOCK", "YADUSTOCK\YADUSTOCK.csproj", "{878C9AE6-A4E0-4BF2-9936-083BEA547C43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{94832631-71E0-403B-B7C3-C08D8F0096D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLogic", "TestLogic\TestLogic.csproj", "{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{878C9AE6-A4E0-4BF2-9936-083BEA547C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878C9AE6-A4E0-4BF2-9936-083BEA547C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878C9AE6-A4E0-4BF2-9936-083BEA547C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878C9AE6-A4E0-4BF2-9936-083BEA547C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94832631-71E0-403B-B7C3-C08D8F0096D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94832631-71E0-403B-B7C3-C08D8F0096D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94832631-71E0-403B-B7C3-C08D8F0096D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94832631-71E0-403B-B7C3-C08D8F0096D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C7B885C-F76E-47F3-8EDF-B25FD4EB6227}
+	EndGlobalSection
+EndGlobal
