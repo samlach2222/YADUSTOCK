@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class SafeMarket
+    public class SaleMarket
     {
+        private readonly int ownWin;
+
+        public int OwnWin => ownWin;
+
         public Product[] BenefitCalcul(Product p, Boost[] b)
         {
             // A CODER

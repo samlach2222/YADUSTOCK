@@ -9,7 +9,7 @@ namespace Logic
     public class Account
     {
         private double own;
-        private readonly Boost[] boostList;
+        private Boost[] boostList;
 
         public Account(double o, Boost[] b)
         {
@@ -17,6 +17,6 @@ namespace Logic
         }
 
         public double Own { get => own; set => own = value; }
-        public Boost[] BoostList => boostList;
+        public Boost[] BoostList { get => boostList; set => boostList = value; }
     }
 }

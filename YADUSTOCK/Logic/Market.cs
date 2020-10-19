@@ -8,6 +8,10 @@ namespace Logic
 {
     public class Market
     {
+        private readonly LateDelivery[] lateDelivery;
+
+        public LateDelivery[] LateDelivery => lateDelivery;
+
         public Market()
         {
             // A CODER
@@ -22,6 +26,12 @@ namespace Logic
         public void PurchaseBoost(Boost b)
         {
             // A CODER
+        }
+
+        public Product IsDelivery(Product p)
+        {
+            // A CODER
+            return null;
         }
     }
 }

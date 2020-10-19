@@ -24,7 +24,7 @@ namespace YADUSTOCK
 
         public Stock S { get => s; set => s = value; }
 
-        public UI_Stock(Stock S)
+        public UI_Stock(Stock s)
         {
             // A CODER
             InitializeComponent();

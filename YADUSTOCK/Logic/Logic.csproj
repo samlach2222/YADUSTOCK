@@ -43,7 +43,8 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Boost.cs" />
-    <Compile Include="SafeMarket.cs" />
+    <Compile Include="LateDelivery.cs" />
+    <Compile Include="SaleMarket.cs" />
     <Compile Include="TypeBoost.cs" />
     <Compile Include="CreateBoost.cs" />
     <Compile Include="CreateProduct.cs" />
