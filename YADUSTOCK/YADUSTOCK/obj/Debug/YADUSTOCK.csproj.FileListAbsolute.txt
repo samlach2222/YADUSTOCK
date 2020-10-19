@@ -53,3 +53,4 @@ C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADU
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.csproj.CopyComplete
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.exe
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.pdb
+C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.csprojAssemblyReference.cache

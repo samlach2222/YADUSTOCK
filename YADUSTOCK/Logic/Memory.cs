@@ -12,21 +12,19 @@ namespace Logic
     {
         private Product[] buyList;
         private int nbTour;
-        private int Own;
         private Boost[] buyBoostList;
         private String namePlayer;
 
-        private readonly Market market;
-        private readonly Stock stock;
-        private readonly Account account;
-        private readonly SafeMarket safemarket;
+        private Market market;
+        private Stock stock;
+        private Account account;
+        private SaleMarket salemarket;
 
         public string NamePlayer { get => namePlayer; set => namePlayer = value; }
 
         public Memory() 
         {
             this.nbTour = 1;
-            this.Own = 10000;
             // A CODER
         }
 
