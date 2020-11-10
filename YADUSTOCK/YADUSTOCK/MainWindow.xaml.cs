@@ -30,13 +30,21 @@ namespace YADUSTOCK
 
         public MainWindow()
         {
-            // A CODER
+            memory = new Memory();
+            ui_home = new UI_Home();
+            ui_bord = new UI_Bord();
+            ui_market = new UI_Market(memory.Market);
+            ui_stock = new UI_Stock(memory.Stock);
+            ui_accountant = new UI_Accountant(memory.Account);
             InitializeComponent();
+            initialize();
         }
 
         public void initialize()
         {
-            // A CODER
+            WindowState = WindowState.Maximized;
+            WindowStyle = WindowStyle.None;
+            this.Content = ui_home;
         }
 
         private void NextTurn(object sender, RoutedEventArgs e)
