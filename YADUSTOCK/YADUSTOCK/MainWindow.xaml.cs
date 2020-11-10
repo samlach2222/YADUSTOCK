@@ -30,12 +30,19 @@ namespace YADUSTOCK
 
         public MainWindow()
         {
+<<<<<<< Updated upstream
             memory = new Memory();
             ui_home = new UI_Home();
             ui_bord = new UI_Bord();
             ui_market = new UI_Market(memory.Market);
             ui_stock = new UI_Stock(memory.Stock);
             ui_accountant = new UI_Accountant(memory.Account);
+=======
+            // A CODER
+            UI_Introduction ui_Introduction = new UI_Introduction();
+            ui_Introduction.ShowDialog();
+
+>>>>>>> Stashed changes
             InitializeComponent();
             initialize();
         }

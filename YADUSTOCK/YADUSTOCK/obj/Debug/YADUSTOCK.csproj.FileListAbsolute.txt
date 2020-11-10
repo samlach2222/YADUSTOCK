@@ -54,6 +54,7 @@ C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADU
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.exe
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.pdb
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.csprojAssemblyReference.cache
+<<<<<<< Updated upstream
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\bin\Debug\YADUSTOCK.exe.config
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\bin\Debug\YADUSTOCK.exe
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\bin\Debug\YADUSTOCK.pdb
@@ -83,3 +84,8 @@ C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.exe
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.pdb
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\App.baml
+=======
+C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\UI_Introduction.g.cs
+C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\UI_Introduction.baml
+C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\App.baml
+>>>>>>> Stashed changes
