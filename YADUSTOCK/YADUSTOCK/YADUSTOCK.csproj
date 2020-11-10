@@ -64,9 +64,6 @@
     <Compile Include="UI_Home.xaml.cs">
       <DependentUpon>UI_Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI_Introduction.xaml.cs">
-      <DependentUpon>UI_Introduction.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UI_Market.xaml.cs">
       <DependentUpon>UI_Market.xaml</DependentUpon>
     </Compile>
@@ -97,10 +94,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI_Introduction.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UI_Market.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -128,8 +121,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Fonts\manaspace.ttf" />
-    <Resource Include="Fonts\pixeled.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,42 +135,5 @@
       <Name>Logic</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Ressources\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Ressources\Buttons\ButtonAccountClicked.png" />
-    <Resource Include="Ressources\Buttons\ButtonExitClicked.png" />
-    <Resource Include="Ressources\Buttons\ButtonHomeClicked.png" />
-    <Resource Include="Ressources\Buttons\ButtonMarketClicked.png" />
-    <Resource Include="Ressources\Buttons\ButtonStockClicked.png" />
-    <Resource Include="Ressources\Buttons\Pencil.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Ressources\Buttons\Button.png" />
-    <Resource Include="Ressources\Buttons\ButtonAccount.png" />
-    <Resource Include="Ressources\Buttons\ButtonEndTurn.png" />
-    <Resource Include="Ressources\Buttons\ButtonExit.png" />
-    <Resource Include="Ressources\Buttons\ButtonHome.png" />
-    <Resource Include="Ressources\Buttons\ButtonMarket.png" />
-    <Resource Include="Ressources\Buttons\ButtonPlay.png" />
-    <Resource Include="Ressources\Buttons\ButtonPlayClicked.png" />
-    <Resource Include="Ressources\Buttons\ButtonQuit.png" />
-    <Resource Include="Ressources\Buttons\ButtonQuitClicked.png" />
-    <Resource Include="Ressources\Buttons\ButtonStock.png" />
-    <Resource Include="Ressources\Buttons\ButtonValidate.png" />
-    <Resource Include="Ressources\Buttons\PencilValidate.png" />
-  </ItemGroup>
-<<<<<<< Updated upstream
-  <ItemGroup>
-    <Resource Include="Ressources\Buttons\ButtonAccountIntro.png" />
-    <Resource Include="Ressources\Buttons\ButtonExitIntro.png" />
-    <Resource Include="Ressources\Buttons\ButtonHomeIntro.png" />
-    <Resource Include="Ressources\Buttons\ButtonMarketIntro.png" />
-    <Resource Include="Ressources\Buttons\ButtonStockIntro.png" />
-    <Resource Include="Ressources\Buttons\PencilIntro.png" />
-  </ItemGroup>
-=======
->>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
