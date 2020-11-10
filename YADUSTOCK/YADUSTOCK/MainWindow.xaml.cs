@@ -42,6 +42,9 @@ namespace YADUSTOCK
             UI_Introduction ui_Introduction = new UI_Introduction();
             ui_Introduction.ShowDialog();
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             InitializeComponent();
             initialize();

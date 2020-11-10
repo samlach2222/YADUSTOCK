@@ -170,6 +170,7 @@
     <Resource Include="Ressources\Buttons\ButtonValidate.png" />
     <Resource Include="Ressources\Buttons\PencilValidate.png" />
   </ItemGroup>
+<<<<<<< Updated upstream
   <ItemGroup>
     <Resource Include="Ressources\Buttons\ButtonAccountIntro.png" />
     <Resource Include="Ressources\Buttons\ButtonExitIntro.png" />
@@ -178,5 +179,7 @@
     <Resource Include="Ressources\Buttons\ButtonStockIntro.png" />
     <Resource Include="Ressources\Buttons\PencilIntro.png" />
   </ItemGroup>
+=======
+>>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

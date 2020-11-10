@@ -5,9 +5,12 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <Style x:Key="Manaspace ">
             <Setter Property="TextElement.FontFamily" Value="Resources/#HATTEN" />
 =======
+=======
+>>>>>>> Stashed changes
         <Style x:Key="manaspace">
             <Setter Property="TextElement.FontFamily"
                     Value="/YADUSTOCK;component/Fonts/#Manaspace">
@@ -17,6 +20,9 @@
             <Setter Property="TextElement.FontFamily"
                     Value="/YADUSTOCK;component/Fonts/#Minecraft">
             </Setter>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         </Style>
     </Application.Resources>
