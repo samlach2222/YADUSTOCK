@@ -1,0 +1,29 @@
+﻿<Window x:Class="YADUSTOCK.UI_Introduction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YADUSTOCK"
+        mc:Ignorable="d"
+        Title="Welcome in our game" Height="1080" Width="1920" Icon="Ressources/Logo.png" Background="White" ResizeMode="NoResize" WindowState="Maximized">
+    <Grid Background="#FFCC99FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="1752*"/>
+            <ColumnDefinition Width="49*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Center" Height="711.5" Margin="12,189,10,0" VerticalAlignment="Top" Width="1796" Fill="#FF4B4253" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Content="Welcome on our game !" Style="{StaticResource manaspace}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace" FontSize="100" Width="1894" Foreground="#FF4B4253" Grid.ColumnSpan="5"/>
+        <Label Content="You are the manager of a company specialized in the sale of cards.&#xD;&#xA;&#xD;&#xA;You will have to make decisions at every tern, among these is the purchase from your&#xD;&#xA;supplier. This action is in the market.&#xD;&#xA;&#xD;&#xA;The status of your accounts is available in the account tab. In this tab you can find&#xD;&#xA;boosts to buy to improve your results&#xD;&#xA;&#xD;&#xA;To finish, the results of your lasty roud are available on your dashboard. Just like&#xD;&#xA;the decisions of the current round.&#xD;&#xA;&#xD;&#xA;When you have finished making your decisions, press the &quot;End turn&quot; button on the&#xD;&#xA;dashboard." HorizontalAlignment="Left" Margin="42,213,0,0" VerticalAlignment="Top" Height="442.96" Width="1744" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace" Foreground="#FFCC99FF" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Center" Height="150.5" Margin="569.75,900.5,665.75,0" VerticalAlignment="Top" Width="516.5" Source="Ressources/Buttons/ButtonValidate.png" Grid.Column="3"/>
+        <Image HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="342" Grid.Column="2" Margin="48,660.96,0,0" Source="Ressources/Buttons/ButtonHomeIntro.png" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="244.54" VerticalAlignment="Top" Width="357" Grid.Column="3" Margin="280.833,655.96,0,0" Source="Ressources/Buttons/ButtonStockIntro.png"/>
+        <Image HorizontalAlignment="Left" Height="278" VerticalAlignment="Top" Width="394.5" Grid.Column="3" Margin="550.25,635.5,0,0" Source="Ressources/Buttons/ButtonMarketIntro.png"/>
+        <Image HorizontalAlignment="Left" Height="271.833" VerticalAlignment="Top" Width="378" Grid.Column="3" Margin="868.833,660.96,0,0" Source="Ressources/Buttons/ButtonAccountIntro.png"/>
+        <Image HorizontalAlignment="Left" Height="291.083" VerticalAlignment="Top" Width="423" Grid.Column="3" Margin="1171.75,655.96,0,0" Source="Ressources/Buttons/ButtonExitIntro.png"/>
+        <Image HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="342" Grid.Column="3" Margin="1449,670.5,0,0" Source="Ressources/Buttons/PencilIntro.png" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

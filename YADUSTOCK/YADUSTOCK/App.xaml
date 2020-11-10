@@ -4,8 +4,20 @@
              xmlns:local="clr-namespace:YADUSTOCK"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+<<<<<<< Updated upstream
         <Style x:Key="Manaspace ">
             <Setter Property="TextElement.FontFamily" Value="Resources/#HATTEN" />
+=======
+        <Style x:Key="manaspace">
+            <Setter Property="TextElement.FontFamily"
+                    Value="/YADUSTOCK;component/Fonts/#Manaspace">
+            </Setter>
+        </Style>
+        <Style x:Key="pixeled">
+            <Setter Property="TextElement.FontFamily"
+                    Value="/YADUSTOCK;component/Fonts/#Minecraft">
+            </Setter>
+>>>>>>> Stashed changes
         </Style>
     </Application.Resources>
 </Application>
