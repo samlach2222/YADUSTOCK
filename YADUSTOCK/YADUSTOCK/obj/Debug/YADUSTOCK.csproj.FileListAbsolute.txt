@@ -83,3 +83,6 @@ C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.exe
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.pdb
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\App.baml
+C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\App.baml
+C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\UI_Introduction.g.cs
+C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\UI_Introduction.baml

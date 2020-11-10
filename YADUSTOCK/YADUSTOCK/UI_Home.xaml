@@ -8,8 +8,5 @@
       d:DesignHeight="720"
       Title="UI_Home" Width="1566.4">
 
-    <Grid Margin="0,0,0.4,0">
-        <Label Content="YADUSTOCK" HorizontalAlignment="Left" Margin="498,49,0,0" VerticalAlignment="Top" Width="560" Height="130" FontFamily ="Ressources/Polices/#manaspace (by codeman38)" FontSize="100" RenderTransformOrigin="-0.06,0.694"/>
-
-    </Grid>
+    <Grid Margin="0,0,0.4,0"/>
 </Page>
