@@ -22,7 +22,6 @@ namespace YADUSTOCK
     {
         public UI_Home()
         {
-            // A CODER
             InitializeComponent();
         }
 

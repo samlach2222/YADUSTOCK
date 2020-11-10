@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:YADUSTOCK"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="Manaspace ">
+            <Setter Property="TextElement.FontFamily" Value="Resources/#HATTEN" />
+        </Style>
     </Application.Resources>
 </Application>

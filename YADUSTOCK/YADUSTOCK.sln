@@ -7,7 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YADUSTOCK", "YADUSTOCK\YADU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{94832631-71E0-403B-B7C3-C08D8F0096D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLogic", "TestLogic\TestLogic.csproj", "{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLogic", "TestLogic\TestLogic.csproj", "{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ressources", "Ressources", "{54102F21-FED6-4079-8FBA-196FEE06561C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polices", "Polices", "{9AECB270-AEF2-4102-B3B3-2FB78EDFCFDE}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Maquette\Conception d'image\manaspace (by codeman38).ttf = ..\Documentation\Maquette\Conception d'image\manaspace (by codeman38).ttf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +37,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9AECB270-AEF2-4102-B3B3-2FB78EDFCFDE} = {54102F21-FED6-4079-8FBA-196FEE06561C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C7B885C-F76E-47F3-8EDF-B25FD4EB6227}

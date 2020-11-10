@@ -5,10 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YADUSTOCK"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="UI_Home">
+      d:DesignHeight="720"
+      Title="UI_Home" Width="1566.4">
 
-    <Grid>
-        
+    <Grid Margin="0,0,0.4,0">
+        <Label Content="YADUSTOCK" HorizontalAlignment="Left" Margin="498,49,0,0" VerticalAlignment="Top" Width="560" Height="130" FontFamily ="Ressources/Polices/#manaspace (by codeman38)" FontSize="100" RenderTransformOrigin="-0.06,0.694"/>
+
     </Grid>
 </Page>
