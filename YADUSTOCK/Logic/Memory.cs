@@ -21,6 +21,9 @@ namespace Logic
         private SaleMarket salemarket;
 
         public string NamePlayer { get => namePlayer; set => namePlayer = value; }
+        public Market Market { get => market;}
+        public Account Account { get => account; }
+        public Stock Stock { get => stock; }
 
         public Memory() 
         {
