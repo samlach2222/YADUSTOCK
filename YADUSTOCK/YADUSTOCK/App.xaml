@@ -4,8 +4,37 @@
              xmlns:local="clr-namespace:YADUSTOCK"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="Manaspace ">
-            <Setter Property="TextElement.FontFamily" Value="Resources/#HATTEN" />
+        <Style x:Key="manaspace">
+            <Setter Property="TextElement.FontFamily"
+                    Value="/YADUSTOCK;component/Fonts/#Manaspace">
+            </Setter>
+        </Style>
+        <Style x:Key="pixeled">
+            <Setter Property="TextElement.FontFamily"
+                    Value="/YADUSTOCK;component/Fonts/#Minecraft">
+            </Setter>
+        </Style>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="YadustockButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Application.Resources>
 </Application>
