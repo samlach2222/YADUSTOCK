@@ -18,12 +18,21 @@
         <Label Content="Welcome on our game !" Style="{StaticResource manaspace}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace" FontSize="100" Width="1894" Foreground="#FF4B4253" Grid.ColumnSpan="5"/>
         <Label Content="You are the manager of a company specialized in the sale of cards.&#xD;&#xA;&#xD;&#xA;You will have to make decisions at every tern, among these is the purchase from your&#xD;&#xA;supplier. This action is in the market.&#xD;&#xA;&#xD;&#xA;The status of your accounts is available in the account tab. In this tab you can find&#xD;&#xA;boosts to buy to improve your results&#xD;&#xA;&#xD;&#xA;To finish, the results of your lasty roud are available on your dashboard. Just like&#xD;&#xA;the decisions of the current round.&#xD;&#xA;&#xD;&#xA;When you have finished making your decisions, press the &quot;End turn&quot; button on the&#xD;&#xA;dashboard." HorizontalAlignment="Left" Margin="42,213,0,0" VerticalAlignment="Top" Height="442.96" Width="1744" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace" Foreground="#FFCC99FF" Grid.Column="2" Grid.ColumnSpan="2"/>
         <Image HorizontalAlignment="Center" Height="150.5" Margin="569.75,900.5,665.75,0" VerticalAlignment="Top" Width="516.5" Source="Ressources/Buttons/ButtonValidate.png" Grid.Column="3"/>
+<<<<<<< Updated upstream
         <Image HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="342" Grid.Column="2" Margin="48,660.96,0,0" Source="Ressources/Buttons/ButtonHomeIntro.png" Grid.ColumnSpan="2"/>
         <Image HorizontalAlignment="Left" Height="244.54" VerticalAlignment="Top" Width="357" Grid.Column="3" Margin="280.833,655.96,0,0" Source="Ressources/Buttons/ButtonStockIntro.png"/>
         <Image HorizontalAlignment="Left" Height="278" VerticalAlignment="Top" Width="394.5" Grid.Column="3" Margin="550.25,635.5,0,0" Source="Ressources/Buttons/ButtonMarketIntro.png"/>
         <Image HorizontalAlignment="Left" Height="271.833" VerticalAlignment="Top" Width="378" Grid.Column="3" Margin="868.833,660.96,0,0" Source="Ressources/Buttons/ButtonAccountIntro.png"/>
         <Image HorizontalAlignment="Left" Height="291.083" VerticalAlignment="Top" Width="423" Grid.Column="3" Margin="1171.75,655.96,0,0" Source="Ressources/Buttons/ButtonExitIntro.png"/>
         <Image HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="342" Grid.Column="3" Margin="1449,670.5,0,0" Source="Ressources/Buttons/PencilIntro.png" Grid.ColumnSpan="2"/>
+=======
+        <Label Content="Label" Grid.Column="3" HorizontalAlignment="Left" Margin="64,803,0,0" VerticalAlignment="Top" Foreground="#FFCC99FF" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace"/>
+        <Label Content="Label" Grid.Column="3" HorizontalAlignment="Left" Margin="308.5,803,0,0" VerticalAlignment="Top" Foreground="#FFCC99FF" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace"/>
+        <Label Content="Label" Grid.Column="3" HorizontalAlignment="Left" Margin="548.5,803,0,0" VerticalAlignment="Top" Foreground="#FFCC99FF" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace"/>
+        <Label Content="Label" Grid.Column="3" HorizontalAlignment="Left" Margin="752.5,803,0,0" VerticalAlignment="Top" Foreground="#FFCC99FF" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace"/>
+        <Label Content="Label" Grid.Column="3" HorizontalAlignment="Left" Margin="983.5,803,0,0" VerticalAlignment="Top" Foreground="#FFCC99FF" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace"/>
+        <Label Content="Label" Grid.Column="3" HorizontalAlignment="Left" Margin="1213,803,0,0" VerticalAlignment="Top" Foreground="#FFCC99FF" FontSize="30" FontFamily="/YADUSTOCK;component/Fonts/#Manaspace"/>
+>>>>>>> Stashed changes
 
     </Grid>
 </Window>
