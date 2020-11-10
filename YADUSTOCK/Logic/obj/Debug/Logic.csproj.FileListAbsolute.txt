@@ -4,24 +4,9 @@ C:\Users\samlach22\Documents\GitHub\YADUSTOCK\Projet\YADUSTOCK\Logic\bin\Debug\L
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\Projet\YADUSTOCK\Logic\bin\Debug\Logic.pdb
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\Projet\YADUSTOCK\Logic\obj\Debug\Logic.dll
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\Projet\YADUSTOCK\Logic\obj\Debug\Logic.pdb
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\bin\Debug\Logic.dll
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\bin\Debug\Logic.pdb
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.csprojAssemblyReference.cache
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.dll
 C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.pdb
-=======
-=======
->>>>>>> Stashed changes
-C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\bin\Debug\Logic.dll
-C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\bin\Debug\Logic.pdb
-C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.csprojAssemblyReference.cache
-C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
-C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.dll
-C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.pdb
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
