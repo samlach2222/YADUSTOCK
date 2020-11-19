@@ -36,8 +36,10 @@ namespace YADUSTOCK
             ui_market = new UI_Market(memory.Market);
             ui_stock = new UI_Stock(memory.Stock);
             ui_accountant = new UI_Accountant(memory.Account);
+            UI_Introduction ui = new UI_Introduction();
+            ui.ShowDialog();
             InitializeComponent();
-            initialize();
+            //initialize();
         }
 
         public void initialize()
