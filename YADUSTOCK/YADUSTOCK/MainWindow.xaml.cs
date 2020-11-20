@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,11 @@ namespace YADUSTOCK
 
         public MainWindow()
         {
+            //Musique de fond
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
+            player.PlayLooping();
+            //Fin musique de fond
+
             memory = new Memory();
             ui_home = new UI_Home();
             ui_bord = new UI_Bord();
@@ -52,6 +58,16 @@ namespace YADUSTOCK
         private void NextTurn(object sender, RoutedEventArgs e)
         {
             // A CODER, ACTION DU BOUTON A AJOUTER
+        }
+
+        public void ButtonClickSound()
+        {
+            Uri uri = new Uri(@"../../Ressources/Sounds/button.wav", UriKind.Relative); // chemin vers l'audio
+            MediaPlayer player = new MediaPlayer(); // création du player 
+            player.Open(uri); // chargement de l'audio
+            player.Play(); // on joue l'audio
+
+            System.Threading.Thread.Sleep(236); // longueur de l'audio en ms
         }
     }
 }
