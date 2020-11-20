@@ -177,5 +177,10 @@
     <Resource Include="Ressources\Buttons\PencilIntro.png" />
     <Resource Include="Ressources\Buttons\PencilValidate.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ressources\Sounds\BG_Sound.wav" />
+    <Content Include="Ressources\Sounds\BG_SoundAlternative.wav" />
+    <Content Include="Ressources\Sounds\button.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
