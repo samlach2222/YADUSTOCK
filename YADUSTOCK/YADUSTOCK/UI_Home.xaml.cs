@@ -27,13 +27,20 @@ namespace YADUSTOCK
 
         private void Play(object sender, RoutedEventArgs e)
         {
-            // A CODER, ACTION DU BOUTON A AJOUTER
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+
+            UI_Introduction ui = new UI_Introduction();
+            ui.ShowDialog();
+            
+            window.Content = window.Ui_bord;
         }
 
         private void Quit(object sender, RoutedEventArgs e)
         {
-            // A CODER, ACTION DU BOUTON A AJOUTER
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            Environment.Exit(0);
         }
-
     }
 }

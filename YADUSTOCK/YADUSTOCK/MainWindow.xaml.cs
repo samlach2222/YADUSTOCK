@@ -29,6 +29,12 @@ namespace YADUSTOCK
         private UI_Stock ui_stock;
         private UI_Accountant ui_accountant;
 
+        public Memory Memory { get => memory; set => memory = value; }
+        public UI_Home Ui_home { get => ui_home; set => ui_home = value; }
+        public UI_Bord Ui_bord { get => ui_bord; set => ui_bord = value; }
+        public UI_Market Ui_market { get => ui_market; set => ui_market = value; }
+        public UI_Stock Ui_stock { get => ui_stock; set => ui_stock = value; }
+
         public MainWindow()
         {
             //Musique de fond
@@ -36,23 +42,21 @@ namespace YADUSTOCK
             player.PlayLooping();
             //Fin musique de fond
 
-            memory = new Memory();
-            ui_home = new UI_Home();
-            ui_bord = new UI_Bord();
-            ui_market = new UI_Market(memory.Market);
-            ui_stock = new UI_Stock(memory.Stock);
-            ui_accountant = new UI_Accountant(memory.Account);
-            UI_Introduction ui = new UI_Introduction();
-            ui.ShowDialog();
+            Memory = new Memory();
+            Ui_home = new UI_Home();
+            Ui_bord = new UI_Bord();
+            Ui_market = new UI_Market(Memory.Market);
+            Ui_stock = new UI_Stock(Memory.Stock);
+            ui_accountant = new UI_Accountant(Memory.Account);
             InitializeComponent();
-            //initialize();
+            initialize();
         }
 
         public void initialize()
         {
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
-            this.Content = ui_home;
+            this.Content = Ui_home;
         }
 
         private void NextTurn(object sender, RoutedEventArgs e)

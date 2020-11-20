@@ -9,6 +9,7 @@
       Title="UI_Bord">
 
     <Grid>
-        
+        <Button Content="DEBUG" HorizontalAlignment="Left" Margin="376,184,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Page>

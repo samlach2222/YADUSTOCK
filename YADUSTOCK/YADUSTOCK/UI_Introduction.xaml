@@ -5,29 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YADUSTOCK"
         mc:Ignorable="d"
-        Title="Welcome in our game" Height="1080" Width="1920" Background="White" ResizeMode="NoResize" WindowState="Maximized" WindowStyle="None" Icon="Ressources/Logo.png">
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}" 
+        Title="Welcome in our game" Background="White" ResizeMode="NoResize" WindowState="Maximized" WindowStyle="None" Icon="Ressources/Logo.png">
     <Grid Background="#FFCC99FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="34*"/>
-            <ColumnDefinition Width="66*"/>
-            <ColumnDefinition Width="1226*"/>
-            <ColumnDefinition Width="526*"/>
-            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle HorizontalAlignment="Center" Height="711" Margin="12,189,10,0" VerticalAlignment="Top" Width="1796" Fill="#FF323034" Grid.Column="2" Grid.ColumnSpan="3"/>
-        <Label Content="Welcome on our game !" Style="{StaticResource manaspace}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" FontSize="100" Width="1894" Foreground="#FF4B4253" Grid.ColumnSpan="6"/>
-        <Label Content="You are the manager of a company specialized in the sale of cards.&#xD;&#xA;&#xD;&#xA;You will have to make decisions at every tern, among these is the purchase from your&#xD;&#xA;supplier. This action is in the market.&#xD;&#xA;&#xD;&#xA;The status of your accounts is available in the account tab. In this tab you can find&#xD;&#xA;boosts to buy to improve your results&#xD;&#xA;&#xD;&#xA;To finish, the results of your lasty roud are available on your dashboard. Just like&#xD;&#xA;the decisions of the current round.&#xD;&#xA;&#xD;&#xA;When you have finished making your decisions, press the &quot;End turn&quot; button on the&#xD;&#xA;dashboard." HorizontalAlignment="Left" Margin="42,213,0,0" VerticalAlignment="Top" Height="443" Width="1744" FontSize="30" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Style="{StaticResource manaspace}" Foreground="#FFCC99FF" Grid.Column="2" Grid.ColumnSpan="3"/>
-        <Image HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="342" Grid.Column="2" Margin="48,661,0,0" Source="Ressources/Buttons/ButtonHomeIntro.png" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="244" VerticalAlignment="Top" Width="357" Grid.Column="3" Margin="281,656,0,0" Source="Ressources/Buttons/ButtonStockIntro.png"/>
-        <Image HorizontalAlignment="Left" Height="278" VerticalAlignment="Top" Width="395" Grid.Column="3" Margin="550,636,0,0" Source="Ressources/Buttons/ButtonMarketIntro.png"/>
-        <Image HorizontalAlignment="Left" Height="272" VerticalAlignment="Top" Width="378" Grid.Column="3" Margin="869,661,0,0" Source="Ressources/Buttons/ButtonAccountIntro.png" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="291" VerticalAlignment="Top" Width="423" Grid.Column="3" Margin="1172,656,0,0" Source="Ressources/Buttons/ButtonExitIntro.png" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="248" VerticalAlignment="Top" Width="361" Grid.Column="4" Margin="214,666,0,0" Source="Ressources/Buttons/PencilIntro.png" Grid.ColumnSpan="2"/>
-        <Button Content="Button" Style="{DynamicResource YadustockButton}" Grid.Column="3" HorizontalAlignment="Center" Margin="569,911,63,0" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Accept" >
-            <Button.Background>
-                <ImageBrush ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+        <Rectangle HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="40 0 40 0" Fill="#FF323034" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="2"/>
+        <Viewbox HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center">
+            <TextBlock Margin="20 0 20 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Welcome on our game !</TextBlock>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center">
+            <Label Content="You are the manager of a company specialized in the sale of cards.&#xD;&#xA;&#xD;&#xA;You will have to make decisions at every tern, among these is the purchase from your&#xD;&#xA;supplier. This action is in the market.&#xD;&#xA;&#xD;&#xA;The status of your accounts is available in the account tab. In this tab you can find&#xD;&#xA;boosts to buy to improve your results&#xD;&#xA;&#xD;&#xA;To finish, the results of your lasty roud are available on your dashboard. Just like&#xD;&#xA;the decisions of the current round.&#xD;&#xA;&#xD;&#xA;When you have finished making your decisions, press the &quot;End turn&quot; button on the&#xD;&#xA;dashboard." VerticalAlignment="Top" Margin="20 0 20 0" HorizontalAlignment="Center" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FFD5C6E4"/>
+        </Viewbox>
+        <Image HorizontalAlignment="center" VerticalAlignment="center" Source="Ressources/Buttons/ButtonHomeIntro.png" Grid.Row="2" Grid.Column="0" Margin="30 0 0 30"/>
+        <Image HorizontalAlignment="center" VerticalAlignment="center" Source="Ressources/Buttons/ButtonStockIntro.png" Grid.Row="2" Grid.Column="1" Margin="0 0 0 30"/>
+        <Image HorizontalAlignment="center" VerticalAlignment="center" Source="Ressources/Buttons/ButtonMarketIntro.png" Grid.Row="2" Grid.Column="2" Margin="0 0 0 30"/>
+        <Image HorizontalAlignment="center" VerticalAlignment="center" Source="Ressources/Buttons/ButtonAccountIntro.png" Grid.Row="2" Grid.Column="3" Margin="0 0 0 30"/>
+        <Image HorizontalAlignment="center" VerticalAlignment="center" Source="Ressources/Buttons/ButtonExitIntro.png" Grid.Row="2" Grid.Column="4" Margin="0 0 0 30"/>
+        <Image HorizontalAlignment="center" VerticalAlignment="center" Source="Ressources/Buttons/PencilIntro.png" Grid.Row="2" Grid.Column="5" Margin="0 0 0 30"/>
+
+        <Viewbox HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center">
+            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Accept">
+                <Button.Background>
+                    <ImageBrush ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+
     </Grid>
 </Window>
