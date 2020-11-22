@@ -34,6 +34,7 @@ namespace YADUSTOCK
         public UI_Bord Ui_bord { get => ui_bord; set => ui_bord = value; }
         public UI_Market Ui_market { get => ui_market; set => ui_market = value; }
         public UI_Stock Ui_stock { get => ui_stock; set => ui_stock = value; }
+        public UI_Accountant Ui_accountant { get => ui_accountant; set => ui_accountant = value; }
 
         public MainWindow()
         {
