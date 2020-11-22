@@ -26,8 +26,43 @@ namespace YADUSTOCK
 
         public UI_Accountant(Account a)
         {
-            // A CODER
+            this.a = a;
             InitializeComponent();
+        }
+
+        private void GoStock(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_stock;
+        }
+
+        private void GoMarket(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_market;
+        }
+
+        private void GoAccount(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_accountant;
+        }
+
+        private void GoHome(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_home;
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            Environment.Exit(0);
         }
     }
 }
