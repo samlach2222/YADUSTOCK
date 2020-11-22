@@ -33,7 +33,7 @@ namespace YADUSTOCK
             UI_Introduction ui = new UI_Introduction();
             ui.ShowDialog();
             
-            window.Content = window.Ui_bord;
+            window.Content = window.Ui_market;
         }
 
         private void Quit(object sender, RoutedEventArgs e)
