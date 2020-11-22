@@ -28,6 +28,8 @@ namespace YADUSTOCK
         {
             // A CODER
             InitializeComponent();
+            ListBox stockList = new ListBox();
+            stockList.Items.Add("GeeksForGeeks");
         }
 
         private void SetSalePrice(object sender, RoutedEventArgs e, double price)
@@ -35,5 +37,39 @@ namespace YADUSTOCK
             // A CODER, ACTION DU BOUTON A AJOUTER
         }
 
+        private void GoHome(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_bord;
+        }
+
+        private void GoStock(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_stock;
+        }
+
+        private void GoMarket(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_market;
+        }
+
+        private void GoAccount(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_accountant;
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            Environment.Exit(0);
+        }
     }
 }
