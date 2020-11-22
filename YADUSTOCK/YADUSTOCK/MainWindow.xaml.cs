@@ -74,5 +74,33 @@ namespace YADUSTOCK
 
             System.Threading.Thread.Sleep(236); // longueur de l'audio en ms
         }
+
+        private void GoStock(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_stock;
+        }
+
+        private void GoMarket(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_market;
+        }
+
+        private void GoAccount(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            window.Content = window.Ui_accountant;
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            Environment.Exit(0);
+        }
     }
 }

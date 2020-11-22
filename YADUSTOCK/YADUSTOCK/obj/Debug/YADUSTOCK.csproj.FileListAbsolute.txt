@@ -119,3 +119,6 @@ D:\Documents\Github\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.csproj.Cor
 D:\Documents\Github\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.csproj.CopyComplete
 D:\Documents\Github\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.exe
 D:\Documents\Github\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK.pdb
+C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\UI_Introduction.g.cs
+C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\YADUSTOCK_Content.g.cs
+C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\obj\Debug\UI_Introduction.baml
