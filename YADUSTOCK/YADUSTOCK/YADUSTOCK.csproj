@@ -178,6 +178,13 @@
     <Resource Include="Ressources\Buttons\PencilValidate.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="ButtonValidate.png" />
+    <Resource Include="ButtonHome.png" />
+    <Resource Include="ButtonStock.png" />
+    <Resource Include="ButtonMarket.png" />
+    <Resource Include="ButtonAccount.png" />
+    <Resource Include="ButtonExit.png" />
+    <Resource Include="EuroSigle.png" />
     <Content Include="Ressources\Sounds\BG_Sound.wav" />
     <Content Include="Ressources\Sounds\BG_SoundAlternative.wav" />
     <Content Include="Ressources\Sounds\button.wav" />

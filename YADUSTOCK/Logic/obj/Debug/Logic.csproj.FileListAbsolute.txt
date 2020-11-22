@@ -16,3 +16,9 @@ C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.cs
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.dll
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.pdb
+D:\Documents\Github\YADUSTOCK\YADUSTOCK\Logic\bin\Debug\Logic.dll
+D:\Documents\Github\YADUSTOCK\YADUSTOCK\Logic\bin\Debug\Logic.pdb
+D:\Documents\Github\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.csprojAssemblyReference.cache
+D:\Documents\Github\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+D:\Documents\Github\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.dll
+D:\Documents\Github\YADUSTOCK\YADUSTOCK\Logic\obj\Debug\Logic.pdb
