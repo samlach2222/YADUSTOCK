@@ -23,9 +23,9 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="40 0 40 0" Fill="#FF323034" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="2"/>
+        <Rectangle HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="40 0 40 0" Fill="#2F2F2F" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="2"/>
         <Viewbox HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center">
-            <TextBlock Margin="20 0 20 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Welcome on our game !</TextBlock>
+            <TextBlock Margin="20 0 20 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#2F2F2F">Welcome on our game !</TextBlock>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center">
             <Label Content="You are the manager of a company specialized in the sale of cards.&#xD;&#xA;&#xD;&#xA;You will have to make decisions at every tern, among these is the purchase from your&#xD;&#xA;supplier. This action is in the market.&#xD;&#xA;&#xD;&#xA;The status of your accounts is available in the account tab. In this tab you can find&#xD;&#xA;boosts to buy to improve your results&#xD;&#xA;&#xD;&#xA;To finish, the results of your lasty roud are available on your dashboard. Just like&#xD;&#xA;the decisions of the current round.&#xD;&#xA;&#xD;&#xA;When you have finished making your decisions, press the &quot;End turn&quot; button on the&#xD;&#xA;dashboard." VerticalAlignment="Top" Margin="20 0 20 0" HorizontalAlignment="Center" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FFD5C6E4"/>
