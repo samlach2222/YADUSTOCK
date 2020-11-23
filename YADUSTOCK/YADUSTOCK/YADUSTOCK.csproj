@@ -185,6 +185,7 @@
     <Resource Include="ButtonAccount.png" />
     <Resource Include="ButtonExit.png" />
     <Resource Include="EuroSigle.png" />
+    <Resource Include="ButtonEndTurn.png" />
     <Content Include="Ressources\Sounds\BG_Sound.wav" />
     <Content Include="Ressources\Sounds\BG_SoundAlternative.wav" />
     <Content Include="Ressources\Sounds\button.wav" />
