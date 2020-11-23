@@ -3520,20 +3520,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yelka\\.nuget\\packages\\": {}
+    "C:\\Users\\samlach22\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+      "projectUniqueName": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
       "projectName": "TestLogic",
-      "projectPath": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
-      "packagesPath": "C:\\Users\\yelka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\obj\\",
+      "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+      "packagesPath": "C:\\Users\\samlach22\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\yelka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\samlach22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -3544,9 +3549,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
+            "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
             }
           }
         }
@@ -3559,6 +3565,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -3592,7 +3599,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

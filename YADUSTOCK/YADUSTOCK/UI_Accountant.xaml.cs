@@ -55,7 +55,7 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            window.Content = window.Ui_home;
+            window.Content = window.Ui_bord;
         }
 
         private void Exit(object sender, RoutedEventArgs e)
