@@ -63,16 +63,16 @@
         <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
             <TextBlock Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Round x" Foreground="#FF2F2F2F"/>
         </Viewbox>
-        <Button x:Name="EndTurnButton" Style="{DynamicResource YadustockButton}" Content="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="EndTurn" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3" Width="598" Height="159">
-                <Button.Background>
-                    <ImageBrush ImageSource="ButtonEndTurn.png" Stretch="Uniform"/>
-                </Button.Background>
-            </Button>
-            <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="3">
-                <TextBlock Margin="120,2,120,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Welcome on the round X" Foreground="#FF2F2F2F" HorizontalAlignment="Left" VerticalAlignment="Center" />
-            </Viewbox>
-        <ListView x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="3" Margin="20 20 20 20"/>
-        <ListView x:Name="LB_DecisionsCurrentTurn" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Margin="20 20 20 20"/>
+        <Button x:Name="EndTurnButton" Style="{DynamicResource YadustockButton}" Content="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="EndTurn" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3" Margin="9.8,10.4,10.4,10.4">
+            <Button.Background>
+                <ImageBrush ImageSource="ButtonEndTurn.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="2" Height="58" Margin="1,67.8,0.4,10.2" Grid.RowSpan="2">
+            <TextBlock Margin="120,2,120,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Welcome on the round X" Foreground="#FF2F2F2F" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        </Viewbox>
+        <ListView x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,9.8,10.2,10.4"/>
+        <ListView x:Name="LB_DecisionsCurrentTurn"  VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Margin="9.8,9.8,10.4,9.6"/>
 
 
     </Grid>
