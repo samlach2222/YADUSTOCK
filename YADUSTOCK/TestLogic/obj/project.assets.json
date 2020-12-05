@@ -3520,19 +3520,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\drago\\.nuget\\packages\\": {}
+    "C:\\Users\\yelka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\drago\\Desktop\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+      "projectUniqueName": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
       "projectName": "TestLogic",
-      "projectPath": "C:\\Users\\drago\\Desktop\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
-      "packagesPath": "C:\\Users\\drago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\drago\\Desktop\\YADUSTOCK\\YADUSTOCK\\TestLogic\\obj\\",
+      "projectPath": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+      "packagesPath": "C:\\Users\\yelka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\drago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yelka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3544,9 +3544,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\drago\\Desktop\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\drago\\Desktop\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
+            "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\yelka\\OneDrive\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
             }
           }
         }
@@ -3559,6 +3560,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -3592,7 +3594,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

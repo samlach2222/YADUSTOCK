@@ -11,7 +11,7 @@ namespace Logic
         private readonly TypeBoost name;
         private readonly double bonus;
         private int timeEnd;
-        private readonly Boolean etat;
+        private Boolean etat;
         private readonly double price;
 
         public Boost(TypeBoost n, double b, double p)
@@ -23,7 +23,7 @@ namespace Logic
         public TypeBoost Name => name;
         public double Bonus => bonus;
         public int TimeEnd { get => timeEnd; set => timeEnd = value; }
-        public bool Etat => etat;
+        public bool Etat { get => etat; set => etat = value; }
         public double Price => price;
 
         public Boost[] CreateListBoost()

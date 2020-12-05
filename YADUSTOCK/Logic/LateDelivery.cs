@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class LateDelivery : Market
+    public class LateDelivery
     {
         private TypeProduct product;
         private int quantity;
@@ -14,7 +14,7 @@ namespace Logic
 
         public LateDelivery(TypeProduct product, int quantity, int tAD)
         {
-            // A CODER
+            this.product = product;
             this.quantity = 0;
             this.turnAfterDelivery = 0;
         }

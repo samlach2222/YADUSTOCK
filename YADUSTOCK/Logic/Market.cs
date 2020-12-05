@@ -8,30 +8,46 @@ namespace Logic
 {
     public class Market
     {
-        private readonly LateDelivery[] lateDelivery;
+        private readonly List<LateDelivery>lateDelivery;
 
-        public LateDelivery[] LateDelivery => lateDelivery;
+        public List<LateDelivery> LateDelivery => lateDelivery;
 
         public Market()
         {
-            // A CODER
+            lateDelivery = new List<LateDelivery>();
         }
 
         public Product Purchase(Product p, int quantity)
         {
-            // A CODER
-            return null;
+            Random aleatoire = new Random();
+            int test = aleatoire.Next(1,4);
+            if (test == 1)
+            {
+                LateDelivery late = new LateDelivery(p.Name, quantity, aleatoire.Next(2, 5));
+                this.lateDelivery.Add(late);
+            }
+            else
+            {
+                p.Quantity = p.Quantity + quantity;
+            }
+            return p;
         }
 
-        public void PurchaseBoost(Boost b)
+        public Boost PurchaseBoost(Boost b)
         {
-            // A CODER
+            b.Etat = true;
+            return b;
         }
 
         public Product IsDelivery(Product p)
         {
-            // A CODER
-            return null;
+            foreach (LateDelivery late in lateDelivery){
+                if ((p.Name == late.Product) && (late.TurnAfterDelivery == 0));
+                {
+                    p.Quantity = late.Quantity;
+                }
+            }
+            return p;
         }
     }
 }
