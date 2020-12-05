@@ -25,7 +25,7 @@ namespace YADUSTOCK
 
         public UI_Market(Market m)
         {
-            // A CODER
+            this.m = m;
             InitializeComponent();
         }
 
@@ -33,7 +33,7 @@ namespace YADUSTOCK
 
         private void Purchase(object sender, RoutedEventArgs e)
         {
-            // A CODER, ACTION DU BOUTON A AJOUTER
+            
         }
 
         private void GoHome(object sender, RoutedEventArgs e)
