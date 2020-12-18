@@ -8,6 +8,6 @@ namespace Logic
 {
     public interface CreateProduct
     {
-        Product[] CreateListProduct();
+        List<Product> CreateListProduct();
     }
 }
