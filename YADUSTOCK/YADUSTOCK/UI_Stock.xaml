@@ -53,8 +53,34 @@
         <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="261.667,0,302,0">
             <TextBlock Margin="20,2,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="STOCK" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Viewbox>
-        <ListView x:Name="LB_Stock" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6">
+        <ListView x:Name="LB_Stock" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6" Background="#FF2F2F2F">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Product" Width="500">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Product}" Foreground="Blue"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
 
+                    <GridViewColumn Header="Quantity" Width="500">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Quantity}" Foreground="Blue"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Price" Width="500">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Price}" Foreground="Blue"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
         </ListView>
         <Button x:Name="HomeButton_Copy" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="0" Width="598" Height="159" Click="GoHome" Grid.Row="4" Grid.ColumnSpan="6">
             <Button.Background>
