@@ -12,11 +12,11 @@ namespace TestLogic
         [Fact]
         public void TestCreate()
         {
-            Product p = new Product(TypeProduct.POKEMON, 2, 6);
-            Assert.Equal(TypeProduct.POKEMON, p.Name);
-            Assert.Equal(2, p.AtBuyPrice);
-            Assert.Equal(6, p.Quantity);
-            Assert.Equal(0, p.ResalePrice);
+            Product product = new Product(TypeProduct.POKEMON, 2, 6);
+            Assert.Equal(TypeProduct.POKEMON, product.Name);
+            Assert.Equal(2, product.AtBuyPrice);
+            Assert.Equal(6, product.Quantity);
+            Assert.Equal(0, product.ResalePrice);
         }
 
         [Fact]
