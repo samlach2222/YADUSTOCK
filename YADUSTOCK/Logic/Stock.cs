@@ -8,18 +8,24 @@ namespace Logic
 {
     public class Stock
     {
-        private readonly Product[] stock;
+        private Product[] stock;
 
         public Stock(Product[] p)
         {
-            // A CODER
+            this.stock = p;
         }
 
-        public Product[] Stock1 => stock;
+        public Product[] Stock1
+        {
+            get
+            {
+                return stock;
+            }
+        }
 
         public void ModifyStock(Product[] stock)
         {
-            // A CODER
+            this.stock = stock;
         }
     }
 }
