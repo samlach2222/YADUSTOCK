@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -186,6 +189,7 @@
     <Resource Include="ButtonExit.png" />
     <Resource Include="EuroSigle.png" />
     <Resource Include="ButtonEndTurn.png" />
+    <Resource Include="Logo.ico" />
     <Content Include="Ressources\Sounds\BG_Sound.wav" />
     <Content Include="Ressources\Sounds\BG_SoundAlternative.wav" />
     <Content Include="Ressources\Sounds\button.wav" />
