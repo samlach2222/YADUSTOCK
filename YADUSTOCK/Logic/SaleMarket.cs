@@ -8,22 +8,14 @@ namespace Logic
 {
     public class SaleMarket
     {
-        private double ownWin;
+        private readonly int ownWin;
 
-        public double OwnWin { get => ownWin; set=> ownWin = value; }
+        public int OwnWin => ownWin;
 
-        public Product BenefitCalcul(Product p, Boost b)
+        public Product[] BenefitCalcul(Product p, Boost[] b)
         {
-            double demande = p.Elasticité * (p.LastPrice - p.ResalePrice);
-            double vente =  p.Quantity * demande;
-
-                if(b.Etat == true)
-                {
-                vente = vente * (float)b.Bonus;  
-                }
-            ownWin = vente * p.ResalePrice;
-            p.Quantity = p.Quantity - (float)vente;
-            return p;
+            // A CODER
+            return null;
         }
     }
 }

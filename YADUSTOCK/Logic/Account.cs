@@ -9,15 +9,14 @@ namespace Logic
     public class Account
     {
         private double own;
-        private List<Boost> boostList;
+        private Boost[] boostList;
 
-        public Account(double o, List<Boost> b)
+        public Account(double o, Boost[] b)
         {
-            own = o;
-            boostList = b;
+            // A CODER
         }
 
         public double Own { get => own; set => own = value; }
-        public List<Boost> BoostList { get => boostList; set => boostList = value; }
+        public Boost[] BoostList { get => boostList; set => boostList = value; }
     }
 }

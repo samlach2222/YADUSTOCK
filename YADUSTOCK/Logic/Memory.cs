@@ -10,111 +10,61 @@ namespace Logic
 {
     public class Memory : CreateBoost, CreateProduct
     {
-        private List<Product> buyList;
+        private Product[] buyList;
         private int nbTour;
-        private List<Boost> buyBoostList;
+        private Boost[] buyBoostList;
+        private String namePlayer;
 
-        private Market market = new Market();
+        private Market market;
         private Stock stock;
         private Account account;
-        private SaleMarket salemarket = new SaleMarket();
-        public Market Market { get => market; }
+        private SaleMarket salemarket;
+
+        public string NamePlayer { get => namePlayer; set => namePlayer = value; }
+        public Market Market { get => market;}
         public Account Account { get => account; }
         public Stock Stock { get => stock; }
 
-        public Memory()
+        public Memory() 
         {
             this.nbTour = 1;
-            Initialize();
+            // A CODER
         }
 
         public void Purchase(TypeProduct p, int quantity)
         {
-           for(int i = 0; i <= buyList.Count(); i++)
-            {
-                if(p == buyList[i].Name)
-                {
-                    buyList[i] = market.Purchase(buyList[i], quantity);
-                    salemarket.OwnWin = salemarket.OwnWin - buyList[i].AtBuyPrice * quantity;
-                }
-            }
-
-           
+            // A CODER
         }
 
         public void PurchaceBoost(TypeBoost b)
         {
-            for (int i = 0; i <= buyBoostList.Count(); i++)
-            {
-                if (b == buyBoostList[i].Name)
-                {
-                    buyBoostList[i] = market.PurchaseBoost(buyBoostList[i]);
-                }
-            }
+            // A CODER
         }
 
         public void NextTurn()
-        {          
-            for(int i = 0; i <= buyList.Count; i++)
-            {
-                foreach (Boost r in buyBoostList)
-                {
-                    if (r.Name == TypeBoost.PUB)
-                    {
-                        salemarket.BenefitCalcul(buyList[i], r);
-                    }
-
-                }
-                buyList[i] = market.IsDelivery(buyList[i]);
-            }
-
-            stock.ModifyStock(buyList);
-            foreach (Boost r in buyBoostList)
-            {
-                if(r.TimeEnd == 0)
-                {
-                    r.Etat = false;
-                }
-                else
-                {
-                    r.TimeEnd = r.TimeEnd - 1;
-                }
-            }
-
-            account.Own += salemarket.OwnWin;
-            nbTour += 1;
+        {
+            // A CODER
         }
 
         public void Initialize()
         {
-            buyList = CreateListProduct();
-            buyBoostList = CreateListBoost();
-            stock = new Stock(buyList);
-            account = new Account(1921, buyBoostList);
+            // A CODER
         }
 
         public void ResetList()
         {
-            this.buyList = null;
+            // A CODER
         }
 
-        public List<Boost> CreateListBoost()
+        public Boost[] CreateListBoost()
         {
-            List<Boost> p = new List<Boost>();
-            p.Add(new Boost(TypeBoost.NEGOCIATION, 0.1, 10000));
-            p.Add(new Boost(TypeBoost.PUB, 0.1, 20000));
-            return p;
+            // A CODER
+            throw new NotImplementedException();
         }
 
         public List<Product> CreateListProduct()
         {
-            List<Product> p = new List<Product>();
-            p.Add(new Product(TypeProduct.TAROT, 10, 1000));
-            p.Add(new Product(TypeProduct.CARTE, 10, 2000));
-            p.Add(new Product(TypeProduct.MAGIC, 10, 500));
-            p.Add(new Product(TypeProduct.POKEMON, 10, 100));
-            p.Add(new Product(TypeProduct.YUGIOH, 10, 50));
-            return p;
+            throw new NotImplementedException();
         }
     }
 }

@@ -8,14 +8,14 @@ namespace Logic
 {
     public class Stock
     {
-        private List<Product> stock;
+        private Product[] stock;
 
-        public Stock(List<Product> p)
+        public Stock(Product[] p)
         {
             this.stock = p;
         }
 
-        public List<Product> getStock
+        public Product[] Stock1
         {
             get
             {
@@ -23,10 +23,9 @@ namespace Logic
             }
         }
 
-        public void ModifyStock(List<Product> stock)
+        public void ModifyStock(Product[] stock)
         {
             this.stock = stock;
         }
     }
-
 }
