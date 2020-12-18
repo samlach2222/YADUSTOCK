@@ -1,5 +1,0 @@
-C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\bin\Release\Logic.dll
-C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\bin\Release\Logic.pdb
-C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Release\Logic.csproj.CoreCompileInputs.cache
-C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Release\Logic.dll
-C:\Users\yelka\OneDrive\Documents\GitHub\YADUSTOCK\YADUSTOCK\Logic\obj\Release\Logic.pdb

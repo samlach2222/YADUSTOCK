@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLogic", "TestLogic\TestLogic.csproj", "{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{4E849A3F-21A9-4FCD-808F-642A26F0133D}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{4299BE63-7D57-4D3C-BA22-E793364A7BE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,9 +28,9 @@ Global
 		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E849A3F-21A9-4FCD-808F-642A26F0133D}.Debug|Any CPU.ActiveCfg = Debug
-		{4E849A3F-21A9-4FCD-808F-642A26F0133D}.Release|Any CPU.ActiveCfg = Release
-		{4E849A3F-21A9-4FCD-808F-642A26F0133D}.Release|Any CPU.Build.0 = Release
+		{81BC7B69-B199-4604-8B8D-5CAFDFF71D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4299BE63-7D57-4D3C-BA22-E793364A7BE8}.Debug|Any CPU.ActiveCfg = Debug
+		{4299BE63-7D57-4D3C-BA22-E793364A7BE8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
