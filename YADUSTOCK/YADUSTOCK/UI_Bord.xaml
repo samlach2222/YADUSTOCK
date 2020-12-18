@@ -71,9 +71,48 @@
         <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="2" Height="58" Margin="1,67.8,0.4,10.2" Grid.RowSpan="2">
             <TextBlock Margin="120,2,120,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Welcome on the round X" Foreground="#FF2F2F2F" HorizontalAlignment="Left" VerticalAlignment="Center" />
         </Viewbox>
-        <ListView x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,9.8,10.2,10.4"/>
-        <ListView x:Name="LB_DecisionsCurrentTurn"  VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Margin="9.8,9.8,10.4,9.6"/>
+        <ListView x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,9.8,10.2,10.4" Background="#FF2F2F2F">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="Card Game" Width="400">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Product}" Foreground="Blue"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
 
+                <GridViewColumn Header="Quantity" Width="400">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Quantity}" Foreground="Blue"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>    
+        </ListView>
 
+        <ListView x:Name="LB_DecisionsCurrentTurn"  VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Margin="9.8,9.8,10.4,9.6" Background="#FF2F2F2F">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Card Game" Width="400">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Product}" Foreground="Blue"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Quantity" Width="400">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Quantity}" Foreground="Blue"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>
