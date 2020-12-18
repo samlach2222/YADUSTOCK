@@ -8,6 +8,6 @@ namespace Logic
 {
     public interface CreateBoost
     {
-        List<Boost> CreateListBoost();
+        Boost[] CreateListBoost();
     }
 }
