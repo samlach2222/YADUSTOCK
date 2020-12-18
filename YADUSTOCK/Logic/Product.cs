@@ -11,23 +11,26 @@ namespace Logic
         private readonly TypeProduct name;
         private readonly double atBuyPrice;
         private double resalePrice;
-        private int quantity;
+        private float quantity;
 
-        public Product(TypeProduct n, double price, int quantity)
+        public Product(TypeProduct n, double price, float quantity)
         {
             this.resalePrice = 0;
-            // A CODER
+            this.name = n;
+            this.atBuyPrice = price;
+            this.quantity = quantity;
         }
 
         public TypeProduct Name => name;
         public double AtBuyPrice => atBuyPrice;
         public double ResalePrice { get => resalePrice; set => resalePrice = value; }
-        public int Quantity { get => quantity; set => quantity = value; }
+        public float Quantity { get => quantity; set => quantity = value; }
 
-        public Product[] CreateListProduct()
+        public List<Product> CreateListProduct()
         {
-            // A CODER
-            throw new NotImplementedException();
+            List<Product> list = new List<Product>();
+            list.Add(this);
+            return list;
         }
     }
 }

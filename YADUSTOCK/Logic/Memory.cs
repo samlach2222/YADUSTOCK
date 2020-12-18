@@ -62,9 +62,8 @@ namespace Logic
             throw new NotImplementedException();
         }
 
-        public Product[] CreateListProduct()
+        public List<Product> CreateListProduct()
         {
-            // A CODER
             throw new NotImplementedException();
         }
     }

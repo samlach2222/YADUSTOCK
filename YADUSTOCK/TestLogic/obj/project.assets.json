@@ -3520,23 +3520,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samlach22\\.nuget\\packages\\": {},
+    "C:\\Users\\mario\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+      "projectUniqueName": "C:\\Users\\mario\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
       "projectName": "TestLogic",
-      "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
-      "packagesPath": "C:\\Users\\samlach22\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\obj\\",
+      "projectPath": "C:\\Users\\mario\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\TestLogic.csproj",
+      "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mario\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\TestLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\samlach22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3551,8 +3551,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\samlach22\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
+            "C:\\Users\\mario\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\mario\\Documents\\GitHub\\YADUSTOCK\\YADUSTOCK\\Logic\\Logic.csproj"
             }
           }
         }
@@ -3599,7 +3599,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
