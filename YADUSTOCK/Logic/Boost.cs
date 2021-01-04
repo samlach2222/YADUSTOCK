@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class Boost : CreateBoost
+    public class Boost
     {
         private readonly TypeBoost name;
         private readonly double bonus;
@@ -14,10 +14,13 @@ namespace Logic
         private Boolean etat;
         private readonly double price;
 
+
         public Boost(TypeBoost n, double b, double p)
         {
             this.etat = false;
-            // A CODER
+            this.name = n;
+            this.bonus = b;
+            this.price = p;
         }
 
         public TypeBoost Name => name;
@@ -25,11 +28,5 @@ namespace Logic
         public int TimeEnd { get => timeEnd; set => timeEnd = value; }
         public bool Etat { get => etat; set => etat = value; }
         public double Price => price;
-
-        public Boost[] CreateListBoost()
-        {
-            // A CODER
-            throw new NotImplementedException();
-        }
     }
 }
