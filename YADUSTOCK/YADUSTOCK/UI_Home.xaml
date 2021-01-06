@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:YADUSTOCK"
       mc:Ignorable="d" 
       d:DesignHeight="720"
-      Title="UI_Home" Width="1566.4">
+      d:DesignWidth="1280"
+      Title="UI_Home" Width="1280">
 
     <Grid>
         <Grid.RowDefinitions>

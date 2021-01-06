@@ -27,6 +27,8 @@ namespace YADUSTOCK
         {
             this.m = m;
             InitializeComponent();
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
         }
 
         public Market M { get => m; set => m = value; }
