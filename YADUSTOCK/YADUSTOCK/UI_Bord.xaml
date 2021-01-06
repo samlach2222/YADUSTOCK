@@ -72,10 +72,10 @@
         <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="2" Height="58" Margin="1,67.8,0.4,10.2" Grid.RowSpan="2">
             <TextBlock Margin="120,2,120,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Welcome on the round X" Foreground="#FF2F2F2F" HorizontalAlignment="Left" VerticalAlignment="Center" />
         </Viewbox>
-        <ListView x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,9.8,10.2,10.4" Background="#FF2F2F2F">
+        <ListView x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,40,10,10" Background="#FF2F2F2F" SizeChanged="ResizeColumns">
         <ListView.View>
             <GridView>
-                <GridViewColumn Header="Card Game" Width="400">
+                <GridViewColumn Header="Card Game" Width="300">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Product}" Foreground="Blue"/>
@@ -83,7 +83,7 @@
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
 
-                <GridViewColumn Header="Quantity" Width="400">
+                <GridViewColumn Header="Quantity" Width="300">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Quantity}" Foreground="Blue"/>
@@ -94,7 +94,7 @@
         </ListView.View>    
         </ListView>
 
-        <ListView x:Name="LB_DecisionsCurrentTurn"  VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Margin="9.8,9.8,10.4,9.6" Background="#FF2F2F2F">
+        <ListView x:Name="LB_DecisionsCurrentTurn"  VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,40,10,10" Background="#FF2F2F2F" SizeChanged="ResizeColumns">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Card Game" Width="400">
@@ -115,5 +115,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Viewbox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,5,10,0">
+            <TextBlock Margin="20,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Results of the last round" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="6" />
+        </Viewbox>
+        <Viewbox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="14,5,14,0">
+            <TextBlock Margin="20,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Decisions of this turn" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="6" />
+        </Viewbox>
     </Grid>
 </Page>

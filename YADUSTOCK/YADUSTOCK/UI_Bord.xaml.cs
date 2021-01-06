@@ -70,5 +70,18 @@ namespace YADUSTOCK
             window.NextTurn();
             */
         }
+
+        private void ResizeColumns(object sender, SizeChangedEventArgs e)  //Change la longueur des colonnes à 50% chacune
+        {
+            ListView listView = sender as ListView;
+            GridView gView = listView.View as GridView;
+
+            var workingWidth = listView.ActualWidth - SystemParameters.VerticalScrollBarWidth;
+            var col1 = 0.50;
+            var col2 = 0.50;
+
+            gView.Columns[0].Width = workingWidth * col1;
+            gView.Columns[1].Width = workingWidth * col2;
+        }
     }
 }
