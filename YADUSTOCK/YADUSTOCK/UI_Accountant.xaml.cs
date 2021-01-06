@@ -28,6 +28,8 @@ namespace YADUSTOCK
         {
             this.a = a;
             InitializeComponent();
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
         }
 
         private void GoStock(object sender, RoutedEventArgs e)

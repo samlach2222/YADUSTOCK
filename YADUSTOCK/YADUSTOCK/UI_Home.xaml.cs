@@ -23,6 +23,8 @@ namespace YADUSTOCK
         public UI_Home()
         {
             InitializeComponent();
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
         }
 
         private void Play(object sender, RoutedEventArgs e)
