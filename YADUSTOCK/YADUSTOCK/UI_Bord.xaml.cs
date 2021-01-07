@@ -64,11 +64,9 @@ namespace YADUSTOCK
 
         private void EndTurn(object sender, RoutedEventArgs e)
         {
-            // A CODER
-            /*
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.NextTurn();
-            */
+            
         }
 
         private void ResizeColumns(object sender, SizeChangedEventArgs e)  //Change la longueur des colonnes à 50% chacune

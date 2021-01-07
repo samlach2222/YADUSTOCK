@@ -43,7 +43,7 @@ namespace YADUSTOCK
             player.PlayLooping();
             //Fin musique de fond
 
-            Memory = new Memory();
+            memory = new Memory();
             Ui_home = new UI_Home();
             Ui_bord = new UI_Bord();
             Ui_market = new UI_Market(Memory.Market);
@@ -60,9 +60,10 @@ namespace YADUSTOCK
             this.Content = Ui_home;
         }
 
-        private void NextTurn(object sender, RoutedEventArgs e)
+        public void NextTurn()
         {
-            // A CODER, ACTION DU BOUTON A AJOUTER
+            memory.NextTurn();
+            this.Ui_accountant.reload();
         }
 
         public void ButtonClickSound()
@@ -75,32 +76,5 @@ namespace YADUSTOCK
             System.Threading.Thread.Sleep(236); // longueur de l'audio en ms
         }
 
-        private void GoStock(object sender, RoutedEventArgs e)
-        {
-            MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.ButtonClickSound();
-            window.Content = window.Ui_stock;
-        }
-
-        private void GoMarket(object sender, RoutedEventArgs e)
-        {
-            MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.ButtonClickSound();
-            window.Content = window.Ui_market;
-        }
-
-        private void GoAccount(object sender, RoutedEventArgs e)
-        {
-            MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.ButtonClickSound();
-            window.Content = window.Ui_accountant;
-        }
-
-        private void Exit(object sender, RoutedEventArgs e)
-        {
-            MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.ButtonClickSound();
-            Environment.Exit(0);
-        }
     }
 }

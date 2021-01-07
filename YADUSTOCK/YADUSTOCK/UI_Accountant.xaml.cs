@@ -30,6 +30,7 @@ namespace YADUSTOCK
             InitializeComponent();
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
             this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.reload();
         }
 
         private void GoStock(object sender, RoutedEventArgs e)
@@ -56,6 +57,10 @@ namespace YADUSTOCK
         private void GoHome(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
+            if (LB_Boost.SelectedItems is Boost b)
+            {
+                window.Memory.PurchaceBoost(b.Name);
+            }
             window.ButtonClickSound();
             window.Content = window.Ui_bord;
         }
@@ -66,5 +71,31 @@ namespace YADUSTOCK
             window.ButtonClickSound();
             Environment.Exit(0);
         }
+
+        public void reload()
+        {
+            MainWindow w = (MainWindow)Application.Current.MainWindow;
+            Memory Memory = w.Memory;
+            this.nbTour.Text = "Round : " + Memory.NbTour;
+            this.nbMoney.Text = ""+a.Own;
+            this.LV_Money.Items.Clear();
+            this.LV_Money.Items.Add("Money :" + a.Own);
+            this.LV_Money.Items.Add("Debt : ?");
+            foreach(Boost b in Memory.Account.BoostList)
+            {
+                this.LB_Boost.Items.Add(b.Name + "   " + b.Price + "  €");
+                
+            }
+
+            foreach (Boost b in Memory.Account.BoostList)
+            {
+                if (b.Etat == true)
+                {
+                    this.LB_OurBoost.Items.Add(b.Name);
+                }
+
+            }
+        }
+
     }
 }
