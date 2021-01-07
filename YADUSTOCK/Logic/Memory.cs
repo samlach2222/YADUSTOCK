@@ -21,11 +21,16 @@ namespace Logic
         public Market Market { get => market; }
         public Account Account { get => account; }
         public Stock Stock { get => stock; }
+        public int NbTour { get => nbTour;}
 
         public Memory()
         {
             this.nbTour = 1;
             Initialize();
+            this.buyList = this.CreateListProduct();
+            this.buyBoostList = this.CreateListBoost();
+            this.account = new Account(5000, buyBoostList);
+            this.stock = new Stock(this.buyList);
         }
 
         public void Purchase(TypeProduct p, int quantity)
@@ -55,7 +60,7 @@ namespace Logic
 
         public void NextTurn()
         {          
-            for(int i = 0; i <= buyList.Count; i++)
+            for(int i = 0; i < buyList.Count; i++)
             {
                 foreach (Boost r in buyBoostList)
                 {
