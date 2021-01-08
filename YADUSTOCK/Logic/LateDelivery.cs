@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace Logic
 {
+    [DataContract]
     public class LateDelivery
     {
-        private TypeProduct product;
-        private int quantity;
-        private int turnAfterDelivery;
+        [DataMember] private TypeProduct product;
+        [DataMember] private int quantity;
+        [DataMember] private int turnAfterDelivery;
 
         public LateDelivery(TypeProduct product, int quantity, int tAD)
         {

@@ -153,6 +153,10 @@
       <Project>{94832631-71e0-403b-b7c3-c08d8f0096d7}</Project>
       <Name>Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Storage\Storage.csproj">
+      <Project>{a2bf63f4-138a-478f-90e0-a9904b526102}</Project>
+      <Name>Storage</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace Logic
 {
+    [DataContract]
     public class Boost
     {
-        private readonly TypeBoost name;
-        private readonly double bonus;
-        private int timeEnd;
-        private Boolean etat;
-        private readonly double price;
+        [DataMember] private readonly TypeBoost name;
+        [DataMember] private readonly double bonus;
+        [DataMember] private int timeEnd;
+        [DataMember] private Boolean etat;
+        [DataMember] private readonly double price;
 
 
         public Boost(TypeBoost n, double b, double p)

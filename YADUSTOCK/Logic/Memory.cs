@@ -5,19 +5,21 @@ using System.Net.Http.Headers;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace Logic
 {
+    [DataContract]
     public class Memory : CreateBoost, CreateProduct
     {
-        private List<Product> buyList;
-        private int nbTour;
-        private List<Boost> buyBoostList;
+        [DataMember] private List<Product> buyList;
+        [DataMember] private int nbTour;
+        [DataMember] private List<Boost> buyBoostList;
 
-        private Market market = new Market();
-        private Stock stock;
-        private Account account;
-        private SaleMarket salemarket = new SaleMarket();
+        [DataMember] private Market market = new Market();
+        [DataMember] private Stock stock;
+        [DataMember] private Account account;
+        [DataMember] private SaleMarket salemarket = new SaleMarket();
         public Market Market { get => market; }
         public Account Account { get => account; }
         public Stock Stock { get => stock; }

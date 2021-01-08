@@ -73,6 +73,7 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
+            window.Save.Save(window.Memory);
             Environment.Exit(0);
         }
 
@@ -81,7 +82,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.NextTurn();  //La fenêtre est reload dans la fonction NextTurn de MainWindow
-            previousTempUpdate(window.Memory);
+            PreviousTempUpdate(window.Memory);
         }
 
         public void reload()
@@ -96,11 +97,11 @@ namespace YADUSTOCK
 
             if (previousRound + 1 == memory.NbTour)  //S'il n'y a pas eu de passage au round suivant
             {
-                previousTempUpdate(memory);
+                PreviousTempUpdate(memory);
             }
             else  //S'il s'agit du round suivant
             {
-                newRound(memory);
+                NewRound(memory);
             }
 
             //Results of the last round
@@ -191,7 +192,7 @@ namespace YADUSTOCK
 
         }
 
-        private void previousTempUpdate(Memory memory)
+        private void PreviousTempUpdate(Memory memory)
         {
             previousMoneyTemp = memory.Account.Own;
             previousBuyListTemp = new List<Product>(memory.BuyList);
@@ -199,7 +200,7 @@ namespace YADUSTOCK
             previousBoostsTemp = new List<Boost>(memory.Account.BoostList);
         }
 
-        private void newRound(Memory memory)
+        private void NewRound(Memory memory)
         {
             //Ajoute les données du round précédent aux variables "previous"
             previousRound++;
@@ -212,5 +213,7 @@ namespace YADUSTOCK
             currentProductsStored.Clear();
             currentProductsStored = new List<Product>(memory.Stock.Stock1);
         }
+
+        
     }
 }
