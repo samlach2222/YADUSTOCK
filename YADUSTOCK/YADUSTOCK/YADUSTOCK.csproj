@@ -64,6 +64,9 @@
     <Compile Include="UI_Bord.xaml.cs">
       <DependentUpon>UI_Bord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI_ClosingWarning.xaml.cs">
+      <DependentUpon>UI_ClosingWarning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI_Home.xaml.cs">
       <DependentUpon>UI_Home.xaml</DependentUpon>
     </Compile>
@@ -96,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI_Bord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI_ClosingWarning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,6 +197,7 @@
   <ItemGroup>
     <Resource Include="ButtonSave.png" />
     <Resource Include="ButtonLoad.png" />
+    <Resource Include="ButtonGoHome.png" />
     <Content Include="Ressources\Sounds\button2.wav" />
     <Resource Include="ButtonValidate.png" />
     <Resource Include="ButtonHome.png" />
