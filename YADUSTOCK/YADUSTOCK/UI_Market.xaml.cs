@@ -81,6 +81,12 @@ namespace YADUSTOCK
             this.nbTour.Text = "Round : " + Memory.NbTour;
             this.nbMoney.Text = "" + Memory.Account.Own;
             this.Stock.Items.Clear();
+            List<Product> market = Memory.CreateListProduct();
+
+            foreach (Product p in market)
+            {
+                this.Stock.Items.Add(p.Name + "   " + p.Quantity + "   " +  p.AtBuyPrice + "  €");
+            }
         }
     }
 }
