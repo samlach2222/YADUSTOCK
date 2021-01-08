@@ -9,21 +9,12 @@ YADUSTOCK
 none
 false
 DEBUG;TRACE
-<<<<<<< Updated upstream
 C:\Users\drago\Desktop\YADUSTOCK\YADUSTOCK\YADUSTOCK\App.xaml
 81936500828
 4-1184703769
 132074388000
 16-1196738804
 MainWindow.xaml;UI_Accountant.xaml;UI_Bord.xaml;UI_Home.xaml;UI_Introduction.xaml;UI_Market.xaml;UI_Parameters.xaml;UI_Stock.xaml;
-=======
-C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\App.xaml
-9-650579130
-4-1184703769
-141320625722
-14-1693375776
-MainWindow.xaml;UI_Accountant.xaml;UI_Bord.xaml;UI_ClosingWarning.xaml;UI_Home.xaml;UI_Introduction.xaml;UI_Market.xaml;UI_Parameters.xaml;UI_Stock.xaml;
->>>>>>> Stashed changes
 
 True
 
