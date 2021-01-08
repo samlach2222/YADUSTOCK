@@ -64,6 +64,7 @@ namespace YADUSTOCK
         {
             memory.NextTurn();
             this.Ui_accountant.reload();
+            this.ui_bord.reload();
         }
 
         public void ButtonClickSound()
