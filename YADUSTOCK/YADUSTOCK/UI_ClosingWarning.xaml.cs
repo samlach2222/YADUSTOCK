@@ -28,6 +28,7 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
+            window.Save.Save(window.Memory);  //Sauvegarde automatiquement en quittant
             Environment.Exit(0);
         }
 
