@@ -85,13 +85,16 @@ namespace YADUSTOCK
             System.Threading.Thread.Sleep(236); // longueur de l'audio en ms
         }
 
-        //Détecte une tentative de fermeture de la fenêtre
-        private void IsClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        //Détecte une tentative de fermeture de la fenêtre avec ALT+F4
+        private void EVT_KeyDown(object sender, KeyEventArgs e)
         {
-            e.Cancel = true;  //Annule la fermeture
+            if (e.Key == Key.System && e.SystemKey == Key.F4)
+            {
+                e.Handled = true;  //Bloque l'action native de ALT+F4
 
-            UI_ClosingWarning closingWarning = new UI_ClosingWarning();
-            closingWarning.ShowDialog();
+                UI_ClosingWarning closingWarning = new UI_ClosingWarning();
+                closingWarning.ShowDialog();
+            }
         }
     }
 }
