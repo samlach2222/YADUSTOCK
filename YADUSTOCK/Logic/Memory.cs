@@ -23,6 +23,7 @@ namespace Logic
         public Stock Stock { get => stock; }
         public int NbTour { get => nbTour;}
         public List<Product> BuyList { get => buyList; }
+        public List<Boost> BuyBoostList { get => buyBoostList; }
 
         public Memory()
         {
@@ -30,7 +31,7 @@ namespace Logic
             Initialize();
             this.buyList = this.CreateListProduct();
             this.buyBoostList = this.CreateListBoost();
-            this.account = new Account(5000, buyBoostList);
+            this.account = new Account(5000, this.CreateListBoost());
             this.stock = new Stock(this.buyList);
         }
 
