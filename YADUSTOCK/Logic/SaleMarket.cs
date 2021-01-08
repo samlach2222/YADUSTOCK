@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace Logic
 {
+    [DataContract]
     public class SaleMarket
     {
-        private double ownWin = 0;
+        [DataMember] private double ownWin = 0;
 
         public double OwnWin { get => ownWin; set=> ownWin = value; }
 

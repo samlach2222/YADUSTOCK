@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,7 +62,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
 
-            // TODO
+            window.Save.Save(window.Memory);
         }
 
         private void load(object sender, RoutedEventArgs e)
@@ -69,7 +70,12 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
 
-            //TODO
+            window.Memory = window.Save.Load();
+
+            Memory memory = window.Memory;
+            window.Ui_accountant.A = memory.Account;
+            window.Ui_market.M = memory.Market;
+            window.Ui_stock.S = memory.Stock;
         }
 
         private void validate(object sender, RoutedEventArgs e)
