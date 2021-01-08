@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\samlach22\Documents\GitHub\YADUSTOCK\YADUSTOCK\YADUSTOCK\App.xaml
-81936500828
+9-650579130
 4-1184703769
-132074388000
+141320625722
 14-1693375776
-MainWindow.xaml;UI_Accountant.xaml;UI_Bord.xaml;UI_Home.xaml;UI_Introduction.xaml;UI_Market.xaml;UI_Parameters.xaml;UI_Stock.xaml;
+MainWindow.xaml;UI_Accountant.xaml;UI_Bord.xaml;UI_ClosingWarning.xaml;UI_Home.xaml;UI_Introduction.xaml;UI_Market.xaml;UI_Parameters.xaml;UI_Stock.xaml;
 
-False
+True
 
