@@ -21,8 +21,11 @@ namespace YADUSTOCK
     public partial class UI_Bord : Page
     {
         private List<Product> previousProducts = new List<Product>();
+        private List<Boost> previousBoosts = new List<Boost>();
         private double previousMoney = 5000;
         private int previousRound = -1;
+        private List<Product> currentProducts = new List<Product>();
+        private List<Boost> currentBoosts = new List<Boost>();
 
         public UI_Bord()
         {
@@ -91,41 +94,99 @@ namespace YADUSTOCK
             this.LB_ResultsLastRound.Items.Clear();
             this.LB_DecisionsCurrentTurn.Items.Clear();
 
+            //Ajoute les données du début du round actuel aux variables "current"
+            if (previousRound + 2 < memory.NbTour)
+            {
+                //Pas besoin d'incrémenter previousRound car il est incrémenter pour les variables "previous"
 
-            //À COMPLETER
+                currentProducts.Clear();
+                foreach (Product p in memory.Stock.Stock1)
+                {
+                    currentProducts.Add(p);
+                }
+
+                currentBoosts.Clear();
+                foreach (Boost b in memory.Account.BoostList)
+                {
+                    currentBoosts.Add(b);
+                }
+            }
+
+            //Results of the last round
             this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (memory.Account.Own - previousMoney) + "€");
-            foreach (Product p in memory.Stock.getStock)
+            foreach (Product p in memory.Stock.Stock1)
             {
                 foreach (Product pp in previousProducts)
                 {
-                    if (p.Name == pp.Name  && p.Quantity != pp.Quantity)
+                    if (p.Name == pp.Name && p.Quantity != pp.Quantity)
                     {
                         this.LB_ResultsLastRound.Items.Add(p.Name + "  :  " + (p.Quantity - pp.Quantity));
                     }
                 }
-
+            }
+            foreach (Boost b in memory.Account.BoostList)
+            {
+                foreach (Boost pb in previousBoosts)
+                {
+                    if (b.Name == pb.Name && b.Etat != pb.Etat)
+                    {
+                        if (b.Etat == true)  //Si le boost a été acheté entre le round précédent et ce round
+                        {
+                            this.LB_ResultsLastRound.Items.Add(b.Name + " bought");
+                        } else  //Si le boost a expiré
+                        {
+                            this.LB_ResultsLastRound.Items.Add(b.Name + " expired");
+                        }
+                    }
+                }
             }
 
-            /*
-            foreach (Boost b in Memory.Account.BoostList)
+            //Decisions of the current turn
+            foreach (Product p in memory.Stock.Stock1)
             {
-                if (b.Etat == true)
+                foreach (Product cp in currentProducts)
                 {
-                    this.LB_OurBoost.Items.Add(b.Name);
+                    if (p.Name == cp.Name && p.Quantity != cp.Quantity)
+                    {
+                        this.LB_DecisionsCurrentTurn.Items.Add(p.Name + "  :  " + (p.Quantity - cp.Quantity));
+                    }
                 }
 
             }
-            */
+            foreach (Boost b in memory.Account.BoostList)
+            {
+                foreach (Boost cb in currentBoosts)
+                {
+                    if (b.Name == cb.Name && b.Etat != cb.Etat)
+                    {
+                        if (b.Etat == true)  //Si le boost a été acheté entre le round précédent et ce round
+                        {
+                            this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " is active");
+                        }
+                        else  //Si le boost a expiré
+                        {
+                            this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " expired");
+                        }
+                    }
+                }
+            }
 
+            //Ajoute les données du round précédent aux variables "previous"
             if (previousRound + 1 < memory.NbTour)
             {
                 previousRound++;
                 previousMoney = memory.Account.Own;
 
                 previousProducts.Clear();
-                foreach (Product p in memory.Stock.getStock)
+                foreach (Product p in memory.Stock.Stock1)
                 {
                     previousProducts.Add(p);
+                }
+
+                previousBoosts.Clear();
+                foreach (Boost b in memory.Account.BoostList)
+                {
+                    previousBoosts.Add(b);
                 }
             }
         }
