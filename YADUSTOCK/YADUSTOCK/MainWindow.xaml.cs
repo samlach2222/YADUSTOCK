@@ -85,5 +85,13 @@ namespace YADUSTOCK
             System.Threading.Thread.Sleep(236); // longueur de l'audio en ms
         }
 
+        //Détecte une tentative de fermeture de la fenêtre
+        private void IsClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;  //Annule la fermeture
+
+            UI_ClosingWarning closingWarning = new UI_ClosingWarning();
+            closingWarning.ShowDialog();
+        }
     }
 }
