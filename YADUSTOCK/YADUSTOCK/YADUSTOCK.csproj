@@ -73,6 +73,9 @@
     <Compile Include="UI_Market.xaml.cs">
       <DependentUpon>UI_Market.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI_Parameters.xaml.cs">
+      <DependentUpon>UI_Parameters.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI_Stock.xaml.cs">
       <DependentUpon>UI_Stock.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UI_Market.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI_Parameters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -181,6 +188,9 @@
     <Resource Include="Ressources\Buttons\PencilValidate.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="ButtonSave.png" />
+    <Resource Include="ButtonLoad.png" />
+    <Content Include="Ressources\Sounds\button2.wav" />
     <Resource Include="ButtonValidate.png" />
     <Resource Include="ButtonHome.png" />
     <Resource Include="ButtonStock.png" />
@@ -190,9 +200,14 @@
     <Resource Include="EuroSigle.png" />
     <Resource Include="ButtonEndTurn.png" />
     <Resource Include="Logo.ico" />
+    <Resource Include="ButtonParameters.png" />
+    <Resource Include="ButtonMusic1.png" />
+    <Resource Include="ButtonMusic2.png" />
+    <Resource Include="ButtonClic1.png" />
+    <Resource Include="ButtonClic2.png" />
     <Content Include="Ressources\Sounds\BG_Sound.wav" />
     <Content Include="Ressources\Sounds\BG_SoundAlternative.wav" />
-    <Content Include="Ressources\Sounds\button.wav" />
+    <Content Include="Ressources\Sounds\button1.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
