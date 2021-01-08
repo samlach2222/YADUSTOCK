@@ -80,8 +80,7 @@ namespace YADUSTOCK
             Memory Memory = w.Memory;
             this.nbTour.Text = "Round : " + Memory.NbTour;
             this.nbMoney.Text = "" + Memory.Account.Own;
-
-
+            this.Stock.Items.Clear();
         }
     }
 }
