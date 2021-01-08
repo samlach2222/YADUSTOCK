@@ -22,6 +22,7 @@ namespace Logic
         public Account Account { get => account; }
         public Stock Stock { get => stock; }
         public int NbTour { get => nbTour;}
+        public List<Product> BuyList { get => buyList; }
 
         public Memory()
         {
