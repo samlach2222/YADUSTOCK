@@ -105,12 +105,12 @@
             </Button.Background>
         </Button>
         <Viewbox  Grid.Row="0" Grid.Column="0">
-            <TextBlock Margin="20,0,0,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="00000.00" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            <TextBlock x:Name ="nbMoney" Margin="20,0,0,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center"  />
         </Viewbox>
         <Image HorizontalAlignment="Left"  VerticalAlignment="Center" Width="92" Grid.Column="0" Grid.Row="0" Source="EuroSigle.png" Margin="0,6"/>
 
-        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
-            <TextBlock Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Round x" Foreground="#FF2F2F2F"/>
+        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="0,1,1,1">
+            <TextBlock x:Name="nbTour" Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF2F2F2F"/>
         </Viewbox>
     </Grid>
 </Page>
