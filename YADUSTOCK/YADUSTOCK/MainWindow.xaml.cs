@@ -28,18 +28,21 @@ namespace YADUSTOCK
         private UI_Market ui_market;
         private UI_Stock ui_stock;
         private UI_Accountant ui_accountant;
+        private Uri uri;
 
+        public System.Media.SoundPlayer player;
         public Memory Memory { get => memory; set => memory = value; }
         public UI_Home Ui_home { get => ui_home; set => ui_home = value; }
         public UI_Bord Ui_bord { get => ui_bord; set => ui_bord = value; }
         public UI_Market Ui_market { get => ui_market; set => ui_market = value; }
         public UI_Stock Ui_stock { get => ui_stock; set => ui_stock = value; }
         public UI_Accountant Ui_accountant { get => ui_accountant; set => ui_accountant = value; }
+        public Uri Uri { get => uri; set => uri = value; }
 
         public MainWindow()
         {
             //Musique de fond
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
+            player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
             player.PlayLooping();
             //Fin musique de fond
 
@@ -49,6 +52,7 @@ namespace YADUSTOCK
             Ui_market = new UI_Market(Memory.Market);
             Ui_stock = new UI_Stock(Memory.Stock);
             ui_accountant = new UI_Accountant(Memory.Account);
+            Uri = new Uri(@"../../Ressources/Sounds/button1.wav", UriKind.Relative);
             InitializeComponent();
             initialize();
         }
@@ -69,9 +73,8 @@ namespace YADUSTOCK
 
         public void ButtonClickSound()
         {
-            Uri uri = new Uri(@"../../Ressources/Sounds/button.wav", UriKind.Relative); // chemin vers l'audio
             MediaPlayer player = new MediaPlayer(); // création du player 
-            player.Open(uri); // chargement de l'audio
+            player.Open(Uri); // chargement de l'audio
             player.Play(); // on joue l'audio
 
             System.Threading.Thread.Sleep(236); // longueur de l'audio en ms
