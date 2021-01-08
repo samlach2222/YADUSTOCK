@@ -20,6 +20,10 @@ namespace YADUSTOCK
     /// </summary>
     public partial class UI_Bord : Page
     {
+        private List<Product> previousProducts = new List<Product>();
+        private double previousMoney = 5000;
+        private int previousRound = -1;
+
         public UI_Bord()
         {
             // A CODER
@@ -86,22 +90,35 @@ namespace YADUSTOCK
 
             this.LB_ResultsLastRound.Items.Clear();
             this.LB_DecisionsCurrentTurn.Items.Clear();
-            
-            //À COMPLETER
-            this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (0) + "€");
-            this.LB_ResultsLastRound.Items.Add("Pokemon Cards sold  :  " + (0));
-            this.LB_DecisionsCurrentTurn.Items.Add("Pokemon Cards buying  :  " + (0));
 
-            /*
-            this.LV_Money.Items.Clear();
-            this.LV_Money.Items.Add("Money :" + a.Own);
-            this.LV_Money.Items.Add("Debt : ?");
-            foreach (Boost b in Memory.Account.BoostList)
+            if (previousRound + 1 < memory.NbTour)
             {
-                this.LB_Boost.Items.Add(b.Name + "   " + b.Price + "  €");
+                previousRound++;
+                previousMoney = memory.Account.Own;
+
+                previousProducts.Clear();
+                foreach (Product p in memory.Stock.getStock)
+                {
+                    previousProducts.Add(p);
+                }
+            }
+
+
+            //À COMPLETER
+            this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (memory.Account.Own - previousMoney) + "€");
+            foreach (Product p in memory.Stock.getStock)
+            {
+                foreach (Product pp in previousProducts)
+                {
+                    if (p.Name == pp.Name)
+                    {
+                        this.LB_ResultsLastRound.Items.Add(p.Name + "  :  " + (p.Quantity - pp.Quantity));
+                    }
+                }
 
             }
 
+            /*
             foreach (Boost b in Memory.Account.BoostList)
             {
                 if (b.Etat == true)
