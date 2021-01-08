@@ -58,6 +58,7 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
+            window.Ui_bord.reload();
             window.Content = window.Ui_bord;
         }
 

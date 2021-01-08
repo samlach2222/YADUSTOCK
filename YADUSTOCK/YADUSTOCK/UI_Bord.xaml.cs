@@ -21,14 +21,15 @@ namespace YADUSTOCK
     public partial class UI_Bord : Page
     {
         private List<Product> previousProductsStored = new List<Product>();
+        private List<Product> previousProductsStoredTemp = new List<Product>();
         private List<Boost> previousBoosts = new List<Boost>();
-        private double previousMoney = 5000;
+        private List<Boost> previousBoostsTemp = new List<Boost>();
+        private double previousMoney;
+        private double previousMoneyTemp = 5000;
         private int previousRound = -1;
-        private List<Product> currentBuyList = new List<Product>();
         private List<Product> previousBuyList = new List<Product>();
         private List<Product> previousBuyListTemp = new List<Product>();
         private List<Product> currentProductsStored = new List<Product>();
-        private List<Boost> currentBoosts = new List<Boost>();
 
         public UI_Bord()
         {
@@ -52,7 +53,6 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_stock;
-            this.reload();
         }
 
         private void GoMarket(object sender, RoutedEventArgs e)
@@ -60,7 +60,6 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_market;
-            this.reload();
         }
 
         private void GoAccount(object sender, RoutedEventArgs e)
@@ -68,7 +67,6 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_accountant;
-            this.reload();
         }
 
         private void Exit(object sender, RoutedEventArgs e)
@@ -82,8 +80,8 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            window.NextTurn();
-            //La fenêtre est reload dans la fonction NextTurn de MainWindow
+            window.NextTurn();  //La fenêtre est reload dans la fonction NextTurn de MainWindow
+            previousTempUpdate(window.Memory);
         }
 
         public void reload()
@@ -93,37 +91,16 @@ namespace YADUSTOCK
             this.nbTour.Text = "Round : " + memory.NbTour;
             this.nbMoney.Text = "" + memory.Account.Own;
             this.welcome_nbTour.Text = "Welcome on the round " + memory.NbTour;
-
             this.LB_ResultsLastRound.Items.Clear();
             this.LB_DecisionsCurrentTurn.Items.Clear();
 
-            //Ajoute la buyList
-            currentBuyList.Clear();
-            foreach (Product p in memory.BuyList)
+            if (previousRound + 1 == memory.NbTour)  //S'il n'y a pas eu de passage au round suivant
             {
-                currentBuyList.Add(p);
+                previousTempUpdate(memory);
             }
-            previousBuyListTemp = new List<Product>(currentBuyList);
-
-            //Ajoute les données du début du round actuel aux variables "current"
-            if (previousRound + 2 < memory.NbTour)
+            else  //S'il s'agit du round suivant
             {
-                //Pas besoin d'incrémenter previousRound car il est incrémenter pour les variables "previous"
-
-                previousBuyList = new List<Product>(previousBuyListTemp);
-
-                currentProductsStored.Clear();
-                foreach (Product p in memory.Stock.Stock1)
-                {
-                    currentProductsStored.Add(p);
-                }
-
-                currentBoosts.Clear();
-                foreach (Boost b in memory.Account.BoostList)
-                {
-                    currentBoosts.Add(b);
-                }
-
+                newRound(memory);
             }
 
             //Results of the last round
@@ -171,7 +148,7 @@ namespace YADUSTOCK
             //Decisions of the current turn
             foreach (Product p in memory.Stock.Stock1)
             {
-                foreach (Product cb in currentBuyList)
+                foreach (Product cb in memory.BuyList)
                 {
                     if (p.Name == cb.Name && p.Quantity != cb.Quantity)
                     {
@@ -181,40 +158,59 @@ namespace YADUSTOCK
             }
             foreach (Boost b in memory.Account.BoostList)
             {
-                foreach (Boost cb in currentBoosts)
+                foreach (Boost cbb in memory.BuyBoostList)
                 {
-                    if (b.Name == cb.Name && b.Etat != cb.Etat)
+                    if (b.Name == cbb.Name)
                     {
-                        if (b.Etat == true)  //Si le boost a été acheté entre le round précédent et ce round
+                        if (cbb.Etat == true && b.Etat != cbb.Etat)  //Si le boost a été acheté dans le round actuel
                         {
-                            this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " is active");
+                            this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " will become active");
                         }
-                        else  //Si le boost a expiré
+                        else //Le boost a potentiellement expiré
                         {
-                            this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " expired");
+                            foreach (Boost pb in previousBoosts)
+                            {
+                                if (b.Name == pb.Name && b.Etat != pb.Etat)
+                                {
+                                    if (b.Etat == false)  //Le boost a expiré
+                                    {
+                                        this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " expire");
+                                    }
+                                    /*
+                                    else  //Le boost a été acheté avant mais est encore actif
+                                    {
+                                        this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " stay active");
+                                    }
+                                    */
+                                }
+                            }
                         }
                     }
                 }
             }
 
+        }
+
+        private void previousTempUpdate(Memory memory)
+        {
+            previousMoneyTemp = memory.Account.Own;
+            previousBuyListTemp = new List<Product>(memory.BuyList);
+            previousProductsStoredTemp = new List<Product>(memory.Stock.Stock1);
+            previousBoostsTemp = new List<Boost>(memory.Account.BoostList);
+        }
+
+        private void newRound(Memory memory)
+        {
             //Ajoute les données du round précédent aux variables "previous"
-            if (previousRound + 1 < memory.NbTour)
-            {
-                previousRound++;
-                previousMoney = memory.Account.Own;
+            previousRound++;
+            previousMoney = previousMoneyTemp;
+            previousBuyList = new List<Product>(previousBuyListTemp);
+            previousProductsStored = new List<Product>(previousProductsStoredTemp);
+            previousBoosts = new List<Boost>(previousBoostsTemp);
 
-                previousProductsStored.Clear();
-                foreach (Product p in memory.Stock.Stock1)
-                {
-                    previousProductsStored.Add(p);
-                }
-
-                previousBoosts.Clear();
-                foreach (Boost b in memory.Account.BoostList)
-                {
-                    previousBoosts.Add(b);
-                }
-            }
+            //Ajoute les données du début du round actuel aux variables "current"
+            currentProductsStored.Clear();
+            currentProductsStored = new List<Product>(memory.Stock.Stock1);
         }
     }
 }
