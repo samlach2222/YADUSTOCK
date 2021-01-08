@@ -29,6 +29,7 @@ namespace YADUSTOCK
             InitializeComponent();
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
             this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.reload();
         }
 
         public Market M { get => m; set => m = value; }
@@ -71,6 +72,15 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             Environment.Exit(0);
+        }
+
+        public void reload()
+        {
+            MainWindow w = (MainWindow)Application.Current.MainWindow;
+            Memory Memory = w.Memory;
+            this.nbTour.Text = "Round : " + Memory.NbTour;
+            this.nbMoney.Text = "" + Memory.Account.Own;
+            this.Stock.Items.Clear();
         }
     }
 }

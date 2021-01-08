@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,7 @@ namespace YADUSTOCK
             InitializeComponent();
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
             this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.reload();
         }
 
         private void GoHome(object sender, RoutedEventArgs e)
@@ -32,6 +34,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_bord;
+            this.reload();
         }
 
         private void GoStock(object sender, RoutedEventArgs e)
@@ -39,6 +42,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_stock;
+            this.reload();
         }
 
         private void GoMarket(object sender, RoutedEventArgs e)
@@ -46,6 +50,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_market;
+            this.reload();
         }
 
         private void GoAccount(object sender, RoutedEventArgs e)
@@ -53,6 +58,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_accountant;
+            this.reload();
         }
 
         private void Exit(object sender, RoutedEventArgs e)
@@ -65,21 +71,46 @@ namespace YADUSTOCK
         private void EndTurn(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
             window.NextTurn();
-            
+            this.reload();
         }
 
-        private void ResizeColumns(object sender, SizeChangedEventArgs e)  //Change la longueur des colonnes à 50% chacune
+        public void reload()
         {
-            ListView listView = sender as ListView;
-            GridView gView = listView.View as GridView;
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            Memory memory = window.Memory;
+            this.nbTour.Text = "Round : " + memory.NbTour;
+            this.nbMoney.Text = "" + memory.Account.Own;
+            this.welcome_nbTour.Text = "Welcome on the round " + memory.NbTour;
 
-            var workingWidth = listView.ActualWidth - SystemParameters.VerticalScrollBarWidth;
-            var col1 = 0.50;
-            var col2 = 0.50;
+            this.LB_ResultsLastRound.Items.Clear();
+            this.LB_DecisionsCurrentTurn.Items.Clear();
+            
+            //À COMPLETER
+            this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (0) + "€");
+            this.LB_ResultsLastRound.Items.Add("Pokemon Cards sold  :  " + (0));
+            this.LB_DecisionsCurrentTurn.Items.Add("Pokemon Cards buying  :  " + (0));
 
-            gView.Columns[0].Width = workingWidth * col1;
-            gView.Columns[1].Width = workingWidth * col2;
+            /*
+            this.LV_Money.Items.Clear();
+            this.LV_Money.Items.Add("Money :" + a.Own);
+            this.LV_Money.Items.Add("Debt : ?");
+            foreach (Boost b in Memory.Account.BoostList)
+            {
+                this.LB_Boost.Items.Add(b.Name + "   " + b.Price + "  €");
+
+            }
+
+            foreach (Boost b in Memory.Account.BoostList)
+            {
+                if (b.Etat == true)
+                {
+                    this.LB_OurBoost.Items.Add(b.Name);
+                }
+
+            }
+            */
         }
     }
 }

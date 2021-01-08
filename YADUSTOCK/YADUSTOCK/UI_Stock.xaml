@@ -54,47 +54,51 @@
         <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="261.667,0,302,0">
             <TextBlock Margin="20,2,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="STOCK" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Viewbox>
-        <ListView x:Name="LB_Stock" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6" Background="#FF2F2F2F">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Product" Width="500">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Product}" Foreground="Blue"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+        <ListBox x:Name="LB_Stock" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6" Background="#FF2F2F2F">
+            <ListBox.Template>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True" Background="#454545">
+                        <Grid DockPanel.Dock="Top" Height="37">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="center" Foreground="#CC99FF" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">PRODUCT</Label>
+                            <Label Grid.Column="1" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="center" Foreground="#CC99FF" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">QUANTITY</Label>
+                            <Label Grid.Column="2" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="center" Foreground="#CC99FF" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">PRICE</Label>
+                        </Grid>
+                        <ItemsPresenter >
 
-                    <GridViewColumn Header="Quantity" Width="500">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Quantity}" Foreground="Blue"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+                        </ItemsPresenter>
 
-                    <GridViewColumn Header="Price" Width="500">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Price}" Foreground="Blue"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
+                    </DockPanel>
+                </ControlTemplate>
+            </ListBox.Template>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Height" Value="80" />
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="Background" Value="#2F2F2F" />
+                    <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
+                    <Setter Property="Foreground" Value="#CC99FF" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+
         <Button x:Name="HomeButton_Copy" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="0" Width="598" Height="159" Click="GoHome" Grid.Row="4" Grid.ColumnSpan="6">
             <Button.Background>
                 <ImageBrush ImageSource="ButtonValidate.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
         <Viewbox  Grid.Row="0" Grid.Column="0">
-            <TextBlock Margin="20,0,0,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="00000.00" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            <TextBlock x:Name ="nbMoney" Margin="20,0,0,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center"  />
         </Viewbox>
         <Image HorizontalAlignment="Left"  VerticalAlignment="Center" Width="92" Grid.Column="0" Grid.Row="0" Source="EuroSigle.png" Margin="0,6"/>
 
-        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
-            <TextBlock Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Round x" Foreground="#FF2F2F2F"/>
+        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="0,1,1,1">
+            <TextBlock x:Name="nbTour" Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF2F2F2F"/>
         </Viewbox>
     </Grid>
 </Page>
