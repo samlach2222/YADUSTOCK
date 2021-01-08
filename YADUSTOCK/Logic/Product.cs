@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.Serialization;
 
 namespace Logic
 {
-    [DataContract]
     public class Product
     {
-        [DataMember] private readonly TypeProduct name;
-        [DataMember] private readonly double atBuyPrice;
-        [DataMember] private double resalePrice;
-        [DataMember] private double lastPrice;
-        [DataMember] private double elasticité;
-        [DataMember] private float quantity;
+        private readonly TypeProduct name;
+        private readonly double atBuyPrice;
+        private double resalePrice;
+        private double lastPrice;
+        private double elasticité;
+        private float quantity;
 
         public Product(TypeProduct n, double price, float quantity, double elasticité)
         {

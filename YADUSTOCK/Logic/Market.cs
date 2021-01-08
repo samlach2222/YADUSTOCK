@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.Serialization;
 
 namespace Logic
 {
-    [DataContract]
     public class Market
     {
-        [DataMember] private readonly List<LateDelivery>lateDelivery;
+        private readonly List<LateDelivery>lateDelivery;
 
         public List<LateDelivery> LateDelivery => lateDelivery;
 

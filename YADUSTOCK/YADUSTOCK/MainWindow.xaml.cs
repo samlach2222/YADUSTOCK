@@ -14,8 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Logic;
-using Storage;
-using System.Runtime.Serialization;
 
 namespace YADUSTOCK
 {
@@ -31,7 +29,6 @@ namespace YADUSTOCK
         private UI_Stock ui_stock;
         private UI_Accountant ui_accountant;
         private Uri uri;
-        private IStorage save;
 
         public System.Media.SoundPlayer player;
         public Memory Memory { get => memory; set => memory = value; }
@@ -41,7 +38,6 @@ namespace YADUSTOCK
         public UI_Stock Ui_stock { get => ui_stock; set => ui_stock = value; }
         public UI_Accountant Ui_accountant { get => ui_accountant; set => ui_accountant = value; }
         public Uri Uri { get => uri; set => uri = value; }
-        public IStorage Save { get => save; set => save = value; }
 
         public MainWindow()
         {
@@ -49,7 +45,6 @@ namespace YADUSTOCK
             player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
             player.PlayLooping();
             //Fin musique de fond
-            Save = new JsonStorage("save.sav");
 
             memory = new Memory();
             Ui_home = new UI_Home();

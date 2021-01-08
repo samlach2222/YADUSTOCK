@@ -34,8 +34,7 @@ namespace YADUSTOCK
 
             UI_Introduction ui = new UI_Introduction();
             ui.ShowDialog();
-
-            window.Ui_bord.reload();
+            
             window.Content = window.Ui_bord;
         }
 
