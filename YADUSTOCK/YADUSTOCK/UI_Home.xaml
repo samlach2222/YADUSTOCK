@@ -12,14 +12,15 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
+            <RowDefinition Height="2.3*"/>
+            <RowDefinition Height="2.3*"/>
+            <RowDefinition Height="2.3*"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Top">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center">
             <TextBlock Margin="40 0 40 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">YADUSTOCK</TextBlock>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center">
@@ -30,13 +31,20 @@
             </Button>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Bottom">
+            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Parameters">
+                <Button.Background>
+                    <ImageBrush ImageSource="ButtonParameters.png" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom">
             <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Quit">
                 <Button.Background>
                     <ImageBrush ImageSource="Ressources/Buttons/ButtonQuit.png" Stretch="UniformToFill"/>
                 </Button.Background>
             </Button>
         </Viewbox>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Bottom">
             <TextBlock Margin="150 0 150 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">A Purple Dream's Game</TextBlock>
         </Viewbox>
     </Grid>
