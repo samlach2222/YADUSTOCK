@@ -49,11 +49,12 @@ namespace Logic
 
         public void PurchaceBoost(TypeBoost b)
         {
-            for (int i = 0; i <= buyBoostList.Count(); i++)
+            for (int i = 0; i < buyBoostList.Count(); i++)
             {
                 if (b == buyBoostList[i].Name)
                 {
                     buyBoostList[i] = market.PurchaseBoost(buyBoostList[i]);
+                    salemarket.OwnWin -= buyBoostList[i].Price;
                 }
             }
         }
@@ -66,7 +67,7 @@ namespace Logic
                 {
                     if (r.Name == TypeBoost.PUB)
                     {
-                        salemarket.BenefitCalcul(buyList[i], r);
+                        buyList[i] = salemarket.BenefitCalcul(buyList[i], r);
                     }
 
                 }
@@ -85,7 +86,8 @@ namespace Logic
                     r.TimeEnd = r.TimeEnd - 1;
                 }
             }
-
+            account.BoostList = buyBoostList;
+            buyBoostList = this.CreateListBoost();
             account.Own += salemarket.OwnWin;
             nbTour += 1;
         }
@@ -109,11 +111,11 @@ namespace Logic
         public List<Product> CreateListProduct()
         {
             List<Product> p = new List<Product>();
-            p.Add(new Product(TypeProduct.TAROT, 10, 1000));
-            p.Add(new Product(TypeProduct.CARTE, 10, 2000));
-            p.Add(new Product(TypeProduct.MAGIC, 10, 500));
-            p.Add(new Product(TypeProduct.POKEMON, 10, 100));
-            p.Add(new Product(TypeProduct.YUGIOH, 10, 50));
+            p.Add(new Product(TypeProduct.TAROT, 10, 1000, -0.2));
+            p.Add(new Product(TypeProduct.CARTE, 10, 2000, -0.4));
+            p.Add(new Product(TypeProduct.MAGIC, 10, 500, -0.1));
+            p.Add(new Product(TypeProduct.POKEMON, 10, 100, -0.5));
+            p.Add(new Product(TypeProduct.YUGIOH, 10, 50, -0.3));
             return p;
         }
     }
