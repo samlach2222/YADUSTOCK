@@ -57,14 +57,21 @@ namespace YADUSTOCK
         private void GoHome(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
-            if (LB_Boost.SelectedItems is Boost b)
-            {
-                window.Memory.PurchaceBoost(b.Name);
-            }
             window.ButtonClickSound();
             window.Content = window.Ui_bord;
         }
 
+        private void PurchaseBoost(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            if (LB_Boost.SelectedItems[0] is TypeBoost b)
+            {
+
+                window.Memory.PurchaceBoost(b);
+                
+            }
+        }
         private void Exit(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -79,22 +86,19 @@ namespace YADUSTOCK
             this.nbTour.Text = "Round : " + Memory.NbTour;
             this.nbMoney.Text = ""+a.Own;
             this.LV_Money.Items.Clear();
-            this.LV_Money.Items.Add("Money :" + a.Own);
+            this.LB_OurBoost.Items.Clear();
+            this.LB_Boost.Items.Clear();
+
+            this.LV_Money.Items.Add("Money :" + a.Own + " €");
             this.LV_Money.Items.Add("Debt : ?");
             foreach(Boost b in Memory.Account.BoostList)
             {
-                this.LB_Boost.Items.Add(b.Name + "   " + b.Price + "  €");
-            }
-
-            foreach (Boost b in Memory.Account.BoostList)
-            {
+                this.LB_Boost.Items.Add(b.Name);
                 if (b.Etat == true)
                 {
                     this.LB_OurBoost.Items.Add(b.Name);
                 }
-
             }
         }
-
     }
 }

@@ -15,13 +15,14 @@ namespace Logic
         private double elasticité;
         private float quantity;
 
-        public Product(TypeProduct n, double price, float quantity)
+        public Product(TypeProduct n, double price, float quantity, double elasticité)
         {
-            this.resalePrice = 0;
+            this.resalePrice = atBuyPrice;
             this.lastPrice = this.resalePrice;
             this.name = n;
             this.atBuyPrice = price;
             this.quantity = quantity;
+            this.elasticité = elasticité;
         }
 
         public TypeProduct Name => name;
