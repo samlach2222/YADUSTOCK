@@ -84,7 +84,6 @@ namespace YADUSTOCK
             foreach(Boost b in Memory.Account.BoostList)
             {
                 this.LB_Boost.Items.Add(b.Name + "   " + b.Price + "  €");
-                
             }
 
             foreach (Boost b in Memory.Account.BoostList)
