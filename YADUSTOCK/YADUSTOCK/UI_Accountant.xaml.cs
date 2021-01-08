@@ -77,7 +77,9 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            Environment.Exit(0);
+            UI_ClosingWarning closingWarning = new UI_ClosingWarning();
+            closingWarning.ShowDialog();
+            //Environment.Exit(0);
         }
 
         public void reload()
