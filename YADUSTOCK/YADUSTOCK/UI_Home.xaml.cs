@@ -44,5 +44,14 @@ namespace YADUSTOCK
             window.ButtonClickSound();
             Environment.Exit(0);
         }
+
+        private void Parameters(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+
+            UI_Parameters popup = new UI_Parameters();
+            popup.ShowDialog();
+        }
     }
 }

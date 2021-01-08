@@ -8,8 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ressources/sounds/button2.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ressources/sounds/bg_sound.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ressources/sounds/bg_soundalternative.wav")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ressources/sounds/button.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ressources/sounds/button1.wav")]
 
 
