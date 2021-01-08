@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Boost.cs" />
+    <Compile Include="IStorage.cs" />
     <Compile Include="LateDelivery.cs" />
     <Compile Include="SaleMarket.cs" />
     <Compile Include="TypeBoost.cs" />
