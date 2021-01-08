@@ -57,69 +57,81 @@
             <TextBlock Margin="20,2,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="YOUR BORD" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Viewbox>
         <Viewbox  Grid.Row="0" Grid.Column="0">
-            <TextBlock Margin="20,0,0,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="00000.00" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            <TextBlock x:Name="nbMoney" Margin="20,0,0,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="00000.00" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center"  />
         </Viewbox>
         <Image HorizontalAlignment="Left"  VerticalAlignment="Center" Width="92" Grid.Column="0" Grid.Row="0" Source="EuroSigle.png" Margin="0,6"/>
 
         <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
-            <TextBlock Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Round x" Foreground="#FF2F2F2F"/>
+            <TextBlock x:Name="nbTour" Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Round x" Foreground="#FF2F2F2F"/>
         </Viewbox>
-        <Button x:Name="EndTurnButton" Style="{DynamicResource YadustockButton}" Content="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="EndTurn" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3" Margin="9.8,10.4,10.4,10.4">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonEndTurn.png" Stretch="Uniform"/>
-            </Button.Background>
-        </Button>
         <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="2" Height="58" Margin="1,67.8,0.4,10.2" Grid.RowSpan="2">
-            <TextBlock Margin="120,2,120,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Welcome on the round X" Foreground="#FF2F2F2F" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBlock x:Name="welcome_nbTour" Margin="120,2,120,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Welcome on the round X" Foreground="#FF2F2F2F" HorizontalAlignment="Left" VerticalAlignment="Center" />
         </Viewbox>
-        <ListView x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,40,10,10" Background="#FF2F2F2F" SizeChanged="ResizeColumns">
-        <ListView.View>
-            <GridView>
-                <GridViewColumn Header="Card Game" Width="300">
-                    <GridViewColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Product}" Foreground="Blue"/>
-                        </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                </GridViewColumn>
 
-                <GridViewColumn Header="Quantity" Width="300">
-                    <GridViewColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Quantity}" Foreground="Blue"/>
-                        </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                </GridViewColumn>
-            </GridView>
-        </ListView.View>    
-        </ListView>
+        <ListBox x:Name="LB_ResultsLastRound" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="4"  Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="20,20,20,20">
+            <ListBox.Template>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True" Background="#454545">
+                        <Grid DockPanel.Dock="Top" Height="37" Margin="50,0,50,0" HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontSize ="20" VerticalAlignment="Center" Foreground="#CC99FF" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Results of the last round</Label>
+                        </Grid>
+                        <ItemsPresenter >
 
-        <ListView x:Name="LB_DecisionsCurrentTurn"  VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Margin="10,40,10,10" Background="#FF2F2F2F" SizeChanged="ResizeColumns">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Card Game" Width="400">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Product}" Foreground="Blue"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+                        </ItemsPresenter>
 
-                    <GridViewColumn Header="Quantity" Width="400">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Quantity}" Foreground="Blue"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Viewbox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,5,10,0">
-            <TextBlock Margin="20,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Results of the last round" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="6" />
-        </Viewbox>
-        <Viewbox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="14,5,14,0">
-            <TextBlock Margin="20,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="Decisions of this turn" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="6" />
-        </Viewbox>
+                    </DockPanel>
+                </ControlTemplate>
+            </ListBox.Template>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Height" Value="80" />
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="Background" Value="#2F2F2F" />
+                    <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
+                    <Setter Property="Foreground" Value="#CC99FF" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+        <ListBox x:Name="LB_DecisionsCurrentTurn" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="4"  Grid.Column="3" Grid.ColumnSpan="3" Margin="20,20,20,0">
+            <ListBox.Template>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True" Background="#454545">
+                        <Grid DockPanel.Dock="Top" Height="37" Margin="50,0,50,0" HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontSize="20" VerticalAlignment="Center" Foreground="#CC99FF" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Decisions of this turn
+                            </Label>
+                        </Grid>
+                        <ItemsPresenter >
+
+                        </ItemsPresenter>
+
+                    </DockPanel>
+                </ControlTemplate>
+            </ListBox.Template>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Height" Value="80" />
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="Background" Value="#2F2F2F" />
+                    <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
+                    <Setter Property="Foreground" Value="#CC99FF" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+        <Grid Grid.Column="3" HorizontalAlignment="Stretch" Margin="20,0,20,20" Grid.Row="5" Grid.ColumnSpan="3" Background="#454545" >
+            <Button x:Name="EndTurnButton" Style="{DynamicResource YadustockButton}" Content="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="EndTurn" Margin="0,10,0,10">
+                <Button.Background>
+                    <ImageBrush ImageSource="ButtonEndTurn.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+
     </Grid>
 </Page>

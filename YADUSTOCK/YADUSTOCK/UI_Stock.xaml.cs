@@ -32,6 +32,7 @@ namespace YADUSTOCK
             this.Width = width;  //Requis pour le fullscreen sans problème de bordures
             ListBox stockList = new ListBox();
             stockList.Items.Add("GeeksForGeeks");
+            this.reload();
         }
 
         private void SetSalePrice(object sender, RoutedEventArgs e, double price)
@@ -72,6 +73,20 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             Environment.Exit(0);
+        }
+
+        public void reload()
+        {
+            MainWindow w = (MainWindow)Application.Current.MainWindow;
+            Memory Memory = w.Memory;
+            this.nbTour.Text = "Round : " + Memory.NbTour;
+            this.nbMoney.Text = "" + Memory.Account.Own;
+
+            /*foreach (Product p in s.Stock1)
+            {
+                this.LB_Stock.Items.Add(p.Name + "   " + p.Quantity + "   " + p.AtBuyPrice +"  €");
+
+            }*/
         }
     }
 }
