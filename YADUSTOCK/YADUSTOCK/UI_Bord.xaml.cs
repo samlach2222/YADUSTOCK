@@ -91,18 +91,6 @@ namespace YADUSTOCK
             this.LB_ResultsLastRound.Items.Clear();
             this.LB_DecisionsCurrentTurn.Items.Clear();
 
-            if (previousRound + 1 < memory.NbTour)
-            {
-                previousRound++;
-                previousMoney = memory.Account.Own;
-
-                previousProducts.Clear();
-                foreach (Product p in memory.Stock.getStock)
-                {
-                    previousProducts.Add(p);
-                }
-            }
-
 
             //À COMPLETER
             this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (memory.Account.Own - previousMoney) + "€");
@@ -110,7 +98,7 @@ namespace YADUSTOCK
             {
                 foreach (Product pp in previousProducts)
                 {
-                    if (p.Name == pp.Name)
+                    if (p.Name == pp.Name  && p.Quantity != pp.Quantity)
                     {
                         this.LB_ResultsLastRound.Items.Add(p.Name + "  :  " + (p.Quantity - pp.Quantity));
                     }
@@ -128,6 +116,18 @@ namespace YADUSTOCK
 
             }
             */
+
+            if (previousRound + 1 < memory.NbTour)
+            {
+                previousRound++;
+                previousMoney = memory.Account.Own;
+
+                previousProducts.Clear();
+                foreach (Product p in memory.Stock.getStock)
+                {
+                    previousProducts.Add(p);
+                }
+            }
         }
     }
 }
