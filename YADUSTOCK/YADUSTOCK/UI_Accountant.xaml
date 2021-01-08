@@ -72,7 +72,7 @@
         <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="0,1,1,1">
             <TextBlock x:Name="nbTour" Margin="0,0,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF2F2F2F"/>
         </Viewbox>
-        <ListView x:Name="LB_Boost" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="3"  Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="20 20 20 20" Background="#FF2F2F2F">
+        <ListView x:Name="LB_Boost" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="3"  Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="20 20 20 20" Background="#FF2F2F2F" MouseDoubleClick="PurchaseBoost">
             <ListBox.Template>
                 <ControlTemplate>
                     <DockPanel LastChildFill="True" Background="#80669A">

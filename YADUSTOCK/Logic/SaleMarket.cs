@@ -8,7 +8,7 @@ namespace Logic
 {
     public class SaleMarket
     {
-        private double ownWin;
+        private double ownWin = 0;
 
         public double OwnWin { get => ownWin; set=> ownWin = value; }
 
@@ -21,7 +21,7 @@ namespace Logic
                 {
                 vente = vente * (float)b.Bonus;  
                 }
-            ownWin = vente * p.ResalePrice;
+            ownWin += vente * p.ResalePrice;
             p.Quantity = p.Quantity - (float)vente;
             return p;
         }
