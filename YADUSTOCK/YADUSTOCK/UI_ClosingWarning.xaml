@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:YADUSTOCK"
         mc:Ignorable="d"
         Background = "#CC99FF"
-        Title="Quit" Height="450" Width="800" Icon="Logo.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="2" WindowStyle="None">
+        Title="Quit" Height="450" Width="800" Icon="Logo.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="2" WindowStyle="None" MouseDown="Window_MouseDown">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

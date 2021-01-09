@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YADUSTOCK"
         mc:Ignorable="d"
-        Title="Parameters" Background = "#CC99FF" Height="450" Width="800" Icon="Logo.ico" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Foreground="Black" WindowStyle="None" BorderThickness="2">
+        Title="Parameters" Background = "#CC99FF" Height="450" Width="800" Icon="Logo.ico" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Foreground="Black" WindowStyle="None" BorderThickness="2" MouseDown="Window_MouseDown">
     
 <Grid>
         <Grid.ColumnDefinitions>
