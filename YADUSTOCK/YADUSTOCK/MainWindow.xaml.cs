@@ -73,7 +73,7 @@ namespace YADUSTOCK
         {
             memory.NextTurn();
             this.Ui_accountant.reload();
-            this.ui_bord.reload();
+            this.Ui_bord.reload();
         }
 
         public void ButtonClickSound()
@@ -88,7 +88,7 @@ namespace YADUSTOCK
         //Détecte une tentative de fermeture de la fenêtre avec ALT+F4
         private void EVT_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.System && e.SystemKey == Key.F4)
+            if (e.Key == Key.System && e.SystemKey == Key.F4 && Content != this.Ui_home)
             {
                 e.Handled = true;  //Bloque l'action native de ALT+F4
 
