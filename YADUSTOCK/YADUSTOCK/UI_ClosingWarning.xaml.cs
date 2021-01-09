@@ -37,6 +37,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_home;
+            window.Save.Save(window.Memory);  //Sauvegarde automatiquement en quittant
             this.Close();
         }
 
