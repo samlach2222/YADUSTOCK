@@ -54,5 +54,58 @@ namespace YADUSTOCK
             UI_Parameters popup = new UI_Parameters();
             popup.ShowDialog();
         }
+
+        private void Button_HoverIn(object sender, MouseEventArgs e)
+        {
+            string uri;
+            String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasPlay":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonPlayClicked.png";
+                        ButtonPlay.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasParameters":
+                        /* Il manque le bouton en version click
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonParametersClicked.png";
+                        ButtonParameters.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        */
+                        break;
+                    case "canvasQuit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonQuitClicked.png";
+                        ButtonQuit.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+        }
+
+        private void Button_HoverOut(object sender, MouseEventArgs e)
+        {
+            string uri;
+            String canvasName = ((Canvas)sender).Name; //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasPlay":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonPlay.png";
+                        ButtonPlay.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasParameters":
+                        uri = @"pack://application:,,,/ButtonParameters.png";
+                        ButtonParameters.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasQuit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonQuit.png";
+                        ButtonQuit.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+        }
+        
     }
 }
