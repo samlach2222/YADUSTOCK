@@ -29,31 +29,31 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            window.player.Stop();
-            window.player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
-            window.player.PlayLooping();
+            window.Memory.Player.Stop();
+            window.Memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
+            window.Memory.Player.PlayLooping();
         }
 
         private void ChangeToMusic2(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            window.player.Stop();
-            window.player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_SoundAlternative.wav");
-            window.player.PlayLooping();
+            window.Memory.Player.Stop();
+            window.Memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_SoundAlternative.wav");
+            window.Memory.Player.PlayLooping();
         }
 
         private void ChangeToClic1(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.Uri = new Uri(@"../../Ressources/Sounds/button1.wav", UriKind.Relative);
+            window.Memory.Uri = new Uri(@"../../Ressources/Sounds/button1.wav", UriKind.Relative);
             window.ButtonClickSound();
         }
 
         private void ChangeToClic2(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.Uri = new Uri(@"../../Ressources/Sounds/button2.wav", UriKind.Relative);
+            window.Memory.Uri = new Uri(@"../../Ressources/Sounds/button2.wav", UriKind.Relative);
             window.ButtonClickSound();
         }
 
@@ -76,6 +76,8 @@ namespace YADUSTOCK
             window.Ui_accountant.A = memory.Account;
             window.Ui_market.M = memory.Market;
             window.Ui_stock.S = memory.Stock;
+            window.Memory.Player.Stop();
+            window.Memory.Player.PlayLooping();
         }
 
         private void validate(object sender, RoutedEventArgs e)
