@@ -6,6 +6,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
+using System.Media;
 
 namespace Logic
 {
@@ -15,6 +16,8 @@ namespace Logic
         [DataMember] private List<Product> buyList;
         [DataMember] private int nbTour;
         [DataMember] private List<Boost> buyBoostList;
+        [DataMember] private Uri uri;
+        [DataMember] private System.Media.SoundPlayer player;
 
         [DataMember] private Market market = new Market();
         [DataMember] private Stock stock;
@@ -26,6 +29,8 @@ namespace Logic
         public int NbTour { get => nbTour;}
         public List<Product> BuyList { get => buyList; }
         public List<Boost> BuyBoostList { get => buyBoostList; }
+        public Uri Uri { get => uri; set => uri = value; }
+        public SoundPlayer Player { get => player; set => player = value; }
 
         public Memory()
         {
