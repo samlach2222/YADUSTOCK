@@ -72,7 +72,7 @@ namespace Logic
         {          
             for(int i = 0; i < buyList.Count; i++)
             {
-                foreach (Boost r in buyBoostList)
+                foreach (Boost r in account.BoostList)
                 {
                     if (r.Name == TypeBoost.PUB)
                     {
@@ -84,7 +84,7 @@ namespace Logic
             }
 
             stock.ModifyStock(buyList);
-            foreach (Boost r in buyBoostList)
+            foreach (Boost r in account.BoostList)
             {
                 if(r.TimeEnd == 0)
                 {
@@ -112,8 +112,8 @@ namespace Logic
         public List<Boost> CreateListBoost()
         {
             List<Boost> p = new List<Boost>();
-            p.Add(new Boost(TypeBoost.NEGOCIATION, 0.1, 10000));
-            p.Add(new Boost(TypeBoost.PUB, 0.1, 20000));
+            p.Add(new Boost(TypeBoost.NEGOCIATION, 0.1, 10000, 2));
+            p.Add(new Boost(TypeBoost.PUB, 0.1, 20000, 3));
             return p;
         }
 

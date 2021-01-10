@@ -84,6 +84,8 @@ namespace YADUSTOCK
 
         public void reload()
         {
+            string BuyBoostBox = "{0, -47}{1, 0}";
+            string MoneyBox = "{0, -27}{1, 0}";
             MainWindow w = (MainWindow)Application.Current.MainWindow;
             Memory Memory = w.Memory;
             this.nbTour.Text = "Round : " + Memory.NbTour;
@@ -92,11 +94,10 @@ namespace YADUSTOCK
             this.LB_OurBoost.Items.Clear();
             this.LB_Boost.Items.Clear();
 
-            this.LV_Money.Items.Add("Money :" + a.Own + " €");
-            this.LV_Money.Items.Add("Debt : ?");
+            this.LV_Money.Items.Add(string.Format(MoneyBox, "Money :", a.Own + " €"));
             foreach(Boost b in Memory.Account.BoostList)
             {
-                this.LB_Boost.Items.Add(b.Name);
+                this.LB_Boost.Items.Add(string.Format(BuyBoostBox, b.Name, b.Price + "€"));
                 if (b.Etat == true)
                 {
                     this.LB_OurBoost.Items.Add(b.Name);
