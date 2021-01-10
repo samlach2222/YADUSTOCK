@@ -156,6 +156,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Discord\Discord.csproj">
+      <Project>{58a54074-e5ee-4ad4-b805-83f745fc1a0b}</Project>
+      <Name>Discord</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logic\Logic.csproj">
       <Project>{94832631-71e0-403b-b7c3-c08d8f0096d7}</Project>
       <Name>Logic</Name>
