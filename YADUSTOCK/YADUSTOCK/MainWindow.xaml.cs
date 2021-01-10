@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Logic;
 using Storage;
-using System.Runtime.Serialization;
+using Discord;
+using System.Threading;
 
 namespace YADUSTOCK
 {
@@ -31,6 +21,7 @@ namespace YADUSTOCK
         private UI_Stock ui_stock;
         private UI_Accountant ui_accountant;
 		private IStorage save;
+        private RichPresence discord;
 
         public Memory Memory { get => memory; set => memory = value; }
         public UI_Home Ui_home { get => ui_home; set => ui_home = value; }
@@ -42,6 +33,10 @@ namespace YADUSTOCK
 
         public MainWindow()
         {
+            discord = new RichPresence();
+            Thread thr = new Thread(new ThreadStart(discord.StarDiscordRichPresence));
+            thr.Start();
+            //discord.StarDiscordRichPresence();
             memory = new Memory();
 
             //Musique de fond

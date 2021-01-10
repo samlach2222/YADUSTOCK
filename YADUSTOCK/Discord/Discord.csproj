@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{94832631-71E0-403B-B7C3-C08D8F0096D7}</ProjectGuid>
+    <ProjectGuid>{58A54074-E5EE-4AD4-B805-83F745FC1A0B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Logic</RootNamespace>
-    <AssemblyName>Logic</AssemblyName>
+    <RootNamespace>Discord</RootNamespace>
+    <AssemblyName>Discord</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,9 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,26 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="Boost.cs" />
-    <Compile Include="IStorage.cs" />
-    <Compile Include="LateDelivery.cs" />
-    <Compile Include="SaleMarket.cs" />
-    <Compile Include="TypeBoost.cs" />
-    <Compile Include="CreateBoost.cs" />
-    <Compile Include="CreateProduct.cs" />
-    <Compile Include="Market.cs" />
-    <Compile Include="Memory.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="ActivityManager.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="ImageManager.cs" />
+    <Compile Include="LobbyManager.cs" />
+    <Compile Include="RichPresence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stock.cs" />
-    <Compile Include="TypeProduct.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Discord\Discord.csproj">
-      <Project>{58a54074-e5ee-4ad4-b805-83f745fc1a0b}</Project>
-      <Name>Discord</Name>
-    </ProjectReference>
+    <Compile Include="StorageManager.cs" />
+    <Compile Include="StoreManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
