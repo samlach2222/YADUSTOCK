@@ -17,12 +17,13 @@ namespace Logic
         [DataMember] private readonly double price;
 
 
-        public Boost(TypeBoost n, double b, double p)
+        public Boost(TypeBoost n, double b, double p, int t)
         {
             this.etat = false;
             this.name = n;
             this.bonus = b;
             this.price = p;
+            this.timeEnd = t;
         }
 
         public TypeBoost Name => name;

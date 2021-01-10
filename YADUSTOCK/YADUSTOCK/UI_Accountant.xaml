@@ -92,7 +92,7 @@
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="Height" Value="50" />
-                    <Setter Property="FontSize" Value="15" />
+                    <Setter Property="FontSize" Value="20" />
                     <Setter Property="Background" Value="#AF85D8" />
                     <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
                 </Style>
@@ -103,22 +103,27 @@
                 <ControlTemplate>
                     <DockPanel LastChildFill="True" Background="#80669A">
                         <Grid DockPanel.Dock="Top" Height="37" Margin="237,0,237.8,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="16*"/>
+                                <RowDefinition Height="21*"/>
+                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Your Account</Label>
+                            <Label Grid.Column="1" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Margin="0,0,-0.4,0" Grid.RowSpan="2">Your Account</Label>
                         </Grid>
                         <ItemsPresenter >
-
+                                
                         </ItemsPresenter>
-                        
+
                     </DockPanel>
                 </ControlTemplate>
             </ListBox.Template>
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="Height" Value="100" />
-                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="FontSize" Value="30" />
                     <Setter Property="Background" Value="#AF85D8" />
                     <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
                 </Style>
