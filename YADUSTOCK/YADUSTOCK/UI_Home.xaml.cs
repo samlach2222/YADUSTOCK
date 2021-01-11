@@ -20,6 +20,8 @@ namespace YADUSTOCK
     /// </summary>
     public partial class UI_Home : Page
     {
+        private MediaPlayer playerSave;
+
         public UI_Home()
         {
             InitializeComponent();
@@ -108,6 +110,69 @@ namespace YADUSTOCK
                 }
             }
         }
-        
+
+        private void MuteMusic(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+
+            string uri;
+
+            if (window.Memory.BgSoundNotRunning == false) // Si la musique est présente
+            {
+                window.Memory.Player.Stop();
+                window.Memory.BgSoundNotRunning = true; // elle ne l'es plus
+
+                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                ButtonMuteMusic.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+            else // si la musique est absente
+            {
+                window.Memory.Player.PlayLooping();
+                window.Memory.BgSoundNotRunning = false; // elle devient présente
+
+                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                ButtonMuteMusic.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+            
+
+        }
+
+        private void MuteEffects(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+
+            string uri;
+
+            if (window.Memory.Uri != null)
+            {
+                window.Memory.UriSave = window.Memory.Uri;
+                window.Memory.Uri = null;
+            }
+            else
+            {
+                window.Memory.Uri = window.Memory.UriSave;
+            }
+
+
+            if (window.Memory.UriHover != null)
+            {
+                window.Memory.UriHoverSave = window.Memory.UriHover;
+                window.Memory.UriHover = null;
+
+                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                ButtonMuteEffects.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+            else
+            {
+                window.Memory.UriHover = window.Memory.UriHoverSave;
+
+                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                ButtonMuteEffects.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+
+            window.ButtonClickSound();
+        }
     }
 }
