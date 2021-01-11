@@ -27,7 +27,7 @@
         <Viewbox HorizontalAlignment="Center"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
             <Button Style="{DynamicResource YadustockButton}" Click="GoHome">
                 <Button.Background>
-                    <ImageBrush x:Name="HomeButton" ImageSource="ButtonGoHome.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="HomeButton" ImageSource="Ressources/Buttons/ButtonGoHome.png" Stretch="UniformToFill"/>
                 </Button.Background>
                 <Canvas x:Name="canvasHome" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
@@ -35,7 +35,7 @@
         <Viewbox HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
             <Button Style="{DynamicResource YadustockButton}" Click="Close">
                 <Button.Background>
-                    <ImageBrush x:Name="ExitButton" ImageSource="Ressources/Buttons/ButtonExit.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ExitButton" ImageSource="Ressources/Buttons/ButtonExit.png" Stretch="Uniform"/>
                 </Button.Background>
                 <Canvas x:Name="canvasExit" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>

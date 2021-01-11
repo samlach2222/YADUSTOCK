@@ -98,7 +98,7 @@ namespace YADUSTOCK
                         ButtonPlay.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
                         break;
                     case "canvasParameters":
-                        uri = @"pack://application:,,,/ButtonParameters.png";
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonParameters.png";
                         ButtonParameters.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
                         break;
                     case "canvasQuit":
