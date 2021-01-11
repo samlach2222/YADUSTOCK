@@ -199,6 +199,7 @@
     <Resource Include="Ressources\Buttons\PencilValidate.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ressources\Sounds\hover.wav" />
     <Resource Include="ButtonSave.png" />
     <Resource Include="ButtonLoad.png" />
     <Resource Include="ButtonGoHome.png" />

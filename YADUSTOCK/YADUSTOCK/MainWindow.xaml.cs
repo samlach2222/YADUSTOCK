@@ -94,5 +94,12 @@ namespace YADUSTOCK
                 closingWarning.ShowDialog();
             }
         }
+
+        public void ButtonHoverSound()
+        {
+            MediaPlayer player = new MediaPlayer(); // création du player 
+            player.Open(new Uri(@"../../Ressources/Sounds/hover.wav", UriKind.Relative)); // chargement de l'audio
+            player.Play(); // on joue l'audio
+        }
     }
 }
