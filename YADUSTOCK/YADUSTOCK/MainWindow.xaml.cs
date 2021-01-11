@@ -31,6 +31,7 @@ namespace YADUSTOCK
         private UI_Stock ui_stock;
         private UI_Accountant ui_accountant;
 		private IStorage save;
+        private MediaPlayer player = new MediaPlayer();
 
         public Memory Memory { get => memory; set => memory = value; }
         public UI_Home Ui_home { get => ui_home; set => ui_home = value; }
@@ -39,10 +40,12 @@ namespace YADUSTOCK
         public UI_Stock Ui_stock { get => ui_stock; set => ui_stock = value; }
         public UI_Accountant Ui_accountant { get => ui_accountant; set => ui_accountant = value; }
 		public IStorage Save { get => save; set => save = value; }
+        public MediaPlayer Player { get => player; set => player = value; }
 
         public MainWindow()
         {
             memory = new Memory();
+            Player = new MediaPlayer();
 
             //Musique de fond
             memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
@@ -75,10 +78,9 @@ namespace YADUSTOCK
         }
 
         public void ButtonClickSound()
-        {
-            MediaPlayer player = new MediaPlayer(); // création du player 
-            player.Open(memory.Uri); // chargement de l'audio
-            player.Play(); // on joue l'audio
+        { 
+            Player.Open(memory.Uri); // chargement de l'audio
+            Player.Play(); // on joue l'audio
 
             System.Threading.Thread.Sleep(236); // longueur de l'audio en ms
         }
@@ -96,10 +98,9 @@ namespace YADUSTOCK
         }
 
         public void ButtonHoverSound()
-        {
-            MediaPlayer player = new MediaPlayer(); // création du player 
-            player.Open(new Uri(@"../../Ressources/Sounds/hover.wav", UriKind.Relative)); // chargement de l'audio
-            player.Play(); // on joue l'audio
+        {  
+            Player.Open(new Uri(@"../../Ressources/Sounds/hover.wav", UriKind.Relative)); // chargement de l'audio
+            Player.Play(); // on joue l'audio
         }
     }
 }

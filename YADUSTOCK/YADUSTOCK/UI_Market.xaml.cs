@@ -106,6 +106,26 @@ namespace YADUSTOCK
                         uri = @"pack://application:,,,/Ressources/Buttons/ButtonValidateClicked.png";
                         ButtonValidate.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
                         break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHomeClicked.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasStock":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonStockClicked.png";
+                        StockButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMarket":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMarketClicked.png";
+                        MarketButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasAccount":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonAccountClicked.png";
+                        AccountButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
                 }
             }
 
@@ -126,6 +146,26 @@ namespace YADUSTOCK
                     case "canvasValidate":
                         uri = @"pack://application:,,,/Ressources/Buttons/ButtonValidate.png";
                         ButtonValidate.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHome.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasStock":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonStock.png";
+                        StockButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMarket":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMarket.png";
+                        MarketButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasAccount":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonAccount.png";
+                        AccountButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
                         break;
                 }
             }
