@@ -34,7 +34,7 @@
         <Viewbox HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Bottom">
             <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Parameters">
                 <Button.Background>
-                    <ImageBrush x:Name="ButtonParameters" ImageSource="ButtonParameters.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonParameters" ImageSource="Ressources/Buttons/ButtonParameters.png" Stretch="UniformToFill"/>
                 </Button.Background>
                 <Canvas x:Name="canvasParameters" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
