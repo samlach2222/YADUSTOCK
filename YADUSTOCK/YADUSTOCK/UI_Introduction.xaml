@@ -38,10 +38,11 @@
         <Image HorizontalAlignment="center" VerticalAlignment="center" Source="Ressources/Buttons/PencilIntro.png" Grid.Row="2" Grid.Column="5" Margin="0 0 0 30"/>
 
         <Viewbox HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="598" Height="159" Click="Accept">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="598" Height="159" Click="Accept">
                 <Button.Background>
-                    <ImageBrush ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonValidate" ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasValidate" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
 

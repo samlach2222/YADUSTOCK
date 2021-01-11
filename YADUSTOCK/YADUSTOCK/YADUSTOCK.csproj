@@ -199,6 +199,14 @@
     <Resource Include="Ressources\Buttons\PencilValidate.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="ButtonEndTurnClicked.png" />
+    <Resource Include="ButtonPlay.png" />
+    <Resource Include="ButtonPlayClicked.png" />
+    <Resource Include="ButtonQuit.png" />
+    <Resource Include="ButtonQuitClicked.png" />
+    <Resource Include="ButtonValidateClicked.png" />
+    <Resource Include="Ressources\Buttons\ButtonEndTurnClicked.png" />
+    <Resource Include="Ressources\Buttons\ButtonValidateClicked.png" />
     <Content Include="Ressources\Sounds\hover.wav" />
     <Resource Include="ButtonSave.png" />
     <Resource Include="ButtonLoad.png" />

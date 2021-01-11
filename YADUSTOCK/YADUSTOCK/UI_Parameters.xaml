@@ -33,59 +33,66 @@
             <TextBlock Margin="10 0 0 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Background Music : </TextBlock>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToMusic1">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToMusic1">
                 <Button.Background>
-                    <ImageBrush ImageSource="ButtonMusic1.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonMusic1" ImageSource="ButtonMusic1.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasMusic1" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToMusic2">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToMusic2">
                 <Button.Background>
-                    <ImageBrush ImageSource="ButtonMusic2.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonMusic2" ImageSource="ButtonMusic2.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasMusic2" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Center">
             <TextBlock Margin="10 0 0 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Clic Sound Effect :</TextBlock>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToClic1" RenderTransformOrigin="0.095,0.095">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToClic1" RenderTransformOrigin="0.095,0.095">
                 <Button.Background>
-                    <ImageBrush ImageSource="ButtonClic1.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonClic1" ImageSource="ButtonClic1.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasClic1" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToClic2">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="ChangeToClic2">
                 <Button.Background>
-                    <ImageBrush ImageSource="ButtonClic2.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonClic2" ImageSource="ButtonClic2.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasClic2" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="8" Grid.RowSpan="2" VerticalAlignment="Center">
             <TextBlock Margin="10 0 0 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Save and Load :</TextBlock>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="save">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="save">
                 <Button.Background>
-                    <ImageBrush ImageSource="ButtonSave.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonSave" ImageSource="ButtonSave.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasSave" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="load">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="load">
                 <Button.Background>
-                    <ImageBrush ImageSource="ButtonLoad.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonLoad" ImageSource="ButtonLoad.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasLoad" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
 
         <Viewbox HorizontalAlignment="Center" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center">
-            <Button Content="Button" Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="validate">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="validate">
                 <Button.Background>
-                    <ImageBrush ImageSource="ButtonValidate.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonValidate" ImageSource="ButtonValidate.png" Stretch="UniformToFill"/>
                 </Button.Background>
+                <Canvas x:Name="canvasValidate" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
     </Grid>

@@ -91,5 +91,44 @@ namespace YADUSTOCK
                 this.Stock.Items.Add(p.Name + "   " + p.Quantity + "   " +  p.AtBuyPrice + "  €");
             }
         }
+
+        private void Button_HoverIn(object sender, MouseEventArgs e)
+        {
+
+            string uri;
+            String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasValidate":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonValidateClicked.png";
+                        ButtonValidate.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonHoverSound();
+
+        }
+
+        private void Button_HoverOut(object sender, MouseEventArgs e)
+        {
+            string uri;
+            String canvasName = ((Canvas)sender).Name; //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasValidate":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonValidate.png";
+                        ButtonValidate.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+        }
     }
 }
