@@ -48,8 +48,11 @@ namespace YADUSTOCK
             Player = new MediaPlayer();
 
             //Musique de fond
-            memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
-            memory.Player.PlayLooping();
+            if(memory.BgSoundNotRunning == false)
+            {
+                memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
+                memory.Player.PlayLooping();
+            }
             //Fin musique de fond
 			Save = new JsonStorage("save.sav");
 
@@ -99,7 +102,7 @@ namespace YADUSTOCK
 
         public void ButtonHoverSound()
         {  
-            Player.Open(new Uri(@"../../Ressources/Sounds/hover.wav", UriKind.Relative)); // chargement de l'audio
+            Player.Open(memory.UriHover); // chargement de l'audio
             Player.Play(); // on joue l'audio
         }
     }
