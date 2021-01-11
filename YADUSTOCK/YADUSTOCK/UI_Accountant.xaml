@@ -31,31 +31,47 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Rectangle Fill="#4C2F2F2F" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="6" Margin="0,-30,0,0"/>
-        <Button x:Name="HomeButton" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="1" Grid.RowSpan="2" Grid.Row="0"  Margin="63,10,63,10" Click="GoHome">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonHome.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="StockButton" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="2" Grid.RowSpan="2" Margin="63,10,63,10" Click="GoStock">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonStock.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="MarketButton" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="3" Grid.RowSpan="2" Margin="63,20,63,0" Click="GoMarket">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonMarket.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="AccountButton" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="4" Grid.RowSpan="2" Margin="63,10,63,10" Click="GoAccount">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonAccount.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="ExitButton" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="6" Grid.RowSpan="2" Margin="63,10,63,10" Click="Exit">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonExit.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+
+        <Viewbox Grid.Column="1" Grid.RowSpan="2" Grid.Row="0">
+            <Button Style="{DynamicResource YadustockButton}" Grid.Column="1" Grid.RowSpan="2" Grid.Row="0"  Width="136" Height="92" Click="GoHome">
+                <Button.Background>
+                    <ImageBrush x:Name="HomeButton" ImageSource="ButtonHome.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasHome" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.RowSpan="2" Grid.Row="0">
+            <Button Style="{DynamicResource YadustockButton}" Grid.Column="2" Grid.RowSpan="2" Click="GoStock" Width="136" Height="92">
+                <Button.Background>
+                    <ImageBrush x:Name="StockButton" ImageSource="ButtonStock.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasStock" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.RowSpan="2" Grid.Row="0">
+            <Button Style="{DynamicResource YadustockButton}" Grid.Column="3" Grid.RowSpan="2" Width="136" Height="92" Click="GoMarket">
+                <Button.Background>
+                    <ImageBrush x:Name="MarketButton" ImageSource="ButtonMarket.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasMarket" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
+        <Viewbox Grid.Column="4" Grid.RowSpan="2" Grid.Row="0">
+            <Button Style="{DynamicResource YadustockButton}"  Width="136" Height="92"  Click="GoAccount">
+                <Button.Background>
+                    <ImageBrush x:Name="AccountButton" ImageSource="ButtonAccount.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasAccount" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
+        <Viewbox Grid.Column="5" Grid.RowSpan="2" Grid.Row="0">
+            <Button Style="{DynamicResource YadustockButton}" Grid.Column="6" Grid.RowSpan="2" Width="136" Height="92" Click="Exit">
+                <Button.Background>
+                    <ImageBrush x:Name="ExitButton" ImageSource="ButtonExit.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasExit" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
         <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,2,20,0">
             <TextBlock Margin="20,2,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="ACCOUNT" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Viewbox>
@@ -117,7 +133,7 @@
                             <Label Grid.Column="1" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Margin="0,0,-0.4,0" Grid.RowSpan="2">Your Account</Label>
                         </Grid>
                         <ItemsPresenter >
-                                
+
                         </ItemsPresenter>
 
                     </DockPanel>

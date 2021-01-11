@@ -46,6 +46,51 @@ namespace YADUSTOCK
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        private void Button_HoverIn(object sender, MouseEventArgs e)
+        {
+
+            string uri;
+            String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHomeClicked.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonHoverSound();
+        }
+
+        private void Button_HoverOut(object sender, MouseEventArgs e)
+        {
+            string uri;
+            String canvasName = ((Canvas)sender).Name; //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHome.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+        }
     }
     
 }
