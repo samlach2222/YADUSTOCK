@@ -57,6 +57,7 @@ namespace YADUSTOCK
 
         private void Button_HoverIn(object sender, MouseEventArgs e)
         {
+
             string uri;
             String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
 
@@ -79,6 +80,8 @@ namespace YADUSTOCK
                         break;
                 }
             }
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonHoverSound();
         }
 
         private void Button_HoverOut(object sender, MouseEventArgs e)
