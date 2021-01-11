@@ -92,5 +92,92 @@ namespace YADUSTOCK
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        private void Button_HoverIn(object sender, MouseEventArgs e)
+        {
+
+            string uri;
+            String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasValidate":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonValidateClicked.png";
+                        ButtonValidate.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMusic1":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMusic1Clicked.png";
+                        ButtonMusic1.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMusic2":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMusic2Clicked.png";
+                        ButtonMusic2.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasClic1":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonClic1Clicked.png";
+                        ButtonClic1.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasClic2":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonClic2Clicked.png";
+                        ButtonClic2.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasSave":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonSaveClicked.png";
+                        ButtonSave.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasLoad":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonLoadClicked.png";
+                        ButtonLoad.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonHoverSound();
+
+        }
+
+        private void Button_HoverOut(object sender, MouseEventArgs e)
+        {
+            string uri;
+            String canvasName = ((Canvas)sender).Name; //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasValidate":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonValidate.png";
+                        ButtonValidate.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMusic1":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMusic1.png";
+                        ButtonMusic1.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMusic2":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMusic2.png";
+                        ButtonMusic2.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasClic1":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonClic1.png";
+                        ButtonClic1.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasClic2":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonClic2.png";
+                        ButtonClic2.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasSave":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonSave.png";
+                        ButtonSave.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasLoad":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonLoad.png";
+                        ButtonLoad.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+        }
     }
 }
