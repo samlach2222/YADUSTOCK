@@ -18,12 +18,14 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center">
             <TextBlock Margin="40 0 40 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">YADUSTOCK</TextBlock>
         </Viewbox>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center">
             <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Play">
                 <Button.Background>
                     <ImageBrush x:Name="ButtonPlay" ImageSource="Ressources/Buttons/ButtonPlay.png" Stretch="UniformToFill"/>
@@ -31,7 +33,7 @@
                 <Canvas x:Name="canvasPlay" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Bottom">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom">
             <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Parameters">
                 <Button.Background>
                     <ImageBrush x:Name="ButtonParameters" ImageSource="ButtonParameters.png" Stretch="UniformToFill"/>
@@ -39,7 +41,7 @@
                 <Canvas x:Name="canvasParameters" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom">
             <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Quit">
                 <Button.Background>
                     <ImageBrush x:Name="ButtonQuit" ImageSource="Ressources/Buttons/ButtonQuit.png" Stretch="UniformToFill"/>
@@ -47,8 +49,26 @@
                 <Canvas x:Name="canvasQuit" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Bottom">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom">
             <TextBlock Margin="150 0 150 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">A Purple Dream's Game</TextBlock>
+        </Viewbox>
+
+        <Viewbox HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="136" Height="92" Click="MuteMusic">
+                <Button.Background>
+                    <ImageBrush x:Name="ButtonMuteMusic" ImageSource="Ressources/Buttons/ButtonExit.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasMuteMusic"  MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
+        
+        <Viewbox HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="136" Height="92" Click="MuteEffects">
+                <Button.Background>
+                    <ImageBrush x:Name="ButtonMuteEffects" ImageSource="Ressources/Buttons/ButtonExit.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasMuteEffects"  MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
         </Viewbox>
     </Grid>
 </Page>

@@ -77,7 +77,11 @@ namespace YADUSTOCK
             window.Ui_market.M = memory.Market;
             window.Ui_stock.S = memory.Stock;
             window.Memory.Player.Stop();
-            window.Memory.Player.PlayLooping();
+            if(window.Memory.BgSoundNotRunning == false)
+            {
+                window.Memory.Player.PlayLooping();
+            }
+            
         }
 
         private void validate(object sender, RoutedEventArgs e)
