@@ -91,6 +91,13 @@ namespace YADUSTOCK
                 }
             }
         }
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            Close();
+        }
     }
     
 }

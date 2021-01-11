@@ -203,6 +203,8 @@
     <Resource Include="Ressources\Buttons\ButtonValidateClicked.png" />
     <Resource Include="Ressources\Buttons\ButtonGoHome.png" />
     <Resource Include="Ressources\Buttons\EuroSigle.png" />
+    <Resource Include="Ressources\Buttons\ButtonClose.png" />
+    <Resource Include="Ressources\Buttons\ButtonCloseClicked.png" />
     <Content Include="Ressources\Sounds\hover.wav" />
     <Resource Include="Ressources\Buttons\ButtonClic1.png" />
     <Resource Include="Ressources\Buttons\ButtonClic1Clicked.png" />
