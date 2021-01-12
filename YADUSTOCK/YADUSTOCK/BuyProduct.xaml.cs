@@ -27,6 +27,10 @@ namespace YADUSTOCK
             InitializeComponent();
             TypeProduct.Content = "> " + p.Name ;
             Quantity.Text = p.QuantityToBuy.ToString();
+
+            ChangerResolutionFenetre();
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
         }
 
         private void Validate(object sender, RoutedEventArgs e)
@@ -40,6 +44,27 @@ namespace YADUSTOCK
             {
                 MessageBox.Show(x.Message);
             }
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            ChangerResolutionFenetre();
+        }
+
+        private void ChangerResolutionFenetre()
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth / 2;
+            double height = width / 5 * 4;
+
+            if (width < 500 || height < 400)
+            {
+                width = 500;
+                height = 400;
+            }
+
+            this.Height = height;
+            this.Width = width;
         }
 
     }
