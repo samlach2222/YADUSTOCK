@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:YADUSTOCK"
         mc:Ignorable="d"
         Background = "#454545"
-        Title="Modifie" Height="394.808" Width="486.968" Icon="Logo.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="2" WindowStyle="None">
+        Title="Modifie" Height="400" Width="500" Icon="Logo.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="2" WindowStyle="None">
     <Grid Margin="0,0,6.6,6.4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -24,7 +24,7 @@
         <TextBox x:Name="Price" Grid.Row="3" VerticalAlignment="Center" Margin="146,9.6,173.6,9.8" Height="39" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" FontSize="25" Background="Transparent" Foreground="#CC99FF"/>
         <Button Margin="7,47.4,-6.4,-15.4" Grid.Row="3" Style="{DynamicResource YadustockButton}" Grid.RowSpan="2" Click="Validate">
             <Button.Background>
-                <ImageBrush ImageSource="ButtonValidate.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
 
