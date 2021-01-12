@@ -360,3 +360,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+
+## Fichiers individuels
+!YADUSTOCK/DiscordRichPresence/DiscordSdk.pdb
