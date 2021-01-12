@@ -36,7 +36,23 @@ namespace YADUSTOCK
 
         private void Purchase(object sender, RoutedEventArgs e)
         {
+            TypeProduct word = (TypeProduct)Enum.Parse(typeof(TypeProduct), Market.SelectedItems[0].ToString().Split(' ')[0], true);
+            MainWindow w = (MainWindow)Application.Current.MainWindow;
+            Memory Memory = w.Memory;
+
+            foreach(Product p in Memory.BuyList)
+            {
+                if(p.Name == word)
+                {
+                    BuyProduct bp = new BuyProduct(p);
+                    if (bp.ShowDialog() == true)
+                    {
+                        this.reload();
+                    }                                   
+                }
+            }
             
+                   
         }
 
         private void GoHome(object sender, RoutedEventArgs e)
@@ -79,16 +95,15 @@ namespace YADUSTOCK
 
         public void reload()
         {
+            string MarketBox = "{0, -29}{1, -23}{2, -21}{3, -22}{4, 0}";
             MainWindow w = (MainWindow)Application.Current.MainWindow;
             Memory Memory = w.Memory;
             this.nbTour.Text = "Round : " + Memory.NbTour;
-            this.nbMoney.Text = "" + Memory.Account.Own;
-            this.Stock.Items.Clear();
-            List<Product> market = Memory.CreateListProduct();
-
-            foreach (Product p in market)
+            this.nbMoney.Text = "" + (int)Memory.Account.Own;
+            this.Market.Items.Clear();
+            for(int i = 0; i < Memory.BuyList.Count(); i++)
             {
-                this.Stock.Items.Add(p.Name + "   " + p.Quantity + "   " +  p.AtBuyPrice + "  €");
+                this.Market.Items.Add(string.Format(MarketBox, Memory.BuyList[i].Name.ToString(), Memory.Stock.StockPlay[i].Quantity, Memory.BuyList[i].AtBuyPrice + " €", Memory.BuyList[i].QuantityToBuy, (Memory.BuyList[i].QuantityToBuy * Memory.BuyList[i].AtBuyPrice) + " €"));
             }
         }
     }

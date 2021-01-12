@@ -1,0 +1,32 @@
+﻿<Window x:Class="YADUSTOCK.SetPriceProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YADUSTOCK"
+        mc:Ignorable="d"
+        Background = "#454545"
+        Title="Modifie" Height="394.808" Width="486.968" Icon="Logo.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="2" WindowStyle="None">
+    <Grid Margin="0,0,6.6,6.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="62*" />
+            <RowDefinition Height="62*" />
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="79*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Type of Product : "  FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" FontSize="25" Foreground="#CC99FF" Height="47" Margin="101,20,85.6,9.8" Width="291"/>
+        <Label x:Name="type" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="153,21.2,166.6,19.6" Height="36" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" FontSize="20" Foreground="#CC99FF" Content="" />
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Content="PRICE :" VerticalAlignment="Center" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" FontSize="20" Foreground="#CC99FF" Height="36" Margin="153,19.4,188.6,21.4" Width="136"/>
+        <TextBox x:Name="Price" Grid.Row="3" VerticalAlignment="Center" Margin="146,9.6,173.6,9.8" Height="39" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" FontSize="25" Background="Transparent" Foreground="#CC99FF"/>
+        <Button Margin="7,47.4,-6.4,-15.4" Grid.Row="3" Style="{DynamicResource YadustockButton}" Grid.RowSpan="2" Click="Validate">
+            <Button.Background>
+                <ImageBrush ImageSource="ButtonValidate.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

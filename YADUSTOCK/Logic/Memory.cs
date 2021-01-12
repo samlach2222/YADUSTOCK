@@ -35,25 +35,10 @@ namespace Logic
         public Memory()
         {
             this.nbTour = 1;
-            Initialize();
-            this.buyList = this.CreateListProduct();
+            this.buyList = this.CleanListProduct();
             this.buyBoostList = this.CreateListBoost();
             this.account = new Account(5000, this.CreateListBoost());
-            this.stock = new Stock(this.buyList);
-        }
-
-        public void Purchase(TypeProduct p, int quantity)
-        {
-           for(int i = 0; i <= buyList.Count(); i++)
-            {
-                if(p == buyList[i].Name)
-                {
-                    buyList[i] = market.Purchase(buyList[i], quantity);
-                    salemarket.OwnWin = salemarket.OwnWin - buyList[i].AtBuyPrice * quantity;
-                }
-            }
-
-           
+            this.stock = new Stock(this.CreateListProduct());
         }
 
         public void PurchaceBoost(TypeBoost b)
@@ -70,61 +55,114 @@ namespace Logic
 
         public void NextTurn()
         {          
-            for(int i = 0; i < buyList.Count; i++)
+            for(int i = 0; i < stock.StockPlay.Count; i++)
             {
-                foreach (Boost r in account.BoostList)
+                foreach(Boost b in account.BoostList)
                 {
-                    if (r.Name == TypeBoost.PUB)
+                    if(b.Name == TypeBoost.PUB)
                     {
-                        buyList[i] = salemarket.BenefitCalcul(buyList[i], r);
+                        stock.StockPlay[i] = this.salemarket.BenefitCalcul(stock.StockPlay[i], b);
                     }
-
                 }
-                buyList[i] = market.IsDelivery(buyList[i]);
+                
             }
 
-            stock.ModifyStock(buyList);
-            foreach (Boost r in account.BoostList)
+            for (int i = 0; i < buyList.Count; i++)
             {
-                if(r.TimeEnd == 0)
+                
+              if(buyList[i].QuantityToBuy != 0)
+              {
+                    buyList[i] = market.Purchase(buyList[i]);
+                    
+
+                    bool test = true;
+                    int j = 0;
+                    while (test)
+                    {
+                        if ((account.BoostList[j].Name == TypeBoost.NEGOCIATION)&& (account.BoostList[j].Etat))
+                        {                     
+                            account.Own += buyList[i].QuantityToBuy * (buyList[i].AtBuyPrice - buyList[i].AtBuyPrice* account.BoostList[j].Bonus);
+                            test = false;
+                        }
+                        else
+                        {
+                            account.Own -= buyList[i].QuantityToBuy * buyList[i].AtBuyPrice;
+                            test = false;
+                        }
+                    }
+                    
+               }
+            }
+
+            foreach(Boost b in Account.BoostList)
+            {
+                if(b.TimeEnd == 0)
                 {
-                    r.Etat = false;
+                    b.Etat = false;
                 }
                 else
                 {
-                    r.TimeEnd = r.TimeEnd - 1;
+                    b.TimeEnd -= 1;
                 }
             }
-            account.BoostList = buyBoostList;
-            buyBoostList = this.CreateListBoost();
-            account.Own += salemarket.OwnWin;
-            nbTour += 1;
-        }
 
-        public void Initialize()
-        {
-            buyList = CreateListProduct();
+            for (int i = 0; i < buyBoostList.Count(); i++)
+            {
+                account.BoostList[i] = buyBoostList[i];
+            }
+
+            nbTour += 1;
+
+            // fin transaction
+            account.Own += salemarket.OwnWin;
+
+            //impot
+            account.Own -= account.Own * 0.05;
+
+            //Frais des locaux
+            account.Own -= 7500;
+
+            //frais des stocks
+            foreach(Product p in stock.StockPlay)
+            {
+                account.Own -= 2 * p.Quantity;
+            }
+
+            stock.ModifyStock(buyList);
+            salemarket.OwnWin = 0;
+            buyList = CleanListProduct();
             buyBoostList = CreateListBoost();
-            stock = new Stock(buyList);
-            account = new Account(1921, buyBoostList);
         }
 
         public List<Boost> CreateListBoost()
         {
             List<Boost> p = new List<Boost>();
-            p.Add(new Boost(TypeBoost.NEGOCIATION, 0.1, 10000, 2));
-            p.Add(new Boost(TypeBoost.PUB, 0.1, 20000, 3));
+            p.Add(new Boost(TypeBoost.NEGOCIATION, 0.2, 10000, 2));
+            p.Add(new Boost(TypeBoost.PUB, 0.3, 20000, 3));
             return p;
         }
 
         public List<Product> CreateListProduct()
         {
             List<Product> p = new List<Product>();
-            p.Add(new Product(TypeProduct.TAROT, 10, 1000, -0.2));
-            p.Add(new Product(TypeProduct.CARTE, 10, 2000, -0.4));
-            p.Add(new Product(TypeProduct.MAGIC, 10, 500, -0.1));
-            p.Add(new Product(TypeProduct.POKEMON, 10, 100, -0.5));
-            p.Add(new Product(TypeProduct.YUGIOH, 10, 50, -0.3));
+            p.Add(new Product(TypeProduct.TAROT, 10, 1000, -0.02));
+            p.Add(new Product(TypeProduct.CARTE, 20, 2000, -0.03));
+            p.Add(new Product(TypeProduct.MAGIC, 25, 500, -0.04));
+            p.Add(new Product(TypeProduct.POKEMON, 15, 100, -0.05));
+            p.Add(new Product(TypeProduct.YUGIOH, 30, 50, -0.02));
+            return p;
+        }
+
+
+
+        public List<Product> CleanListProduct()
+        {
+            List<Product> p = new List<Product>();
+            p.Add(new Product(TypeProduct.TAROT, 10, 0, -0.02));
+            p.Add(new Product(TypeProduct.CARTE, 20, 0, -0.03));
+            p.Add(new Product(TypeProduct.MAGIC, 25, 0, -0.04));
+            p.Add(new Product(TypeProduct.POKEMON, 15, 0, -0.05));
+            p.Add(new Product(TypeProduct.YUGIOH, 30, 0, -0.02));
             return p;
         }
     }

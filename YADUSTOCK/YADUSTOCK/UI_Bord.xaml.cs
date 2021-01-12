@@ -91,7 +91,7 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             Memory memory = window.Memory;
             this.nbTour.Text = "Round : " + memory.NbTour;
-            this.nbMoney.Text = "" + memory.Account.Own;
+            this.nbMoney.Text = "" + (int)memory.Account.Own;
             this.welcome_nbTour.Text = "Welcome on the round " + memory.NbTour;
             this.LB_ResultsLastRound.Items.Clear();
             this.LB_DecisionsCurrentTurn.Items.Clear();
@@ -106,8 +106,8 @@ namespace YADUSTOCK
             }
 
             //Results of the last round
-            this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (memory.Account.Own - previousMoney) + "€");
-            foreach (Product p in memory.Stock.Stock1)
+            this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (double)(memory.Account.Own - previousMoney) + "€");
+            foreach (Product p in memory.Stock.StockPlay)
             {
                 foreach (Product pp in previousProductsStored)
                 {
@@ -148,7 +148,7 @@ namespace YADUSTOCK
             }
 
             //Decisions of the current turn
-            foreach (Product p in memory.Stock.Stock1)
+            foreach (Product p in memory.Stock.StockPlay)
             {
                 foreach (Product cb in memory.BuyList)
                 {
@@ -197,7 +197,7 @@ namespace YADUSTOCK
         {
             previousMoneyTemp = memory.Account.Own;
             previousBuyListTemp = new List<Product>(memory.BuyList);
-            previousProductsStoredTemp = new List<Product>(memory.Stock.Stock1);
+            previousProductsStoredTemp = new List<Product>(memory.Stock.StockPlay);
             previousBoostsTemp = new List<Boost>(memory.Account.BoostList);
         }
 
@@ -212,7 +212,7 @@ namespace YADUSTOCK
 
             //Ajoute les données du début du round actuel aux variables "current"
             currentProductsStored.Clear();
-            currentProductsStored = new List<Product>(memory.Stock.Stock1);
+            currentProductsStored = new List<Product>(memory.Stock.StockPlay);
         }
     }
 }
