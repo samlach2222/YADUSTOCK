@@ -70,8 +70,10 @@ namespace YADUSTOCK
         public void NextTurn()
         {
             memory.NextTurn();
-            this.Ui_accountant.reload();
-            this.Ui_bord.reload();
+            ui_stock.reload();
+            ui_market.reload();
+            ui_accountant.reload();
+            ui_bord.reload();
         }
 
         public void ButtonClickSound()

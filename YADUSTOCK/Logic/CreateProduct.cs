@@ -9,5 +9,6 @@ namespace Logic
     public interface CreateProduct
     {
         List<Product> CreateListProduct();
+        List<Product> CleanListProduct();
     }
 }

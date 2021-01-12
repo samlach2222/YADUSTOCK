@@ -65,8 +65,9 @@ namespace YADUSTOCK
         private void PurchaseBoost(object sender, MouseButtonEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
+            TypeBoost word = (TypeBoost) Enum.Parse(typeof(TypeBoost), LB_Boost.SelectedItems[0].ToString().Split(' ')[0], true);
             window.ButtonClickSound();
-            if (LB_Boost.SelectedItems[0] is TypeBoost b)
+            if (word is TypeBoost b)
             {
 
                 window.Memory.PurchaceBoost(b);
@@ -89,7 +90,7 @@ namespace YADUSTOCK
             MainWindow w = (MainWindow)Application.Current.MainWindow;
             Memory Memory = w.Memory;
             this.nbTour.Text = "Round : " + Memory.NbTour;
-            this.nbMoney.Text = ""+a.Own;
+            this.nbMoney.Text = ""+(int)a.Own;
             this.LV_Money.Items.Clear();
             this.LB_OurBoost.Items.Clear();
             this.LB_Boost.Items.Clear();

@@ -15,9 +15,10 @@ namespace Logic
         [DataMember] private double resalePrice;
         [DataMember] private double lastPrice;
         [DataMember] private double elasticité;
-        [DataMember] private float quantity;
+        [DataMember] private int quantity;
+        [DataMember] private int quantityToBuy = 0;
 
-        public Product(TypeProduct n, double price, float quantity, double elasticité)
+        public Product(TypeProduct n, double price, int quantity, double elasticité)
         {
             this.resalePrice = atBuyPrice;
             this.lastPrice = this.resalePrice;
@@ -31,7 +32,8 @@ namespace Logic
         public double AtBuyPrice => atBuyPrice;
         public double ResalePrice { get => resalePrice; set => resalePrice = value; }
         public double LastPrice { get => lastPrice; set => lastPrice = value; }
-        public float Quantity { get => quantity; set => quantity = value; }
+        public int Quantity { get => quantity; set => quantity = value; }
+        public int QuantityToBuy { get => quantityToBuy; set => quantityToBuy = value; }
         public double Elasticité { get => elasticité; set => elasticité = value; }
 
     }

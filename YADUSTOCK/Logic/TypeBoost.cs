@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public enum TypeBoost
+    [Flags] public enum TypeBoost
     {
         PUB,
         NEGOCIATION

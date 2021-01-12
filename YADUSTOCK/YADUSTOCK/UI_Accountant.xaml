@@ -75,12 +75,12 @@
         <ListView x:Name="LB_Boost" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="3"  Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="20 20 20 20" Background="#FF2F2F2F" MouseDoubleClick="PurchaseBoost">
             <ListBox.Template>
                 <ControlTemplate>
-                    <DockPanel LastChildFill="True" Background="#80669A">
+                    <DockPanel LastChildFill="True" Background="#454545">
                         <Grid DockPanel.Dock="Top" Height="37" Margin="237,0,237.8,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Buy Boost</Label>
+                            <Label Grid.Column="0" HorizontalAlignment="Center" Foreground="#CC99FF" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Margin="-234,0,-359.2,0">Buy Boost</Label>
                         </Grid>
                         <ItemsPresenter >
 
@@ -101,7 +101,7 @@
         <ListBox x:Name="LV_Money" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="20 20 20 20">
             <ListBox.Template>
                 <ControlTemplate>
-                    <DockPanel LastChildFill="True" Background="#80669A">
+                    <DockPanel LastChildFill="True" Background="#454545">
                         <Grid DockPanel.Dock="Top" Height="37" Margin="237,0,237.8,0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="16*"/>
@@ -111,10 +111,10 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Margin="0,0,-0.4,0" Grid.RowSpan="2">Your Account</Label>
+                            <Label Grid.Column="0"  HorizontalAlignment="Center" Foreground ="#CC99FF" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Margin="5,0,-70.4,-0.2" Grid.RowSpan="2" Grid.ColumnSpan="2">Your Account</Label>
                         </Grid>
                         <ItemsPresenter >
-                                
+
                         </ItemsPresenter>
 
                     </DockPanel>
@@ -132,12 +132,12 @@
         <ListView x:Name="LB_OurBoost" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Row="6"  Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="20 20 20 20" Background="#FF2F2F2F">
             <ListBox.Template>
                 <ControlTemplate>
-                    <DockPanel LastChildFill="True" Background="#80669A">
+                    <DockPanel LastChildFill="True" Background="#454545">
                         <Grid DockPanel.Dock="Top" Height="37" Margin="237,0,237.8,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Your Boost</Label>
+                            <Label Grid.Column="1"  HorizontalAlignment="Center" Foreground ="#CC99FF" FontSize ="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Your Boost</Label>
                         </Grid>
                         <ItemsPresenter >
 

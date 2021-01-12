@@ -54,10 +54,10 @@
         <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="261.667,0,302,0">
             <TextBlock Margin="20,2,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="MARKET" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Viewbox>
-        <ListBox Name ="Stock" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Background="#FF2F2F2F">
+        <ListBox Name ="Market" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Background="#FF2F2F2F" MouseDoubleClick="Purchase">
             <ListBox.Template>
                 <ControlTemplate>
-                    <DockPanel LastChildFill="True" Background="#80669A">
+                    <DockPanel LastChildFill="True" Background="#454545">
                         <Grid DockPanel.Dock="Top" Height="37">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
@@ -66,11 +66,11 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Product</Label>
-                            <Label Grid.Column="1" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Quantity</Label>
-                            <Label Grid.Column="2" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Price</Label>
-                            <Label Grid.Column="3" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Quantity Buy</Label>
-                            <Label Grid.Column="4" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Total</Label>
+                            <Label Grid.Column="0" Foreground="#CC99FF" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Product</Label>
+                            <Label Grid.Column="1" Foreground="#CC99FF" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Quantity</Label>
+                            <Label Grid.Column="2" Foreground="#CC99FF" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Price</Label>
+                            <Label Grid.Column="3" Foreground="#CC99FF" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Quantity Buy</Label>
+                            <Label Grid.Column="4" Foreground="#CC99FF" HorizontalAlignment ="Center" FontSize="20" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace">Total</Label>
                         </Grid>
                         <ItemsPresenter>
 
@@ -85,6 +85,7 @@
                     <Setter Property="Background" Value="#AF85D8" />
                     <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
                 </Style>
+
             </ListBox.ItemContainerStyle>
         </ListBox>
         <Button x:Name="HomeButton_Copy" Style="{DynamicResource YadustockButton}" Content="" Grid.Column="0" Width="598" Height="159" Click="GoHome" Grid.Row="4" Grid.ColumnSpan="6">

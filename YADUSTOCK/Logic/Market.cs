@@ -19,18 +19,18 @@ namespace Logic
             lateDelivery = new List<LateDelivery>();
         }
 
-        public Product Purchase(Product p, int quantity)
+        public Product Purchase(Product p)
         {
             Random aleatoire = new Random();
             int test = aleatoire.Next(1,4);
             if (test == 1)
             {
-                LateDelivery late = new LateDelivery(p.Name, quantity, aleatoire.Next(2, 5));
+                LateDelivery late = new LateDelivery(p.Name, p.QuantityToBuy, aleatoire.Next(2, 5));
                 this.lateDelivery.Add(late);
             }
             else
             {
-                p.Quantity = p.Quantity + quantity;
+                p.Quantity = p.QuantityToBuy;
             }
             return p;
         }
@@ -46,7 +46,7 @@ namespace Logic
             foreach (LateDelivery late in lateDelivery){
                 if ((p.Name == late.Product) && (late.TurnAfterDelivery == 0));
                 {
-                    p.Quantity = late.Quantity;
+                    p.Quantity += late.Quantity;
                 }
             }
             return p;

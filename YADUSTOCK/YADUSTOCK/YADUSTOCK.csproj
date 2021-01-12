@@ -58,6 +58,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BuyProduct.xaml.cs">
+      <DependentUpon>BuyProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SetPriceProduct.xaml.cs">
+      <DependentUpon>SetPriceProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI_Accountant.xaml.cs">
       <DependentUpon>UI_Accountant.xaml</DependentUpon>
     </Compile>
@@ -82,6 +88,10 @@
     <Compile Include="UI_Stock.xaml.cs">
       <DependentUpon>UI_Stock.xaml</DependentUpon>
     </Compile>
+    <Page Include="BuyProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,6 +104,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SetPriceProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI_Accountant.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
