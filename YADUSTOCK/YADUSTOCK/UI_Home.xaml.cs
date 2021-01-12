@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,16 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
+
+            // FIN DE PROCESS DISCORD SDK
+            Process[] workers = Process.GetProcessesByName("DiscordSdk");
+            foreach (Process worker in workers)
+            {
+                worker.Kill();
+                worker.WaitForExit();
+                worker.Dispose();
+            }
+
             Environment.Exit(0);
         }
 

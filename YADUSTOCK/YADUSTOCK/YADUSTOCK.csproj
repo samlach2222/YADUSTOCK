@@ -159,6 +159,27 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DiscordRichPresence\DiscordSdk.deps.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DiscordRichPresence\DiscordSdk.runtimeconfig.dev.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DiscordRichPresence\DiscordSdk.runtimeconfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DiscordRichPresence\discord_game_sdk.bundle">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DiscordRichPresence\discord_game_sdk.dll.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DiscordRichPresence\discord_game_sdk.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DiscordRichPresence\discord_game_sdk.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -223,6 +244,18 @@
     <Resource Include="Ressources\Buttons\musicON.png" />
     <Resource Include="Ressources\Buttons\SoundOFF.png" />
     <Resource Include="Ressources\Buttons\SoundON.png" />
+    <Content Include="DiscordRichPresence\DiscordSdk.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DiscordRichPresence\DiscordSdk.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DiscordRichPresence\DiscordSdk.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DiscordRichPresence\discord_game_sdk.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Ressources\Sounds\hover.wav" />
     <Resource Include="Ressources\Buttons\ButtonClic1.png" />
     <Resource Include="Ressources\Buttons\ButtonClic1Clicked.png" />
