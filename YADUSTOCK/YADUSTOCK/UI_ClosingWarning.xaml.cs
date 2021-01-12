@@ -22,6 +22,10 @@ namespace YADUSTOCK
         public UI_ClosingWarning()
         {
             InitializeComponent();
+
+            ChangerResolutionFenetre();
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
         }
 
         private void Close(object sender, RoutedEventArgs e)
@@ -45,6 +49,79 @@ namespace YADUSTOCK
         {
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
+        }
+
+        private void Button_HoverIn(object sender, MouseEventArgs e)
+        {
+
+            string uri;
+            String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHomeClicked.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonHoverSound();
+        }
+
+        private void Button_HoverOut(object sender, MouseEventArgs e)
+        {
+            string uri;
+            String canvasName = ((Canvas)sender).Name; //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHome.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+        }
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+            Close();
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            ChangerResolutionFenetre();
+        }
+
+        private void ChangerResolutionFenetre()
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth / 2;
+            double height = width / 16 * 9;
+
+            if (width < 560 || height < 315)
+            {
+                width = 560;
+                height = 315;
+            }
+
+            this.Height = height;
+            this.Width = width;
         }
     }
     

@@ -35,8 +35,14 @@ namespace YADUSTOCK
         {
             // A CODER
             InitializeComponent();
+
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
-            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
+
             this.reload();
         }
 
@@ -213,6 +219,94 @@ namespace YADUSTOCK
             //Ajoute les données du début du round actuel aux variables "current"
             currentProductsStored.Clear();
             currentProductsStored = new List<Product>(memory.Stock.StockPlay);
+        }
+
+        private void Button_HoverIn(object sender, MouseEventArgs e)
+        {
+
+            string uri;
+            String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasEndTurn":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonEndTurnClicked.png";
+                        EndTurnButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHomeClicked.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasStock":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonStockClicked.png";
+                        StockButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMarket":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMarketClicked.png";
+                        MarketButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasAccount":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonAccountClicked.png";
+                        AccountButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonHoverSound();
+
+        }
+
+        private void Button_HoverOut(object sender, MouseEventArgs e)
+        {
+            string uri;
+            String canvasName = ((Canvas)sender).Name; //Nom du Canvas
+
+            if (e.LeftButton == MouseButtonState.Released)  //Sans le if, le bouton arrête de surbriller au clic
+            {
+                switch (canvasName)
+                {
+                    case "canvasEndTurn":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonEndTurn.png";
+                        EndTurnButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasHome":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonHome.png";
+                        HomeButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasStock":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonStock.png";
+                        StockButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasMarket":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonMarket.png";
+                        MarketButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasAccount":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonAccount.png";
+                        AccountButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                    case "canvasExit":
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                        ExitButton.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+                        break;
+                }
+            }
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        public void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
         }
     }
 }

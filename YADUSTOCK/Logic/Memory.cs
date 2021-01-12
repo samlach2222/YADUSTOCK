@@ -16,13 +16,21 @@ namespace Logic
         [DataMember] private List<Product> buyList;
         [DataMember] private int nbTour;
         [DataMember] private List<Boost> buyBoostList;
-        [DataMember] private Uri uri;
         [DataMember] private System.Media.SoundPlayer player;
-
         [DataMember] private Market market = new Market();
         [DataMember] private Stock stock;
         [DataMember] private Account account;
         [DataMember] private SaleMarket salemarket = new SaleMarket();
+
+        // DEBUT SAUVEGARDE SONS ET STATUS
+        [DataMember] private Uri uri;
+        [DataMember] private Uri uriHover;
+        [DataMember] private bool bgSoundNotRunning; //Default value : False
+        [DataMember] private Uri uriSave;
+        [DataMember] private Uri uriHoverSave;
+        // FIN SAUVEGARDE SONS ET STATUS
+
+
         public Market Market { get => market; }
         public Account Account { get => account; }
         public Stock Stock { get => stock; }
@@ -31,9 +39,14 @@ namespace Logic
         public List<Boost> BuyBoostList { get => buyBoostList; }
         public Uri Uri { get => uri; set => uri = value; }
         public SoundPlayer Player { get => player; set => player = value; }
+        public Uri UriHover { get => uriHover; set => uriHover = value; }
+        public bool BgSoundNotRunning { get => bgSoundNotRunning; set => bgSoundNotRunning = value; }
+        public Uri UriSave { get => uriSave; set => uriSave = value; }
+        public Uri UriHoverSave { get => uriHoverSave; set => uriHoverSave = value; }
 
         public Memory()
         {
+            this.uriHover = new Uri(@"../../Ressources/Sounds/hover.wav", UriKind.Relative);
             this.nbTour = 1;
             this.buyList = this.CleanListProduct();
             this.buyBoostList = this.CreateListBoost();
