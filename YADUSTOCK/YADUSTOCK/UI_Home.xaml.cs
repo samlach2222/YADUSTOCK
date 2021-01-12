@@ -23,8 +23,13 @@ namespace YADUSTOCK
         public UI_Home()
         {
             InitializeComponent();
+
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
-            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
         }
 
         private void Play(object sender, RoutedEventArgs e)
@@ -57,6 +62,7 @@ namespace YADUSTOCK
 
         private void Button_HoverIn(object sender, MouseEventArgs e)
         {
+
             string uri;
             String canvasName = ((Canvas)sender).Name;  //Nom du Canvas
 
@@ -69,10 +75,9 @@ namespace YADUSTOCK
                         ButtonPlay.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
                         break;
                     case "canvasParameters":
-                        /* Il manque le bouton en version click
                         uri = @"pack://application:,,,/Ressources/Buttons/ButtonParametersClicked.png";
                         ButtonParameters.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
-                        */
+                        
                         break;
                     case "canvasQuit":
                         uri = @"pack://application:,,,/Ressources/Buttons/ButtonQuitClicked.png";
@@ -80,6 +85,8 @@ namespace YADUSTOCK
                         break;
                 }
             }
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonHoverSound();
         }
 
         private void Button_HoverOut(object sender, MouseEventArgs e)
@@ -96,7 +103,7 @@ namespace YADUSTOCK
                         ButtonPlay.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
                         break;
                     case "canvasParameters":
-                        uri = @"pack://application:,,,/ButtonParameters.png";
+                        uri = @"pack://application:,,,/Ressources/Buttons/ButtonParameters.png";
                         ButtonParameters.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
                         break;
                     case "canvasQuit":
@@ -106,6 +113,78 @@ namespace YADUSTOCK
                 }
             }
         }
-        
+
+        private void MuteMusic(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+
+            string uri;
+
+            if (window.Memory.BgSoundNotRunning == false) // Si la musique est présente
+            {
+                window.Memory.Player.Stop();
+                window.Memory.BgSoundNotRunning = true; // elle ne l'es plus
+
+                uri = @"pack://application:,,,/Ressources/Buttons/musicOFF.png";
+                ButtonMuteMusic.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+            else // si la musique est absente
+            {
+                window.Memory.Player.PlayLooping();
+                window.Memory.BgSoundNotRunning = false; // elle devient présente
+
+                uri = @"pack://application:,,,/Ressources/Buttons/musicON.png";
+                ButtonMuteMusic.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+            
+
+        }
+
+        private void MuteEffects(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            window.ButtonClickSound();
+
+            string uri;
+
+            if (window.Memory.Uri != null)
+            {
+                window.Memory.UriSave = window.Memory.Uri;
+                window.Memory.Uri = null;
+            }
+            else
+            {
+                window.Memory.Uri = window.Memory.UriSave;
+            }
+
+
+            if (window.Memory.UriHover != null)
+            {
+                window.Memory.UriHoverSave = window.Memory.UriHover;
+                window.Memory.UriHover = null;
+
+                uri = @"pack://application:,,,/Ressources/Buttons/SoundOFF.png";
+                ButtonMuteEffects.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+            else
+            {
+                window.Memory.UriHover = window.Memory.UriHoverSave;
+
+                uri = @"pack://application:,,,/Ressources/Buttons/SoundON.png";
+                ButtonMuteEffects.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
+            }
+
+            window.ButtonClickSound();
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
+        }
     }
 }

@@ -9,6 +9,7 @@
         Title="Quit" Height="450" Width="800" Icon="Logo.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="2" WindowStyle="None" MouseDown="Window_MouseDown">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -16,24 +17,39 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center">
             <TextBlock Margin="10 0 0 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Back to home page :</TextBlock>
         </Viewbox>
 
-        <Viewbox HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center">
+        <Viewbox HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center">
             <TextBlock Margin="10 0 0 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Leave YaDuStock :</TextBlock>
         </Viewbox>
 
-        <Button x:Name="HomeButton" Style="{DynamicResource YadustockButton}" Content="" Grid.Row="0" Grid.Column="1" Margin="50,10,50,10" Click="GoHome">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonGoHome.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+        <Viewbox HorizontalAlignment="Center"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+            <Button Style="{DynamicResource YadustockButton}" Click="GoHome">
+                <Button.Background>
+                    <ImageBrush x:Name="HomeButton" ImageSource="Ressources/Buttons/ButtonGoHome.png" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Canvas x:Name="canvasHome" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
+        
+        <Viewbox HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+            <Button Style="{DynamicResource YadustockButton}" Click="Close">
+                <Button.Background>
+                    <ImageBrush x:Name="ExitButton" ImageSource="Ressources/Buttons/ButtonExit.png" Stretch="Uniform"/>
+                </Button.Background>
+                <Canvas x:Name="canvasExit" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
 
-        <Button x:Name="ExitButton" Style="{DynamicResource YadustockButton}" Content="" Grid.Row="1" Grid.Column="1" Click="Close">
-            <Button.Background>
-                <ImageBrush ImageSource="ButtonExit.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+        <Viewbox HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+            <Button Style="{DynamicResource YadustockButton}" Click="CloseWindow" Margin="0,6,6,0">
+                <Button.Background>
+                    <ImageBrush x:Name="CloseWindowButton" ImageSource="Ressources/Buttons/ButtonClose.png" Stretch="Uniform" AlignmentX="Right"/>
+                </Button.Background>
+                <Canvas x:Name="canvasCloseWindow" Margin="51,31,73,30" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
+            </Button>
+        </Viewbox>
     </Grid>
 </Window>
