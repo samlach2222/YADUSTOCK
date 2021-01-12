@@ -20,8 +20,6 @@ namespace YADUSTOCK
     /// </summary>
     public partial class UI_Home : Page
     {
-        private MediaPlayer playerSave;
-
         public UI_Home()
         {
             InitializeComponent();
@@ -128,7 +126,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                 window.Memory.Player.Stop();
                 window.Memory.BgSoundNotRunning = true; // elle ne l'es plus
 
-                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                uri = @"pack://application:,,,/Ressources/Buttons/musicOFF.png";
                 ButtonMuteMusic.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
             }
             else // si la musique est absente
@@ -136,7 +134,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                 window.Memory.Player.PlayLooping();
                 window.Memory.BgSoundNotRunning = false; // elle devient présente
 
-                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                uri = @"pack://application:,,,/Ressources/Buttons/musicON.png";
                 ButtonMuteMusic.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
             }
             
@@ -166,14 +164,14 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                 window.Memory.UriHoverSave = window.Memory.UriHover;
                 window.Memory.UriHover = null;
 
-                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExitClicked.png";
+                uri = @"pack://application:,,,/Ressources/Buttons/SoundOFF.png";
                 ButtonMuteEffects.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
             }
             else
             {
                 window.Memory.UriHover = window.Memory.UriHoverSave;
 
-                uri = @"pack://application:,,,/Ressources/Buttons/ButtonExit.png";
+                uri = @"pack://application:,,,/Ressources/Buttons/SoundON.png";
                 ButtonMuteEffects.ImageSource = new ImageSourceConverter().ConvertFromString(uri) as ImageSource;
             }
 

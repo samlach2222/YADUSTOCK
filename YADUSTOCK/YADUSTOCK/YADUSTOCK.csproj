@@ -205,6 +205,10 @@
     <Resource Include="Ressources\Buttons\EuroSigle.png" />
     <Resource Include="Ressources\Buttons\ButtonClose.png" />
     <Resource Include="Ressources\Buttons\ButtonCloseClicked.png" />
+    <Resource Include="Ressources\Buttons\musicOFF.png" />
+    <Resource Include="Ressources\Buttons\musicON.png" />
+    <Resource Include="Ressources\Buttons\SoundOFF.png" />
+    <Resource Include="Ressources\Buttons\SoundON.png" />
     <Content Include="Ressources\Sounds\hover.wav" />
     <Resource Include="Ressources\Buttons\ButtonClic1.png" />
     <Resource Include="Ressources\Buttons\ButtonClic1Clicked.png" />

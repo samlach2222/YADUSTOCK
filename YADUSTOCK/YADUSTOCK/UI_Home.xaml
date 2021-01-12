@@ -53,19 +53,19 @@
             <TextBlock Margin="150 0 150 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">A Purple Dream's Game</TextBlock>
         </Viewbox>
 
-        <Viewbox HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom">
-            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="136" Height="92" Click="MuteMusic">
+        <Viewbox HorizontalAlignment="Right" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center"  VerticalAlignment="Center" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="2" Height="2" Click="MuteMusic">
                 <Button.Background>
-                    <ImageBrush x:Name="ButtonMuteMusic" ImageSource="Ressources/Buttons/ButtonExit.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonMuteMusic" ImageSource="Ressources/Buttons/musicON.png" Stretch="UniformToFill"/>
                 </Button.Background>
                 <Canvas x:Name="canvasMuteMusic"  MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
         </Viewbox>
         
-        <Viewbox HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom">
-            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="136" Height="92" Click="MuteEffects">
+        <Viewbox HorizontalAlignment="Right" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="1" Height="1" Click="MuteEffects">
                 <Button.Background>
-                    <ImageBrush x:Name="ButtonMuteEffects" ImageSource="Ressources/Buttons/ButtonExit.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="ButtonMuteEffects" ImageSource="Ressources/Buttons/SoundON.png" Stretch="UniformToFill"/>
                 </Button.Background>
                 <Canvas x:Name="canvasMuteEffects"  MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
             </Button>
