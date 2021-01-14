@@ -24,8 +24,9 @@
         <TextBox x:Name="Quantity" Grid.Row="3" VerticalAlignment="Center" Margin="153,9.6,166.6,9.8" Height="39" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" FontSize="25" Background="Transparent" Foreground="#CC99FF"/>
         <Button Margin="7,47.4,-6.4,-15.4" Grid.Row="3" Style="{DynamicResource YadustockButton}" Grid.RowSpan="2" Click="Validate">
             <Button.Background>
-                <ImageBrush ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
+                <ImageBrush x:Name="ButtonValidate" ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
             </Button.Background>
+            <Canvas x:Name="canvasValidate" Margin="42,22,59,22" MouseEnter="Button_HoverIn" MouseLeave="Button_HoverOut" Background="Transparent"/>
         </Button>
 
     </Grid>
