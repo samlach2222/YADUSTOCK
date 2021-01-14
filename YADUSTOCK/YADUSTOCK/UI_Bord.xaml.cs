@@ -31,9 +31,11 @@ namespace YADUSTOCK
         private List<Product> previousBuyListTemp = new List<Product>();
         private List<Product> currentProductsStored = new List<Product>();
 
+        /// <summary>
+        /// Constructeur de la page UI_Bord
+        /// </summary>
         public UI_Bord()
         {
-            // A CODER
             InitializeComponent();
 
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
@@ -46,6 +48,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             this.reload();
         }
 
+        /// <summary>
+        /// Recharge la page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoHome(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -54,6 +61,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             this.reload();
         }
 
+        /// <summary>
+        /// Emmène vers la page des stock (UI_Stock)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoStock(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -61,6 +73,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             window.Content = window.Ui_stock;
         }
 
+        /// <summary>
+        /// Emmène vers la page du market (UI_Market)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoMarket(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -68,6 +85,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             window.Content = window.Ui_market;
         }
 
+        /// <summary>
+        /// Emmène vers la page de trésorerie (UI_Accountant)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoAccount(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -75,6 +97,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             window.Content = window.Ui_accountant;
         }
 
+        /// <summary>
+        /// Affiche la fenêtre de fermeture (UI_ClosingWarning)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Exit(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -84,6 +111,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             //Environment.Exit(0);
         }
 
+        /// <summary>
+        /// Termine le tour pour passer au tour suivant
+        /// </summary>
+        /// <param name="sender">Bouton "END TURN"</param>
+        /// <param name="e"></param>
         private void EndTurn(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -92,6 +124,9 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             previousTempUpdate(window.Memory);
         }
 
+        /// <summary>
+        /// Recharge la page et met à jour les variables
+        /// </summary>
         public void reload()
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -199,6 +234,10 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
 
         }
 
+        /// <summary>
+        /// Met à jour les variables previous temporaires contenant les données du round précédent avec les données actuelles
+        /// </summary>
+        /// <param name="memory"></param>
         private void previousTempUpdate(Memory memory)
         {
             previousMoneyTemp = memory.Account.Own;
@@ -207,6 +246,10 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             previousBoostsTemp = new List<Boost>(memory.Account.BoostList);
         }
 
+        /// <summary>
+        /// Met à jour les variables previous avec les variables previous temporaires, et les variables current avec les données du début de round
+        /// </summary>
+        /// <param name="memory"></param>
         private void newRound(Memory memory)
         {
             //Ajoute les données du round précédent aux variables "previous"
@@ -221,6 +264,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             currentProductsStored = new List<Product>(memory.Stock.StockPlay);
         }
 
+        /// <summary>
+        /// Affiche le bouton dont le curseur est dessus en surbrillance
+        /// </summary>
+        /// <param name="sender">Bouton dont le curseur est dessus</param>
+        /// <param name="e">Souris</param>
         private void Button_HoverIn(object sender, MouseEventArgs e)
         {
 
@@ -263,6 +311,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
 
         }
 
+        /// <summary>
+        /// Lorsque le curseur sort d'un bouton, réaffiche ce dernier sans surbrillance
+        /// </summary>
+        /// <param name="sender">Bouton dont le curseur est sorti</param>
+        /// <param name="e">Souris</param>
         private void Button_HoverOut(object sender, MouseEventArgs e)
         {
             string uri;
@@ -300,7 +353,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             }
         }
 
-        //Change dynamiquement la résolution si l'écran a changé
+        /// <summary>
+        /// Change dynamiquement la résolution si l'écran a changé
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
         {
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
