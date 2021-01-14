@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using Logic;
 using Storage;
 using System.Runtime.Serialization;
+using System.Diagnostics;
 
 namespace YADUSTOCK
 {
@@ -44,6 +45,11 @@ namespace YADUSTOCK
 
         public MainWindow()
         {
+            string directory = System.IO.Path.Combine(Environment.CurrentDirectory, "DiscordRichPresence"); // en attendant de trouver comment l'inclure dans un build
+            string filePath = System.IO.Path.Combine(directory, "DiscordSdk.exe");
+
+            Process.Start(filePath);
+
             memory = new Memory();
             Player = new MediaPlayer();
 
@@ -76,8 +82,10 @@ namespace YADUSTOCK
         public void NextTurn()
         {
             memory.NextTurn();
-            this.Ui_accountant.reload();
-            this.Ui_bord.reload();
+            ui_stock.reload();
+            ui_market.reload();
+            ui_accountant.reload();
+            ui_bord.reload();
         }
 
         public void ButtonClickSound()
@@ -97,6 +105,19 @@ namespace YADUSTOCK
 
                 UI_ClosingWarning closingWarning = new UI_ClosingWarning();
                 closingWarning.ShowDialog();
+            }
+            else if (e.Key == Key.System && e.SystemKey == Key.F4 && Content == this.ui_home)
+            {
+                // FIN DE PROCESS DISCORD SDK
+                Process[] workers = Process.GetProcessesByName("DiscordSdk");
+                foreach (Process worker in workers)
+                {
+                    worker.Kill();
+                    worker.WaitForExit();
+                    worker.Dispose();
+                }
+
+                Environment.Exit(0);
             }
         }
 

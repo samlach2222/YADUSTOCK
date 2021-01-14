@@ -69,7 +69,7 @@
         <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="261.667,0,302,0">
             <TextBlock Margin="20,2,20,0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Text="STOCK" Foreground="#FF2F2F2F" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Viewbox>
-        <ListBox x:Name="LB_Stock" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6" Background="#FF2F2F2F">
+        <ListBox x:Name="LB_Stock" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="60,20,60,0" Grid.Row="3"  Grid.Column="0" Grid.ColumnSpan="6" Background="#FF2F2F2F" MouseDoubleClick ="SetSalePrice">
             <ListBox.Template>
                 <ControlTemplate>
                     <DockPanel LastChildFill="True" Background="#454545">
@@ -92,11 +92,10 @@
             </ListBox.Template>
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
-                    <Setter Property="Height" Value="80" />
+                    <Setter Property="Height" Value="100" />
                     <Setter Property="FontSize" Value="20" />
-                    <Setter Property="Background" Value="#2F2F2F" />
+                    <Setter Property="Background" Value="#AF85D8" />
                     <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
-                    <Setter Property="Foreground" Value="#CC99FF" />
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListBox>

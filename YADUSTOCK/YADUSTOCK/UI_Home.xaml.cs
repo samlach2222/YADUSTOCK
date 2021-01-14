@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +24,13 @@ namespace YADUSTOCK
         public UI_Home()
         {
             InitializeComponent();
+
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
-            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
         }
 
         private void Play(object sender, RoutedEventArgs e)
@@ -43,6 +49,16 @@ namespace YADUSTOCK
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
+
+            // FIN DE PROCESS DISCORD SDK
+            Process[] workers = Process.GetProcessesByName("DiscordSdk");
+            foreach (Process worker in workers)
+            {
+                worker.Kill();
+                worker.WaitForExit();
+                worker.Dispose();
+            }
+
             Environment.Exit(0);
         }
 
@@ -171,6 +187,15 @@ namespace YADUSTOCK
             }
 
             window.ButtonClickSound();
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
         }
     }
 }

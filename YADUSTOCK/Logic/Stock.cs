@@ -11,17 +11,18 @@ namespace Logic
     public class Stock
     {
         [DataMember] private List<Product> stock;
-
+        public List<Product> StockPlay { get => stock; set => stock = value; }
         public Stock(List<Product> p)
         {
-            this.Stock1 = p;
+            this.stock = p;
         }
 
-        public List<Product> Stock1 { get => stock; set => stock = value; }
-
-        public void ModifyStock(List<Product> stock)
+        public void ModifyStock(List<Product> Nstock)
         {
-            this.Stock1 = stock;
+            for(int i = 0; i < stock.Count; i++)
+            {
+                stock[i].Quantity += Nstock[i].Quantity;
+            }
         }
     }
 

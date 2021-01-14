@@ -17,14 +17,25 @@ namespace Logic
         public Product BenefitCalcul(Product p, Boost b)
         {
             double demande = p.Elasticité * (p.LastPrice - p.ResalePrice);
-            double vente =  p.Quantity * demande;
+            double vente =  p.Quantity - (p.Quantity * demande);
 
-                if(b.Etat == true)
+                if(b.Etat == false)
                 {
-                vente = vente * (float)b.Bonus;  
+                    vente = vente + vente * b.Bonus;  
                 }
+
+           if(vente > p.Quantity)
+              {
+                    vente = p.Quantity;
+              }
+
+            if (vente < 0)
+            {
+                vente = 0;
+            }
+
             ownWin += vente * p.ResalePrice;
-            p.Quantity = p.Quantity - (float)vente;
+            p.Quantity = p.Quantity - (int)vente;
             return p;
         }
     }

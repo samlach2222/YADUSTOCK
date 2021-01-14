@@ -28,16 +28,36 @@ namespace YADUSTOCK
         {
             // A CODER
             InitializeComponent();
+
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
-            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
+
             ListBox stockList = new ListBox();
             stockList.Items.Add("GeeksForGeeks");
             this.reload();
         }
 
-        private void SetSalePrice(object sender, RoutedEventArgs e, double price)
+        private void SetSalePrice(object sender, MouseButtonEventArgs e)
         {
-            // A CODER, ACTION DU BOUTON A AJOUTER
+            TypeProduct word = (TypeProduct)Enum.Parse(typeof(TypeProduct), LB_Stock.SelectedItems[0].ToString().Split(' ')[0], true);
+            MainWindow w = (MainWindow)Application.Current.MainWindow;
+            Memory Memory = w.Memory;
+
+            foreach (Product p in Memory.Stock.StockPlay)
+            {
+                if (p.Name == word)
+                {
+                    SetPriceProduct sp = new SetPriceProduct(p);
+                    if (sp.ShowDialog() == true)
+                    {
+                        this.reload();
+                    }
+                }
+            }
         }
 
         private void GoHome(object sender, RoutedEventArgs e)
@@ -80,16 +100,16 @@ namespace YADUSTOCK
 
         public void reload()
         {
+            string MarketBox = "{0, -50}{1, -35}{2, 0}";
             MainWindow w = (MainWindow)Application.Current.MainWindow;
             Memory Memory = w.Memory;
             this.nbTour.Text = "Round : " + Memory.NbTour;
-            this.nbMoney.Text = "" + Memory.Account.Own;
-
-            /*foreach (Product p in s.Stock1)
+            this.nbMoney.Text = "" + (int)Memory.Account.Own;
+            this.LB_Stock.Items.Clear();
+            foreach (Product p in Memory.Stock.StockPlay)
             {
-                this.LB_Stock.Items.Add(p.Name + "   " + p.Quantity + "   " + p.AtBuyPrice +"  €");
-
-            }*/
+                this.LB_Stock.Items.Add(string.Format(MarketBox, p.Name.ToString(), p.Quantity, p.ResalePrice + " €"));
+            }
         }
 
         private void Button_HoverIn(object sender, MouseEventArgs e)
@@ -169,6 +189,15 @@ namespace YADUSTOCK
                         break;
                 }
             }
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
         }
     }
 }
