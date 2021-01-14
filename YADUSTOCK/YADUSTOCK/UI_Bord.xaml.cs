@@ -20,16 +20,16 @@ namespace YADUSTOCK
     /// </summary>
     public partial class UI_Bord : Page
     {
-        private List<Product> previousProductsStored = new List<Product>();
-        private List<Product> previousProductsStoredTemp = new List<Product>();
-        private List<Boost> previousBoosts = new List<Boost>();
-        private List<Boost> previousBoostsTemp = new List<Boost>();
+        private List<Product> previousProductsStored;
+        private List<Product> previousProductsStoredTemp;
+        private List<Boost> previousBoosts;
+        private List<Boost> previousBoostsTemp;
         private double previousMoney;
         private double previousMoneyTemp = 5000;
         private int previousRound = -1;
-        private List<Product> previousBuyList = new List<Product>();
-        private List<Product> previousBuyListTemp = new List<Product>();
-        private List<Product> currentProductsStored = new List<Product>();
+        private List<Product> previousBuyList;
+        private List<Product> previousBuyListTemp;
+        private List<Product> currentProductsStored;
 
         /// <summary>
         /// Constructeur de la page UI_Bord
@@ -45,13 +45,18 @@ namespace YADUSTOCK
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
 EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
 
+            MainWindow window = (MainWindow)Application.Current.MainWindow;
+            this.previousBoostsTemp = window.Memory.CreateListBoost();
+            this.previousProductsStoredTemp = window.Memory.CreateListProduct();
+            this.previousBuyListTemp = window.Memory.CleanListProduct();
+
             this.reload();
         }
 
         /// <summary>
         /// Recharge la page
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender">Bouton pour aller à Bord</param>
         /// <param name="e"></param>
         private void GoHome(object sender, RoutedEventArgs e)
         {
@@ -64,7 +69,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// <summary>
         /// Emmène vers la page des stock (UI_Stock)
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender">Bouton pour aller à Stock</param>
         /// <param name="e"></param>
         private void GoStock(object sender, RoutedEventArgs e)
         {
@@ -76,7 +81,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// <summary>
         /// Emmène vers la page du market (UI_Market)
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender">Bouton pour aller à Market</param>
         /// <param name="e"></param>
         private void GoMarket(object sender, RoutedEventArgs e)
         {
@@ -88,7 +93,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// <summary>
         /// Emmène vers la page de trésorerie (UI_Accountant)
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender">Bouton pour aller à Account</param>
         /// <param name="e"></param>
         private void GoAccount(object sender, RoutedEventArgs e)
         {
@@ -100,7 +105,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// <summary>
         /// Affiche la fenêtre de fermeture (UI_ClosingWarning)
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender">Bouton pour quitter</param>
         /// <param name="e"></param>
         private void Exit(object sender, RoutedEventArgs e)
         {
@@ -154,18 +159,26 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                 {
                     if (p.Name == pp.Name)
                     {
-                        float vendus = p.Quantity - pp.Quantity;
+                        int vendus = p.Quantity - pp.Quantity;
 
                         if (p.Quantity != pp.Quantity)  //Produits vendus
                         {
                             this.LB_ResultsLastRound.Items.Add(p.Name + " vendus :  " + vendus);
                         }
 
-                        foreach (Product pb in previousBuyList)
+                        foreach (Product pbl in previousBuyList)
                         {
-                            if (p.Name == pb.Name && p.Quantity != vendus + pb.Quantity)
+                            if (pbl.Quantity > 0)
                             {
-                                this.LB_ResultsLastRound.Items.Add(p.Name + " en stock :  " + (vendus + pb.Quantity));
+                                string differenceMessage = p.Name + " en stock :  ";
+                                int differenceNombre = vendus + pbl.Quantity;
+
+                                if (differenceNombre >= 0)
+                                {
+                                    differenceMessage += "+";
+                                }
+                                differenceMessage += differenceNombre;
+                                this.LB_ResultsLastRound.Items.Add(differenceMessage);
                             }
                         }
                     }
@@ -179,8 +192,9 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                     {
                         if (b.Etat == true)  //Si le boost a été acheté entre le round précédent et ce round
                         {
-                            this.LB_ResultsLastRound.Items.Add(b.Name + " is active");
-                        } else  //Si le boost a expiré
+                            this.LB_ResultsLastRound.Items.Add(b.Name + " has been activated");
+                        }
+                        else  //Si le boost a expiré
                         {
                             this.LB_ResultsLastRound.Items.Add(b.Name + " expired");
                         }
@@ -189,14 +203,11 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             }
 
             //Decisions of the current turn
-            foreach (Product p in memory.Stock.StockPlay)
+            foreach (Product bl in memory.BuyList)
             {
-                foreach (Product cb in memory.BuyList)
+                if (bl.Quantity > 0)
                 {
-                    if (p.Name == cb.Name && p.Quantity != cb.Quantity)
-                    {
-                        this.LB_DecisionsCurrentTurn.Items.Add(p.Name + " en stock :  " + (p.Quantity + cb.Quantity));
-                    }
+                    this.LB_DecisionsCurrentTurn.Items.Add(bl.Name + " en stock :  +" + bl.Quantity);
                 }
             }
             foreach (Boost b in memory.Account.BoostList)
@@ -209,24 +220,9 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                         {
                             this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " will become active");
                         }
-                        else //Le boost a potentiellement expiré
+                        else if ((b.TimeEnd - 1) == 0)  //Le boost va expiré
                         {
-                            foreach (Boost pb in previousBoosts)
-                            {
-                                if (b.Name == pb.Name && b.Etat != pb.Etat)
-                                {
-                                    if (b.Etat == false)  //Le boost a expiré
-                                    {
-                                        this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " expire");
-                                    }
-                                    /*
-                                    else  //Le boost a été acheté avant mais est encore actif
-                                    {
-                                        this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " stay active");
-                                    }
-                                    */
-                                }
-                            }
+                            this.LB_DecisionsCurrentTurn.Items.Add(b.Name + " expire");
                         }
                     }
                 }
@@ -260,7 +256,6 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             previousBoosts = new List<Boost>(previousBoostsTemp);
 
             //Ajoute les données du début du round actuel aux variables "current"
-            currentProductsStored.Clear();
             currentProductsStored = new List<Product>(memory.Stock.StockPlay);
         }
 
