@@ -28,8 +28,14 @@ namespace YADUSTOCK
         {
             this.a = a;
             InitializeComponent();
+
             double width = System.Windows.SystemParameters.PrimaryScreenWidth;
-            this.Width = width;  //Requis pour le fullscreen sans problème de bordures
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
+
             this.reload();
         }
 
@@ -65,8 +71,9 @@ namespace YADUSTOCK
         private void PurchaseBoost(object sender, MouseButtonEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
+            TypeBoost word = (TypeBoost) Enum.Parse(typeof(TypeBoost), LB_Boost.SelectedItems[0].ToString().Split(' ')[0], true);
             window.ButtonClickSound();
-            if (LB_Boost.SelectedItems[0] is TypeBoost b)
+            if (word is TypeBoost b)
             {
 
                 window.Memory.PurchaceBoost(b);
@@ -89,7 +96,7 @@ namespace YADUSTOCK
             MainWindow w = (MainWindow)Application.Current.MainWindow;
             Memory Memory = w.Memory;
             this.nbTour.Text = "Round : " + Memory.NbTour;
-            this.nbMoney.Text = ""+a.Own;
+            this.nbMoney.Text = ""+(int)a.Own;
             this.LV_Money.Items.Clear();
             this.LB_OurBoost.Items.Clear();
             this.LB_Boost.Items.Clear();
@@ -182,6 +189,15 @@ namespace YADUSTOCK
                         break;
                 }
             }
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Width = width;
+            double height = System.Windows.SystemParameters.PrimaryScreenHeight;  //height = width / 16 * 9 ne fonctionne pas pour les ratios autres que 16/9
+            this.Height = height;
         }
     }
 }

@@ -23,6 +23,10 @@ namespace YADUSTOCK
         public UI_Parameters()
         {
             InitializeComponent();
+
+            ChangerResolutionFenetre();
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
         }
 
         private void ChangeToMusic1(object sender, RoutedEventArgs e)
@@ -182,6 +186,27 @@ namespace YADUSTOCK
                         break;
                 }
             }
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            ChangerResolutionFenetre();
+        }
+
+        private void ChangerResolutionFenetre()
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth / 2;
+            double height = width / 16 * 9;
+
+            if (width < 720 || height < 405)
+            {
+                width = 720;
+                height = 405;
+            }
+
+            this.Height = height;
+            this.Width = width;
         }
     }
 }

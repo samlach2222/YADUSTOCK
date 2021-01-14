@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,10 @@ namespace YADUSTOCK
         public UI_ClosingWarning()
         {
             InitializeComponent();
+
+            ChangerResolutionFenetre();
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
+EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
         }
 
         private void Close(object sender, RoutedEventArgs e)
@@ -29,6 +34,16 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Save.Save(window.Memory);  //Sauvegarde automatiquement en quittant
+
+            // FIN DE PROCESS DISCORD SDK
+            Process[] workers = Process.GetProcessesByName("DiscordSdk");
+            foreach (Process worker in workers)
+            {
+                worker.Kill();
+                worker.WaitForExit();
+                worker.Dispose();
+            }
+
             Environment.Exit(0);
         }
 
@@ -97,6 +112,27 @@ namespace YADUSTOCK
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             Close();
+        }
+
+        //Change dynamiquement la résolution si l'écran a changé
+        private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
+        {
+            ChangerResolutionFenetre();
+        }
+
+        private void ChangerResolutionFenetre()
+        {
+            double width = System.Windows.SystemParameters.PrimaryScreenWidth / 2;
+            double height = width / 16 * 9;
+
+            if (width < 560 || height < 315)
+            {
+                width = 560;
+                height = 315;
+            }
+
+            this.Height = height;
+            this.Width = width;
         }
     }
     
