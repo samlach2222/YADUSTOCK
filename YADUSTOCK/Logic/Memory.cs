@@ -121,7 +121,10 @@ namespace Logic
 
             for (int i = 0; i < buyBoostList.Count(); i++)
             {
-                account.BoostList[i] = buyBoostList[i];
+                if (!account.BoostList[i].Etat)
+                {
+                    account.BoostList[i] = buyBoostList[i];
+                }
             }
 
             nbTour += 1;
