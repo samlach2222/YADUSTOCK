@@ -71,7 +71,7 @@
             <TextBlock Margin="10 0 0 0" FontFamily="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" Foreground="#FF4B4253">Save and Load :</TextBlock>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
-            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="save">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Save">
                 <Button.Background>
                     <ImageBrush x:Name="ButtonSave" ImageSource="Ressources/Buttons/ButtonSave.png" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -79,7 +79,7 @@
             </Button>
         </Viewbox>
         <Viewbox HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center">
-            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="load">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Load">
                 <Button.Background>
                     <ImageBrush x:Name="ButtonLoad" ImageSource="Ressources/Buttons/ButtonLoad.png" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -88,7 +88,7 @@
         </Viewbox>
 
         <Viewbox HorizontalAlignment="Center" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center">
-            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="validate">
+            <Button Style="{DynamicResource YadustockButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="598" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="159" Click="Validate">
                 <Button.Background>
                     <ImageBrush x:Name="ButtonValidate" ImageSource="Ressources/Buttons/ButtonValidate.png" Stretch="UniformToFill"/>
                 </Button.Background>

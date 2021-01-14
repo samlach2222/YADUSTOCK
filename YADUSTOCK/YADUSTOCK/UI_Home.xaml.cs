@@ -41,7 +41,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             UI_Introduction ui = new UI_Introduction();
             ui.ShowDialog();
 
-            window.Ui_bord.reload();
+            window.Ui_bord.Reload();
             window.Content = window.Ui_bord;
         }
 

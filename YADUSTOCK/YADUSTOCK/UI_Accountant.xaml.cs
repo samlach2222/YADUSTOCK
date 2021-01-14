@@ -36,7 +36,7 @@ namespace YADUSTOCK
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
 EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
 
-            this.reload();
+            this.Reload();
         }
 
         private void GoStock(object sender, RoutedEventArgs e)
@@ -64,7 +64,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            window.Ui_bord.reload();
+            window.Ui_bord.Reload();
             window.Content = window.Ui_bord;
         }
 
@@ -89,7 +89,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             //Environment.Exit(0);
         }
 
-        public void reload()
+        public void Reload()
         {
             string BuyBoostBox = "{0, -47}{1, 0}";
             string MoneyBox = "{0, -27}{1, 0}";

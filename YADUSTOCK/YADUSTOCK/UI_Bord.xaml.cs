@@ -49,7 +49,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             this.previousProductsStoredTemp = window.Memory.CreateListProduct();
             this.previousBuyListTemp = window.Memory.CleanListProduct();
 
-            this.reload();
+            this.Reload();
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Content = window.Ui_bord;
-            this.reload();
+            this.Reload();
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// <summary>
         /// Recharge la page et met à jour les variables
         /// </summary>
-        public void reload()
+        public void Reload()
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             Memory memory = window.Memory;
@@ -147,7 +147,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             }
             else  //S'il s'agit du round suivant
             {
-                NewRound(memory);
+                NewRound();
             }
 
             //Results of the last round
@@ -245,12 +245,10 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         }
 
         /// <summary>
-        /// Met à jour les variables previous avec les variables previous temporaires, et les variables current avec les données du début de round
+        /// Met à jour les variables previous avec les variables previous temporaires
         /// </summary>
-        /// <param name="memory"></param>
-        private void NewRound(Memory memory)
+        private void NewRound()
         {
-            //Ajoute les données du round précédent aux variables "previous"
             previousRound++;
             previousMoney = previousMoneyTemp;
             previousBuyList = new List<Product>(previousBuyListTemp);

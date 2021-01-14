@@ -35,7 +35,7 @@ namespace YADUSTOCK
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new
 EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de résolution d'écran
 
-            this.reload();
+            this.Reload();
         }
 
         public Market M { get => m; set => m = value; }
@@ -53,7 +53,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                     BuyProduct bp = new BuyProduct(p);
                     if (bp.ShowDialog() == true)
                     {
-                        this.reload();
+                        this.Reload();
                     }                                   
                 }
             }
@@ -65,7 +65,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            window.Ui_bord.reload();
+            window.Ui_bord.Reload();
             window.Content = window.Ui_bord;
         }
 
@@ -99,7 +99,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             //Environment.Exit(0);
         }
 
-        public void reload()
+        public void Reload()
         {
             string MarketBox = "{0, -29}{1, -23}{2, -21}{3, -22}{4, 0}";
             MainWindow w = (MainWindow)Application.Current.MainWindow;

@@ -61,7 +61,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             window.ButtonClickSound();
         }
 
-        private void save(object sender, RoutedEventArgs e)
+        private void Save(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
@@ -69,7 +69,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             window.Save.Save(window.Memory);
         }
 
-        private void load(object sender, RoutedEventArgs e)
+        private void Load(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
@@ -88,7 +88,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             
         }
 
-        private void validate(object sender, RoutedEventArgs e)
+        private void Validate(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
