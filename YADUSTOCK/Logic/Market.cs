@@ -13,12 +13,19 @@ namespace Logic
         [DataMember] private readonly List<LateDelivery>lateDelivery;
 
         public List<LateDelivery> LateDelivery => lateDelivery;
-
+        /// <summary>
+        /// constructeur de la classe
+        /// </summary>
         public Market()
         {
             lateDelivery = new List<LateDelivery>();
         }
 
+        /// <summary>
+        /// permet d'acheter un produit
+        /// </summary>
+        /// <param name="p">nom du produit à acheter</param>
+        /// <returns></returns>
         public Product Purchase(Product p)
         {
             Random aleatoire = new Random();
@@ -35,12 +42,22 @@ namespace Logic
             return p;
         }
 
+        /// <summary>
+        /// Permet d'acheter un boost
+        /// </summary>
+        /// <param name="b">Type du boost à acheter</param>
+        /// <returns></returns>
         public Boost PurchaseBoost(Boost b)
         {
             b.Etat = true;
             return b;
         }
 
+        /// <summary>
+        /// permet de verifier si un produit est livré
+        /// </summary>
+        /// <param name="p">Type du produit en retard</param>
+        /// <returns></returns>
         public Product IsDelivery(Product p)
         {
             foreach (LateDelivery late in lateDelivery){

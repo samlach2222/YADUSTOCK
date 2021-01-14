@@ -16,7 +16,13 @@ namespace Logic
         [DataMember] private Boolean etat;
         [DataMember] private readonly double price;
 
-
+        /// <summary>
+        /// permet de crée un boost
+        /// </summary>
+        /// <param name="n">Type du boost</param>
+        /// <param name="b">Bonus apporter par le boost</param>
+        /// <param name="p">Prix du boost</param>
+        /// <param name="t">Temps d'activation du boost</param>
         public Boost(TypeBoost n, double b, double p, int t)
         {
             this.etat = false;

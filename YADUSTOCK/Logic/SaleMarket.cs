@@ -14,6 +14,12 @@ namespace Logic
 
         public double OwnWin { get => ownWin; set=> ownWin = value; }
 
+        /// <summary>
+        /// Calcule le bénefice du tour grace à la vente de produit
+        /// </summary>
+        /// <param name="p">Produit à vendre</param>
+        /// <param name="b">Boost actif pour la vente</param>
+        /// <returns></returns>
         public Product BenefitCalcul(Product p, Boost b)
         {
             double demande = p.Elasticité * (p.LastPrice - p.ResalePrice);

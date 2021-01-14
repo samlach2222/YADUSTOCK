@@ -13,6 +13,11 @@ namespace Logic
         [DataMember] private double own;
         [DataMember] private List<Boost> boostList;
 
+        /// <summary>
+        /// Constructeur de la classe
+        /// </summary>
+        /// <param name="o">Fond monètaire au début du jeu</param>
+        /// <param name="b">Liste des boost à l'initialisation</param>
         public Account(double o, List<Boost> b)
         {
             own = o;
