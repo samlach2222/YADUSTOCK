@@ -16,7 +16,10 @@ namespace Logic
         {
             this.stock = p;
         }
-
+        /// <summary>
+        /// Constructeur de la classe 
+        /// </summary>
+        /// <param name="Nstock"></param>
         public void ModifyStock(List<Product> Nstock)
         {
             for(int i = 0; i < stock.Count; i++)

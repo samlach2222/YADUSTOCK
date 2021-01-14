@@ -44,6 +44,9 @@ namespace Logic
         public Uri UriSave { get => uriSave; set => uriSave = value; }
         public Uri UriHoverSave { get => uriHoverSave; set => uriHoverSave = value; }
 
+        /// <summary>
+        /// constructeur de la classe
+        /// </summary>
         public Memory()
         {
             this.uriHover = new Uri(@"../../Ressources/Sounds/hover.wav", UriKind.Relative);
@@ -54,6 +57,10 @@ namespace Logic
             this.stock = new Stock(this.CreateListProduct());
         }
 
+        /// <summary>
+        /// Permet d'acheter un boost 
+        /// </summary>
+        /// <param name="b">Type du boost à acheter de type TypeBoost</param>
         public void PurchaceBoost(TypeBoost b)
         {
             for (int i = 0; i < buyBoostList.Count(); i++)
@@ -66,6 +73,9 @@ namespace Logic
             }
         }
 
+        /// <summary>
+        /// Permet de passer le tour
+        /// </summary>
         public void NextTurn()
         {          
             for(int i = 0; i < stock.StockPlay.Count; i++)
@@ -150,6 +160,10 @@ namespace Logic
             buyBoostList = CreateListBoost();
         }
 
+        /// <summary>
+        /// creer une nouvelle liste de Boost
+        /// </summary>
+        /// <returns>Retourne une liste de Boost initialié au valeur de base</returns>
         public List<Boost> CreateListBoost()
         {
             List<Boost> p = new List<Boost>();
@@ -158,6 +172,10 @@ namespace Logic
             return p;
         }
 
+        /// <summary>
+        /// Initilise la liste des produit au lancement du jeu
+        /// </summary>
+        /// <returns>Liste de produit</returns>
         public List<Product> CreateListProduct()
         {
             List<Product> p = new List<Product>();
@@ -170,7 +188,10 @@ namespace Logic
         }
 
 
-
+        /// <summary>
+        /// permet de réinitialier la liste à la nouvelle
+        /// </summary>
+        /// <returns>retourne une liste de produit avec une quantité de 0</returns>
         public List<Product> CleanListProduct()
         {
             List<Product> p = new List<Product>();
