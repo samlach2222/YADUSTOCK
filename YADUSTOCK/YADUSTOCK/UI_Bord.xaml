@@ -87,7 +87,7 @@
             <ListBox.Template>
                 <ControlTemplate>
                     <DockPanel LastChildFill="True" Background="#454545">
-                        <Grid DockPanel.Dock="Top" Height="37" Margin="50,0,50,0" HorizontalAlignment="Center">
+                        <Grid DockPanel.Dock="Top" Height="37" Margin="0,0,0,0" HorizontalAlignment="Center">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
@@ -102,7 +102,7 @@
             </ListBox.Template>
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
-                    <Setter Property="Height" Value="80" />
+                    <Setter Property="Height" Value="50" />
                     <Setter Property="FontSize" Value="20" />
                     <Setter Property="Background" Value="#2F2F2F" />
                     <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
@@ -111,11 +111,11 @@
             </ListBox.ItemContainerStyle>
         </ListBox>
 
-        <ListBox x:Name="LB_DecisionsCurrentTurn" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="4"  Grid.Column="3" Grid.ColumnSpan="3" Margin="20,20,20,0">
+        <ListBox x:Name="LB_DecisionsCurrentTurn" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Grid.Row="4"  Grid.Column="3" Grid.ColumnSpan="3" Margin="20,20,20,-1">
             <ListBox.Template>
                 <ControlTemplate>
                     <DockPanel LastChildFill="True" Background="#454545">
-                        <Grid DockPanel.Dock="Top" Height="37" Margin="50,0,50,0" HorizontalAlignment="Center">
+                        <Grid DockPanel.Dock="Top" Height="37" Margin="0,0,0,0" HorizontalAlignment="Center">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
@@ -131,7 +131,7 @@
             </ListBox.Template>
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
-                    <Setter Property="Height" Value="80" />
+                    <Setter Property="Height" Value="50" />
                     <Setter Property="FontSize" Value="20" />
                     <Setter Property="Background" Value="#2F2F2F" />
                     <Setter Property="FontFamily" Value="/YADUSTOCK;component/Ressources/Fonts/#Manaspace" />
