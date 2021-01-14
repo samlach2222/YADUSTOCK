@@ -38,7 +38,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
 
             ListBox stockList = new ListBox();
             stockList.Items.Add("GeeksForGeeks");
-            this.reload();
+            this.Reload();
         }
 
         private void SetSalePrice(object sender, MouseButtonEventArgs e)
@@ -54,7 +54,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                     SetPriceProduct sp = new SetPriceProduct(p);
                     if (sp.ShowDialog() == true)
                     {
-                        this.reload();
+                        this.Reload();
                     }
                 }
             }
@@ -64,7 +64,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
-            window.Ui_bord.reload();
+            window.Ui_bord.Reload();
             window.Content = window.Ui_bord;
         }
 
@@ -98,7 +98,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             //Environment.Exit(0);
         }
 
-        public void reload()
+        public void Reload()
         {
             string MarketBox = "{0, -50}{1, -35}{2, 0}";
             MainWindow w = (MainWindow)Application.Current.MainWindow;

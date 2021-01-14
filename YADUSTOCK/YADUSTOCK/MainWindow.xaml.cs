@@ -69,10 +69,10 @@ namespace YADUSTOCK
             ui_accountant = new UI_Accountant(Memory.Account);
             memory.Uri = new Uri(@"../../Ressources/Sounds/button1.wav", UriKind.Relative);
             InitializeComponent();
-            initialize();
+            Initialize();
         }
 
-        public void initialize()
+        public void Initialize()
         {
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
@@ -82,10 +82,10 @@ namespace YADUSTOCK
         public void NextTurn()
         {
             memory.NextTurn();
-            ui_stock.reload();
-            ui_market.reload();
-            ui_accountant.reload();
-            ui_bord.reload();
+            ui_stock.Reload();
+            ui_market.Reload();
+            ui_accountant.Reload();
+            ui_bord.Reload();
         }
 
         public void ButtonClickSound()
