@@ -29,7 +29,6 @@ namespace YADUSTOCK
         private int previousRound = -1;
         private List<Product> previousBuyList;
         private List<Product> previousBuyListTemp;
-        private List<Product> currentProductsStored;
 
         /// <summary>
         /// Constructeur de la page UI_Bord
@@ -126,7 +125,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.NextTurn();  //La fenêtre est reload dans la fonction NextTurn de MainWindow
-            previousTempUpdate(window.Memory);
+            PreviousTempUpdate(window.Memory);
         }
 
         /// <summary>
@@ -144,15 +143,15 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
 
             if (previousRound + 1 == memory.NbTour)  //S'il n'y a pas eu de passage au round suivant
             {
-                previousTempUpdate(memory);
+                PreviousTempUpdate(memory);
             }
             else  //S'il s'agit du round suivant
             {
-                newRound(memory);
+                NewRound(memory);
             }
 
             //Results of the last round
-            this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (double)(memory.Account.Own - previousMoney) + "€");
+            this.LB_ResultsLastRound.Items.Add("Benefit  :  " + (memory.Account.Own - previousMoney) + "€");
             foreach (Product p in memory.Stock.StockPlay)
             {
                 foreach (Product pp in previousProductsStored)
@@ -163,15 +162,15 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
 
                         if (p.Quantity != pp.Quantity)  //Produits vendus
                         {
-                            this.LB_ResultsLastRound.Items.Add(p.Name + " vendus :  " + vendus);
+                            this.LB_ResultsLastRound.Items.Add(p.Name + " vendus  :  " + vendus);
                         }
 
                         foreach (Product pbl in previousBuyList)
                         {
-                            if (pbl.Quantity > 0)
+                            if (pbl.QuantityToBuy > 0 && p.Name == pbl.Name)
                             {
-                                string differenceMessage = p.Name + " en stock :  ";
-                                int differenceNombre = vendus + pbl.Quantity;
+                                string differenceMessage = pbl.Name + " en stock  :  ";
+                                int differenceNombre = vendus + pbl.QuantityToBuy;
 
                                 if (differenceNombre >= 0)
                                 {
@@ -188,13 +187,16 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             {
                 foreach (Boost pb in previousBoosts)
                 {
-                    if (b.Name == pb.Name && b.Etat != pb.Etat)
+                    if (b.Name == pb.Name)
                     {
-                        if (b.Etat == true)  //Si le boost a été acheté entre le round précédent et ce round
+                        if (b.Etat != pb.Etat)
                         {
-                            this.LB_ResultsLastRound.Items.Add(b.Name + " has been activated");
+                            if (b.Etat == true)  //Si le boost a été acheté entre le round précédent et ce round
+                            {
+                                this.LB_ResultsLastRound.Items.Add(b.Name + " has been activated");
+                            }
                         }
-                        else  //Si le boost a expiré
+                        else if (b.TimeEnd == 0 && pb.Etat)  //Si le boost a expiré
                         {
                             this.LB_ResultsLastRound.Items.Add(b.Name + " expired");
                         }
@@ -205,9 +207,9 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             //Decisions of the current turn
             foreach (Product bl in memory.BuyList)
             {
-                if (bl.Quantity > 0)
+                if (bl.QuantityToBuy > 0)
                 {
-                    this.LB_DecisionsCurrentTurn.Items.Add(bl.Name + " en stock :  +" + bl.Quantity);
+                    this.LB_DecisionsCurrentTurn.Items.Add(bl.Name + " en stock  :  +" + bl.QuantityToBuy);
                 }
             }
             foreach (Boost b in memory.Account.BoostList)
@@ -234,7 +236,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// Met à jour les variables previous temporaires contenant les données du round précédent avec les données actuelles
         /// </summary>
         /// <param name="memory"></param>
-        private void previousTempUpdate(Memory memory)
+        private void PreviousTempUpdate(Memory memory)
         {
             previousMoneyTemp = memory.Account.Own;
             previousBuyListTemp = new List<Product>(memory.BuyList);
@@ -246,7 +248,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// Met à jour les variables previous avec les variables previous temporaires, et les variables current avec les données du début de round
         /// </summary>
         /// <param name="memory"></param>
-        private void newRound(Memory memory)
+        private void NewRound(Memory memory)
         {
             //Ajoute les données du round précédent aux variables "previous"
             previousRound++;
@@ -254,9 +256,6 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             previousBuyList = new List<Product>(previousBuyListTemp);
             previousProductsStored = new List<Product>(previousProductsStoredTemp);
             previousBoosts = new List<Boost>(previousBoostsTemp);
-
-            //Ajoute les données du début du round actuel aux variables "current"
-            currentProductsStored = new List<Product>(memory.Stock.StockPlay);
         }
 
         /// <summary>
