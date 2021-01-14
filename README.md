@@ -1,7 +1,7 @@
 # YADUSTOCK
 
-<img src="Documentation/Maquette/Conception%20d'image/Logo.png" height="300" width="300">
-<img src="Documentation/Documents%20Ressources/Home.png" height="540" width="960">
+<img src="Documentation/Maquette/Conception%20d'image/Logo.png" width="30%">
+<img src="Documentation/Documents%20Ressources/Home.png" width="100%">
 
 ## Projet Tutoré de S3 - Purple Dream
 
