@@ -18,6 +18,13 @@ namespace Logic
         [DataMember] private int quantity;
         [DataMember] private int quantityToBuy = 0;
 
+        /// <summary>
+        /// Constructeur de la classe
+        /// </summary>
+        /// <param name="n">Type du boost</param>
+        /// <param name="price">prix du produit</param>
+        /// <param name="quantity">Quantité du produit </param>
+        /// <param name="elasticité">élasticité de vente du produit</param>
         public Product(TypeProduct n, double price, int quantity, double elasticité)
         {
             this.resalePrice = atBuyPrice;
