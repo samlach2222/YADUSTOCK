@@ -20,7 +20,7 @@ namespace Storage
         {
             //Sauvegarde dans l'emplacement AppData\Roaming\YaDuStock\ de l'utilisateur
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            filePath += "\\YaDuStock";
+            filePath += "\\Yadustock";
             if (!Directory.Exists(filePath))
             {
                 Directory.CreateDirectory(filePath);

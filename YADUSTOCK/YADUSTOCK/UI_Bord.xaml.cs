@@ -147,7 +147,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             }
             else  //S'il s'agit du round suivant
             {
-                NewRound();
+                NewRound(memory);
             }
 
             //Results of the last round
@@ -159,12 +159,12 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
                     if (p.Name == pp.Name)
                     {
                         int vendus = p.Quantity - pp.Quantity;
-
+                        /*
                         if (p.Quantity != pp.Quantity)  //Produits vendus
                         {
                             this.LB_ResultsLastRound.Items.Add(p.Name + " vendus  :  " + vendus);
                         }
-
+                        */
                         foreach (Product pbl in previousBuyList)
                         {
                             if (pbl.QuantityToBuy > 0 && p.Name == pbl.Name)
@@ -247,9 +247,9 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
         /// <summary>
         /// Met à jour les variables previous avec les variables previous temporaires
         /// </summary>
-        private void NewRound()
+        private void NewRound(Memory memory)
         {
-            previousRound++;
+            previousRound = memory.NbTour - 1;
             previousMoney = previousMoneyTemp;
             previousBuyList = new List<Product>(previousBuyListTemp);
             previousProductsStored = new List<Product>(previousProductsStoredTemp);
