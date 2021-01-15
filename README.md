@@ -30,8 +30,6 @@ Puis téléchargez les 2 fichiers présent et exécutez "Yadustock_Setup.exe".
 Vous pourrez lancer le jeu depuis le bureau ou dans le menu démarrer
 
 Pour plus d'informations sur les closes d'installation, référez-vous à l'onglet "Dossier Setup".
-
-YADUSTOCK est compatible Discord Rich Presence, pour celà rendez-vous dans votre aplication discord, puis dans les paramètres/Activité de jeu puis activez "Affiche le jeu en cours en tant que message de statut.
 ***
 ### [Dossier] Documentation :
 
