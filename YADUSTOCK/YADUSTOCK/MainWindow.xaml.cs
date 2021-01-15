@@ -45,6 +45,13 @@ namespace YADUSTOCK
 
         public MainWindow()
         {
+            /*
+            string directory = System.IO.Path.Combine(Environment.CurrentDirectory, "DiscordRichPresence"); // en attendant de trouver comment l'inclure dans un build
+            string filePath = System.IO.Path.Combine(directory, "DiscordSdk.exe");
+
+            Process.Start(filePath);
+            */
+
             memory = new Memory();
             Player = new MediaPlayer();
 
