@@ -22,13 +22,7 @@
         "Entry"
         {
         "MsmKey" = "8:_03239382EA57102B638F3D4027F4AF0B"
-        "OwnerKey" = "8:_046C9F2629195C3C3F270F220DC9149D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_046C9F2629195C3C3F270F220DC9149D"
-        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
+        "OwnerKey" = "8:_32E3D99DFE51AD47572A26254B2B8A20"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,20 +33,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2C8722A038C248504D8957592A54BC2D"
-        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2C8722A038C248504D8957592A54BC2D"
-        "OwnerKey" = "8:_046C9F2629195C3C3F270F220DC9149D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2E5431F873B1570F14F1E25BBE355069"
         "OwnerKey" = "8:_03239382EA57102B638F3D4027F4AF0B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_32E3D99DFE51AD47572A26254B2B8A20"
+        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -65,6 +53,18 @@
         {
         "MsmKey" = "8:_53ABFF9D3BBE0B968CCB0D0C5C8BF6E5"
         "OwnerKey" = "8:_03239382EA57102B638F3D4027F4AF0B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5A7BF371BE9DFBF4299EF1498343090E"
+        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5A7BF371BE9DFBF4299EF1498343090E"
+        "OwnerKey" = "8:_32E3D99DFE51AD47572A26254B2B8A20"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -100,31 +100,31 @@
         "Entry"
         {
         "MsmKey" = "8:_FB707754F3C0007438FF731DDD6AEC84"
-        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
+        "OwnerKey" = "8:_9D8027B9E3ED457DA05E0D7037850E69"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_FB707754F3C0007438FF731DDD6AEC84"
-        "OwnerKey" = "8:_9D8027B9E3ED457DA05E0D7037850E69"
+        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5A7BF371BE9DFBF4299EF1498343090E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_03239382EA57102B638F3D4027F4AF0B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2C8722A038C248504D8957592A54BC2D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9D8027B9E3ED457DA05E0D7037850E69"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -154,7 +154,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A438AB2ECC874C04B27B6EBF188A8E84"
+        "OwnerKey" = "8:_9D8027B9E3ED457DA05E0D7037850E69"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -171,7 +171,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Yadustock_Setup.msi"
+        "OutputFilename" = "8:Debug\\Yadustock_Setup_Additionnel.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -181,13 +181,21 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Yadustock_Setup.msi"
+        "OutputFilename" = "8:Release\\Yadustock_Setup_Additionnel.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -197,6 +205,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -257,37 +273,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_046C9F2629195C3C3F270F220DC9149D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_046C9F2629195C3C3F270F220DC9149D"
-                    {
-                    "Name" = "8:Storage.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Storage.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0956563DDF10E802DCF9EC1898E0D27C"
             {
             "AssemblyRegister" = "3:1"
@@ -302,37 +287,6 @@
                     }
                 }
             "SourcePath" = "8:System.Diagnostics.Tracing.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2C8722A038C248504D8957592A54BC2D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Logic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_2C8722A038C248504D8957592A54BC2D"
-                    {
-                    "Name" = "8:Logic.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Logic.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
@@ -381,6 +335,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_32E3D99DFE51AD47572A26254B2B8A20"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_32E3D99DFE51AD47572A26254B2B8A20"
+                    {
+                    "Name" = "8:Storage.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Storage.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_53ABFF9D3BBE0B968CCB0D0C5C8BF6E5"
             {
             "AssemblyRegister" = "3:1"
@@ -395,6 +380,37 @@
                     }
                 }
             "SourcePath" = "8:System.IO.Compression.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5A7BF371BE9DFBF4299EF1498343090E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Logic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5A7BF371BE9DFBF4299EF1498343090E"
+                    {
+                    "Name" = "8:Logic.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Logic.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
@@ -1128,7 +1144,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7415D82456234E2AB1E97169FFED256E"
             {
-            "SourcePath" = "8:..\\Storage\\obj\\Debug\\netstandard2.0\\Storage.dll"
+            "SourcePath" = "8:..\\Storage\\obj\\Release\\netstandard2.0\\Storage.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
@@ -1156,7 +1172,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9D8027B9E3ED457DA05E0D7037850E69"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\Logic\\obj\\Release\\Logic.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
@@ -1184,7 +1200,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A438AB2ECC874C04B27B6EBF188A8E84"
             {
-            "SourcePath" = "8:..\\YADUSTOCK\\obj\\Debug\\YADUSTOCK.exe"
+            "SourcePath" = "8:..\\YADUSTOCK\\obj\\Release\\YADUSTOCK.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5F1A99B1B3194F9C8EBF2070DCAF0B9C"
