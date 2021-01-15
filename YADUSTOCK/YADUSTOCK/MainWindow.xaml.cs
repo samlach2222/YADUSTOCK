@@ -45,18 +45,13 @@ namespace YADUSTOCK
 
         public MainWindow()
         {
-            string directory = System.IO.Path.Combine(Environment.CurrentDirectory, "DiscordRichPresence"); // en attendant de trouver comment l'inclure dans un build
-            string filePath = System.IO.Path.Combine(directory, "DiscordSdk.exe");
-
-            Process.Start(filePath);
-
             memory = new Memory();
             Player = new MediaPlayer();
 
             //Musique de fond
             if(memory.BgSoundNotRunning == false)
             {
-                memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
+                memory.Player = new System.Media.SoundPlayer("Ressources/Sounds/BG_Sound.wav");
                 memory.Player.PlayLooping();
             }
             //Fin musique de fond
@@ -67,7 +62,7 @@ namespace YADUSTOCK
             Ui_market = new UI_Market(Memory.Market);
             Ui_stock = new UI_Stock(Memory.Stock);
             ui_accountant = new UI_Accountant(Memory.Account);
-            memory.Uri = new Uri(@"../../Ressources/Sounds/button1.wav", UriKind.Relative);
+            memory.Uri = new Uri(@"Ressources/Sounds/button1.wav", UriKind.Relative);
             InitializeComponent();
             Initialize();
         }

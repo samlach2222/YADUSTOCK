@@ -159,27 +159,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DiscordRichPresence\DiscordSdk.deps.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="DiscordRichPresence\DiscordSdk.runtimeconfig.dev.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="DiscordRichPresence\DiscordSdk.runtimeconfig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="DiscordRichPresence\discord_game_sdk.bundle">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="DiscordRichPresence\discord_game_sdk.dll.lib">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="DiscordRichPresence\discord_game_sdk.dylib">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="DiscordRichPresence\discord_game_sdk.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -244,19 +223,9 @@
     <Resource Include="Ressources\Buttons\musicON.png" />
     <Resource Include="Ressources\Buttons\SoundOFF.png" />
     <Resource Include="Ressources\Buttons\SoundON.png" />
-    <Content Include="DiscordRichPresence\DiscordSdk.dll">
+    <Content Include="Ressources\Sounds\hover.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="DiscordRichPresence\DiscordSdk.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DiscordRichPresence\DiscordSdk.pdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DiscordRichPresence\discord_game_sdk.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ressources\Sounds\hover.wav" />
     <Resource Include="Ressources\Buttons\ButtonClic1.png" />
     <Resource Include="Ressources\Buttons\ButtonClic1Clicked.png" />
     <Resource Include="Ressources\Buttons\ButtonClic2.png" />
@@ -271,11 +240,19 @@
     <Resource Include="Ressources\Buttons\ButtonParametersClicked.png" />
     <Resource Include="Ressources\Buttons\ButtonSave.png" />
     <Resource Include="Ressources\Buttons\ButtonSaveClicked.png" />
-    <Content Include="Ressources\Sounds\button2.wav" />
+    <Content Include="Ressources\Sounds\button2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Logo.ico" />
-    <Content Include="Ressources\Sounds\BG_Sound.wav" />
-    <Content Include="Ressources\Sounds\BG_SoundAlternative.wav" />
-    <Content Include="Ressources\Sounds\button1.wav" />
+    <Content Include="Ressources\Sounds\BG_Sound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\Sounds\BG_SoundAlternative.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\Sounds\button1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

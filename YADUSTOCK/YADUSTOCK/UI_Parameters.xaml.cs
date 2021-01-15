@@ -34,7 +34,7 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Memory.Player.Stop();
-            window.Memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_Sound.wav");
+            window.Memory.Player = new System.Media.SoundPlayer("Ressources/Sounds/BG_Sound.wav");
             window.Memory.Player.PlayLooping();
         }
 
@@ -43,21 +43,21 @@ EventHandler(SystemEvents_DisplaySettingsChanged);  //Détecte un changement de 
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.ButtonClickSound();
             window.Memory.Player.Stop();
-            window.Memory.Player = new System.Media.SoundPlayer("../../Ressources/Sounds/BG_SoundAlternative.wav");
+            window.Memory.Player = new System.Media.SoundPlayer("Ressources/Sounds/BG_SoundAlternative.wav");
             window.Memory.Player.PlayLooping();
         }
 
         private void ChangeToClic1(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.Memory.Uri = new Uri(@"../../Ressources/Sounds/button1.wav", UriKind.Relative);
+            window.Memory.Uri = new Uri(@"Ressources/Sounds/button1.wav", UriKind.Relative);
             window.ButtonClickSound();
         }
 
         private void ChangeToClic2(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
-            window.Memory.Uri = new Uri(@"../../Ressources/Sounds/button2.wav", UriKind.Relative);
+            window.Memory.Uri = new Uri(@"Ressources/Sounds/button2.wav", UriKind.Relative);
             window.ButtonClickSound();
         }
 

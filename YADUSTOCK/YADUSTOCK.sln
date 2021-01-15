@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLogic", "TestLogic\Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage", "Storage\Storage.csproj", "{EB0E5F54-F484-46F1-AA73-1BEF985940D8}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupYadustock", "SetupYadustock\SetupYadustock.vdproj", "{73FA026C-900B-4230-82C9-9072636F28D7}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{92528485-4147-4D8B-9C80-E15CA058E22D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,8 +34,8 @@ Global
 		{EB0E5F54-F484-46F1-AA73-1BEF985940D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB0E5F54-F484-46F1-AA73-1BEF985940D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB0E5F54-F484-46F1-AA73-1BEF985940D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73FA026C-900B-4230-82C9-9072636F28D7}.Debug|Any CPU.ActiveCfg = Debug
-		{73FA026C-900B-4230-82C9-9072636F28D7}.Release|Any CPU.ActiveCfg = Release
+		{92528485-4147-4D8B-9C80-E15CA058E22D}.Debug|Any CPU.ActiveCfg = Debug
+		{92528485-4147-4D8B-9C80-E15CA058E22D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
