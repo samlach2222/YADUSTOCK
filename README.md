@@ -23,9 +23,11 @@ De plus les textes étants grands, le clavier étant facultatif et les effets é
 
 
 Pour installer YADUSTOCK, vous devez sois :
-* vous rendre dans le dossier "Setup" et télécharger puis exécuter "Yadustock_Setup.exe".
-* vous rendre dans l'onglet "Releases" et télécharger puis exécuter "Yadustock_Setup.exe".
-Poursivez l'installation puis lancez l'icône sur le bureau ou dans le menu démarrer
+* vous rendre dans le dossier "Setup".
+* vous rendre dans l'onglet "Releases".
+
+Puis téléchargez les 2 fichiers présent et exécutez "Yadustock_Setup.exe".
+Vous pourrez lancer le jeu depuis le bureau ou dans le menu démarrer
 
 Pour plus d'informations sur les closes d'installation, référez-vous à l'onglet "Dossier Setup".
 
