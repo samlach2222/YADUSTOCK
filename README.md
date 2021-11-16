@@ -6,9 +6,6 @@
 ## Projet Tutoré de S3 - Purple Dream
 
 [![GitHub version](https://img.shields.io/badge/version-1.02-purple.svg)](https://img.shields.io/badge)
-[![Discord](https://img.shields.io/discord/756176190603132959.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/awD7fzb)
-
-
 
 Le projet Yadustock porte sur la création d’un jeu de gestion d’une entreprise. Nous avons choisi que l’entreprise sera spécialisée dans la vente de jeux de cartes afin d’offrir au joueur un large éventail de produits pour lui permettre une certaine personnalisation.  
 
